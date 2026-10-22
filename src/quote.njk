@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: Free on-site quote
+description: Request a free mobile on-site flooring quote anywhere in Sydney.
+---
+<section class="wrap page quote">
+  <div class="quote__intro">
+    <p class="eyebrow">No charge, no obligation</p>
+    <h1>Book your free on-site quote</h1>
+    <p class="lead">We come to you with samples, measure up and give you a price on the spot. Fill this in and we will be in touch to arrange a time.</p>
+    <p>Prefer to talk? Call <a href="tel:{{ site.phoneLink }}">{{ site.phone }}</a>.</p>
+  </div>
+
+  <form class="form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="{{ site.web3formsKey }}">
+    <input type="hidden" name="subject" value="New quote request from the website">
+    <input type="hidden" name="from_name" value="{{ site.name }} website">
+    <input type="hidden" name="redirect" value="{{ site.url }}/thanks/">
+    <input type="checkbox" name="botcheck" class="sr" tabindex="-1" autocomplete="off">
+
+    <div class="row">
+      <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+    </div>
+    <div class="row">
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Suburb<input name="suburb" required autocomplete="address-level2"></label>
+    </div>
+    <div class="row">
+      <label>Flooring type
+        <select name="flooring_type">
+          <option>Not sure yet</option>
+          {% for c in categories %}<option>{{ c.name }}</option>{% endfor %}
+        </select>
+      </label>
+      <label>Best time to visit
+        <select name="best_time">
+          <option>Any time</option><option>Morning</option><option>Afternoon</option><option>Weekend</option>
+        </select>
+      </label>
+    </div>
+    <label>Product you are interested in (optional)<input name="product" id="product"></label>
+    <label>Tell us about the job<textarea name="message" rows="5" placeholder="Rooms, approximate size, whether old flooring needs removing, timing"></textarea></label>
+    <button class="btn" type="submit">Request my free quote</button>
+    <p class="note">We only use your details to arrange your quote.</p>
+  </form>
+</section>

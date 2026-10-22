@@ -1,0 +1,5 @@
+{
+  "layout": "product.njk",
+  "tags": "product",
+  "permalink": "/products/{{ category }}/{{ page.fileSlug }}/"
+}

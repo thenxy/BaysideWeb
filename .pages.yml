@@ -1,0 +1,42 @@
+media:
+  input: src/img
+  output: /img
+content:
+  - name: products
+    label: Products
+    type: collection
+    path: src/products
+    exclude: [products.json]
+    filename: "{fields.brand}-{fields.title}.md"
+    view:
+      fields: [title, brand, category, range]
+      primary: title
+      sort: [brand, title]
+      group: [category]
+    fields:
+      - { name: title, label: Name, type: string, required: true }
+      - { name: brand, label: Brand, type: string, required: true }
+      - { name: range, label: Range, type: string }
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values: [hybrid, timber, laminate, carpet, vinyl]
+      - { name: thickness, label: Thickness, type: string }
+      - { name: finish, label: Finish, type: string }
+      - { name: image, label: Main photo, type: image }
+      - { name: gallery, label: More photos, type: image, list: true }
+      - { name: specs, label: Specs, type: object, fields: [] }
+      - { name: body, label: Description, type: rich-text }
+  - name: site
+    label: Business details (phone, email, areas)
+    type: file
+    path: src/_data/site.json
+    format: json
+    fields:
+      - { name: phone, label: Phone (display), type: string }
+      - { name: phoneLink, label: Phone (digits only, for tap-to-call), type: string }
+      - { name: email, label: Email, type: string }
+      - { name: hours, label: Hours, type: string }
+      - { name: areas, label: Areas serviced, type: string, list: true }

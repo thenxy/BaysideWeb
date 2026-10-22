@@ -1,0 +1,17 @@
+{
+  "name": "Bayside Flooring Studio",
+  "tagline": "Carpet, hybrid, timber and laminate flooring across Sydney",
+  "url": "https://www.baysideflooringstudio.com.au",
+  "phone": "TODO 0400 000 000",
+  "phoneLink": "0400000000",
+  "email": "TODO hello@baysideflooringstudio.com.au",
+  "quoteEmailTo": "TODO the address quote requests are sent to",
+  "web3formsKey": "TODO-WEB3FORMS-ACCESS-KEY",
+  "hours": "Mon to Sat, by appointment",
+  "areas": [
+    "Botany", "Mascot", "Rosebery", "Eastlakes", "Brighton-Le-Sands",
+    "Rockdale", "Kogarah", "Hurstville", "Sans Souci", "Sylvania",
+    "Sutherland", "Maroubra", "Randwick", "Eastern Suburbs", "Inner West"
+  ],
+  "supplierNote": "We supply and install products from Jims Flooring, The Flooring Lab, Everfloor and more."
+}
