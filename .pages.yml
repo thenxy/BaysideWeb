@@ -22,9 +22,11 @@ content:
         type: select
         required: true
         options:
-          values: [hybrid, timber, laminate, carpet, vinyl]
+          values: [hybrid, timber, laminate, carpet, vinyl, bamboo, accessories]
       - { name: thickness, label: Thickness, type: string }
       - { name: finish, label: Finish, type: string }
+      - { name: subcategory, label: Sub-category (e.g. Nylon, Underlay), type: string }
+      - { name: supplier, label: Supplier, type: string }
       - { name: image, label: Main photo, type: image }
       - { name: gallery, label: More photos, type: image, list: true }
       - { name: specs, label: Specs, type: object, fields: [] }

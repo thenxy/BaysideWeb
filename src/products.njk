@@ -10,6 +10,7 @@ description: Browse carpet, hybrid, timber, laminate and vinyl flooring.
   <div class="filters" id="filters">
     <button class="chip is-on" data-cat="all">All</button>
     {% for c in categories %}<button class="chip" data-cat="{{ c.key }}">{{ c.name }}</button>{% endfor %}
+    <label class="sel"><span class="sr">Brand</span><select id="brand"><option value="">All brands</option>{% for b in collections.catalogue | pluck("brand") | unique %}<option>{{ b }}</option>{% endfor %}</select></label>
     <label class="search"><span class="sr">Search products</span><input id="q" type="search" placeholder="Search name or brand"></label>
   </div>
 
@@ -17,6 +18,7 @@ description: Browse carpet, hybrid, timber, laminate and vinyl flooring.
   <div class="grid" id="grid">
     {% for p in collections.catalogue %}{% include "card.njk" %}{% endfor %}
   </div>
+  <p class="more"><button class="btn btn--ghost" id="more" hidden>Show more</button></p>
   <p class="empty" id="none" hidden>Nothing matches. <a href="/quote/">Ask us</a>, we can source it.</p>
   {% else %}
   <p class="empty">The online range is being added. In the meantime <a href="/quote/">request a free on-site quote</a> and we will bring samples.</p>
