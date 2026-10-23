@@ -8,7 +8,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/img": "img" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
 
-  // Products sorted by brand then title, optionally filtered by category key.
+  // Catalogue sorted by range then title; inCategory filters by category key.
   eleventyConfig.addFilter("inCategory", (items, key) =>
     items.filter((p) => p.data.category === key)
   );
@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
     api
       .getFilteredByTag("product")
       .sort((a, b) =>
-        (a.data.brand + a.data.title).localeCompare(b.data.brand + b.data.title)
+        ((a.data.range || "") + a.data.title).localeCompare((b.data.range || "") + b.data.title)
       )
   );
 

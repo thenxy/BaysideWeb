@@ -133,7 +133,7 @@ def scrape_jims(cache):
         out.append(dict(
             title=name, brand=brand, range=None, category=cat, subcategory=sub,
             sku=sku.group(1).strip() if sku else None,
-            thickness=thickness_of(specs.get("Dimensions"), specs.get("Thickness"), name),
+            thickness=thickness_of(name, specs.get("Dimensions"), specs.get("Thickness")),
             colours=colours or None, specs=specs or None,
             desc=short(short_desc.get_text(" ") if short_desc else ld.get("description", "")),
             images=images, source=u, supplier="Jim's Flooring",
@@ -279,14 +279,39 @@ def save_image(url, dest, cache):
         return False
 
 
+# Company names that must never appear on the public site.
+SCRUB = re.compile(
+    r"\b(?:the\s+flooring\s+lab|flooring\s+lab|jim['’]?s|jims|everfloor|floortex|armstrong|dunlop|"
+    r"tudorwoods|carpetmate|continental\s+oak)(?![a-z])['’]?s?\s*", re.I)
+
+
+def scrub(t):
+    t = SCRUB.sub(" ", t or "")
+    t = re.sub(r"\s*:\s*", " - ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    t = re.sub(r"^[\s\-–,;]+|[\s\-–,;]+$", "", t)
+    return re.sub(r"(?:\s-){2,}", " -", t)
+
+
 def tidy(t):
-    t = re.sub(r"\s+", " ", t or "").strip()
-    return t.title() if len(t) > 3 and t.isupper() else t
+    t = scrub(t)
+    if len(t) > 3 and t.isupper():
+        return t.title()
+    return re.sub(r"\b[A-Z]{4,}\b", lambda m: m.group().title(), t)
+
+
+def scrub_text(t):
+    """Like scrub() but keeps sentence punctuation intact."""
+    t = SCRUB.sub(" ", t or "")
+    return re.sub(r"\s+", " ", t).strip()
 
 
 def write_product(p, slugs, cache, images=True):
     p["title"], p["range"] = tidy(p["title"]), tidy(p["range"]) or None
-    base = slugify(f"{p['brand']} {p['range'] or ''} {p['title']}")
+    p["desc"] = scrub_text(p.get("desc"))
+    if p.get("specs"):
+        p["specs"] = {k: scrub_text(v) for k, v in p["specs"].items() if scrub_text(v)}
+    base = slugify(f"{p['range'] or ''} {p['title']}")
     slug, n = base, 2
     while slug in slugs:
         slug = f"{base}-{n}"
@@ -298,8 +323,8 @@ def write_product(p, slugs, cache, images=True):
             name = f"{slug}.webp" if i == 0 else f"{slug}-{i + 1}.webp"
             if save_image(url, IMG / name, cache):
                 saved.append(f"/img/products/{name}")
-    fm = {"title": p["title"], "brand": p["brand"], "category": p["category"]}
-    for k in ("range", "subcategory", "sku", "thickness", "colours"):
+    fm = {"title": p["title"], "category": p["category"]}
+    for k in ("range", "subcategory", "sku", "thickness"):
         if p.get(k):
             fm[k] = p[k]
     if saved:
@@ -308,7 +333,6 @@ def write_product(p, slugs, cache, images=True):
             fm["gallery"] = saved[1:]
     if p.get("specs"):
         fm["specs"] = p["specs"]
-    fm["supplier"] = p["supplier"]
     fm["source"] = p["source"]
     text = "---\n" + yaml.safe_dump(fm, allow_unicode=True, sort_keys=False, width=100) + "---\n"
     text += (p.get("desc") or "") + "\n"
@@ -331,6 +355,9 @@ def main():
         got = fn(a.cache)
         print(f"  {len(got)} products", flush=True)
         products += got
+    # accessories are not sold online; wall coverings are out of scope for a flooring catalogue
+    products = [p for p in products if p["category"] != "accessories" and "wall covering" not in
+                (p["title"] + " " + (p.get("desc") or "")).lower()[:400]]
     # remove previously generated products (those with a `source:`), keep hand-written ones
     PRODUCTS.mkdir(parents=True, exist_ok=True)
     hosts = {"jims": "jimsflooring.com.au", "flooringlab": "theflooringlab.com.au", "everfloor": "everfloor.com.au"}
@@ -341,6 +368,12 @@ def main():
     slugs = {f.stem for f in PRODUCTS.glob("*.md")}
     for p in products:
         write_product(p, slugs, a.cache, not a.no_images)
+    used = set()
+    for f in PRODUCTS.glob("*.md"):
+        used |= set(re.findall(r"/img/products/([^\s]+\.webp)", f.read_text(encoding="utf8")))
+    for im in IMG.glob("*.webp"):
+        if im.name not in used:
+            im.unlink()
     print("wrote", len(products), "products")
 
 

@@ -11,4 +11,4 @@ Static site built with [Eleventy](https://www.11ty.dev). Quote only, no checkout
 
 ## Product catalogue
 
-`python3 scripts/scrape.py` rebuilds the catalogue from Jim's Flooring (everything), The Flooring Lab (Phoenix 7mm and Lumina 9mm hybrid only) and Everfloor (everything), saving small web-size photos to `src/img/products/`. Needs `pip install requests beautifulsoup4 lxml pillow pyyaml`. Generated products have a `source:` line; products you add by hand (no `source:`) are never overwritten. Use `--only jims|flooringlab|everfloor` to refresh one supplier.
+`python3 scripts/scrape.py` rebuilds the catalogue from the supplier websites (accessories are skipped, supplier and brand names are stripped from titles and text), saving small web-size photos to `src/img/products/`. Needs `pip install requests beautifulsoup4 lxml pillow pyyaml`. Generated products have a `source:` line; products you add by hand (no `source:`) are never overwritten. Use `--only jims|flooringlab|everfloor` to refresh one supplier.

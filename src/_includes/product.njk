@@ -8,11 +8,11 @@ layout: base.njk
   </nav>
   <div class="pdp__grid">
     <div class="pdp__media">
-      {% if image %}<img src="{{ image }}" alt="{{ brand }} {{ title }}">{% else %}<span class="swatch swatch--lg" aria-hidden="true"></span>{% endif %}
+      {% if image %}<img src="{{ image }}" alt="{{ title }}">{% else %}<span class="swatch swatch--lg" aria-hidden="true"></span>{% endif %}
       {% for g in gallery %}<img src="{{ g }}" alt="{{ title }} detail" loading="lazy">{% endfor %}
     </div>
     <div class="pdp__info">
-      <p class="eyebrow">{{ brand }}{% if range %} &middot; {{ range }}{% endif %}</p>
+      {% if range %}<p class="eyebrow">{{ range }}</p>{% endif %}
       <h1>{{ title }}</h1>
       <div class="prose">{{ content | safe }}</div>
       {% if specs %}
@@ -21,7 +21,7 @@ layout: base.njk
       </dl>
       {% endif %}
       <div class="pdp__cta">
-        <a class="btn" href="/quote/?product={{ (brand + ' ' + title) | urlencode }}">Request a free quote</a>
+        <a class="btn" href="/quote/?product={{ ((range + ' ' if range else '') + title) | urlencode }}">Request a free quote</a>
         <p class="note">Pricing on request. We bring samples to you and measure up for free.</p>
       </div>
     </div>
