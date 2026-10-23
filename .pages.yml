@@ -7,26 +7,24 @@ content:
     type: collection
     path: src/products
     exclude: [products.json]
-    filename: "{fields.brand}-{fields.title}.md"
+    filename: "{fields.title}.md"
     view:
-      fields: [title, brand, category, range]
+      fields: [title, category, range]
       primary: title
-      sort: [brand, title]
+      sort: [range, title]
       group: [category]
     fields:
       - { name: title, label: Name, type: string, required: true }
-      - { name: brand, label: Brand, type: string, required: true }
-      - { name: range, label: Range, type: string }
+      - { name: range, label: Range / collection name, type: string }
       - name: category
         label: Category
         type: select
         required: true
         options:
-          values: [hybrid, timber, laminate, carpet, vinyl, bamboo, accessories]
+          values: [hybrid, timber, laminate, carpet, vinyl, bamboo]
       - { name: thickness, label: Thickness, type: string }
       - { name: finish, label: Finish, type: string }
       - { name: subcategory, label: Sub-category (e.g. Nylon, Underlay), type: string }
-      - { name: supplier, label: Supplier, type: string }
       - { name: image, label: Main photo, type: image }
       - { name: gallery, label: More photos, type: image, list: true }
       - { name: specs, label: Specs, type: object, fields: [] }

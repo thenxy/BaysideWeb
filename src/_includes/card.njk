@@ -1,13 +1,13 @@
-<a class="card" href="{{ p.url }}" data-cat="{{ p.data.category }}" data-brand="{{ p.data.brand }}">
+<a class="card" href="{{ p.url }}" data-cat="{{ p.data.category }}">
   <div class="card__img">
     {% if p.data.image %}
-      <img src="{{ p.data.image }}" alt="{{ p.data.brand }} {{ p.data.title }}" loading="lazy">
+      <img src="{{ p.data.image }}" alt="{{ p.data.title }}" loading="lazy">
     {% else %}
       <span class="swatch" aria-hidden="true"></span>
     {% endif %}
   </div>
   <div class="card__body">
-    <p class="card__brand">{{ p.data.brand }}{% if p.data.range %} &middot; {{ p.data.range }}{% endif %}</p>
+    {% if p.data.range %}<p class="card__brand">{{ p.data.range }}</p>{% endif %}
     <h3>{{ p.data.title }}</h3>
     <p class="card__meta">{% if p.data.thickness %}{{ p.data.thickness }}{% endif %}{% if p.data.finish %} &middot; {{ p.data.finish }}{% endif %}</p>
   </div>
