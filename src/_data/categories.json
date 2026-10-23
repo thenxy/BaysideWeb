@@ -1,0 +1,72 @@
+[
+  {
+    "key": "hybrid",
+    "name": "Hybrid",
+    "blurb": "Rigid-core planks that are waterproof, stable and quick to lay. Our most popular choice for busy Sydney homes.",
+    "tones": [
+      "#c9a779",
+      "#b88f5f",
+      "#d6bc92"
+    ]
+  },
+  {
+    "key": "timber",
+    "name": "Timber",
+    "blurb": "Solid and engineered hardwood with real grain and real warmth, finished to last.",
+    "tones": [
+      "#9a6a3c",
+      "#7d5430",
+      "#b07d49"
+    ]
+  },
+  {
+    "key": "laminate",
+    "name": "Laminate",
+    "blurb": "Hard-wearing, scratch-resistant boards with the look of timber at a friendlier price.",
+    "tones": [
+      "#bfae98",
+      "#a8957c",
+      "#cdbfa9"
+    ]
+  },
+  {
+    "key": "carpet",
+    "name": "Carpet",
+    "blurb": "Soft underfoot, quiet and warm. Wool, nylon and polyester in plenty of colours.",
+    "tones": [
+      "#8f9a96",
+      "#738481",
+      "#a9b2ae"
+    ]
+  },
+  {
+    "key": "vinyl",
+    "name": "Vinyl",
+    "blurb": "Water-resistant plank and sheet vinyl for kitchens, laundries and rentals.",
+    "tones": [
+      "#b6a58f",
+      "#9d8b73",
+      "#c8baa5"
+    ]
+  },
+  {
+    "key": "bamboo",
+    "name": "Bamboo",
+    "blurb": "Hard, sustainable and distinctive. Strand-woven bamboo with a clean, modern look.",
+    "tones": [
+      "#c8b57d",
+      "#b09c63",
+      "#d8c994"
+    ]
+  },
+  {
+    "key": "accessories",
+    "name": "Accessories",
+    "blurb": "Trims, scotia, underlay, adhesives and floor prep to finish the job properly.",
+    "tones": [
+      "#a9a398",
+      "#8e887c",
+      "#bdb8ad"
+    ]
+  }
+]

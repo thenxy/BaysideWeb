@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ description or site.tagline }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top">
+    <div class="wrap top__in">
+      <a class="brand" href="/" aria-label="{{ site.name }} home">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand__name">Bayside <em>Flooring Studio</em></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="/products/">Products</a>
+        {% for c in categories %}<a class="nav__cat" href="/products/{{ c.key }}/">{{ c.name }}</a>{% endfor %}
+        <a href="/about/">About</a>
+      </nav>
+      <a class="btn btn--sm" href="/quote/">Free quote</a>
+    </div>
+  </header>
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div>
+        <p class="foot__brand">{{ site.name }}</p>
+        <p>{{ site.supplierNote }}</p>
+      </div>
+      <div>
+        <p class="foot__h">Browse</p>
+        <ul>{% for c in categories %}<li><a href="/products/{{ c.key }}/">{{ c.name }}</a></li>{% endfor %}</ul>
+      </div>
+      <div>
+        <p class="foot__h">Get in touch</p>
+        <ul>
+          <li><a href="tel:{{ site.phoneLink }}">{{ site.phone }}</a></li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li>{{ site.hours }}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap foot__base">
+      <span>&copy; {{ "" | year }} {{ site.name }}. Servicing Sydney.</span>
+      <a href="/quote/">Book a free on-site quote</a>
+    </div>
+  </footer>
+
+  <div class="dock" role="group" aria-label="Quick contact">
+    <a href="tel:{{ site.phoneLink }}">Call</a>
+    <a class="dock__main" href="/quote/">Free on-site quote</a>
+  </div>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>

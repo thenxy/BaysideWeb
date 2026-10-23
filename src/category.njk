@@ -1,0 +1,23 @@
+---
+layout: base.njk
+pagination:
+  data: categories
+  size: 1
+  alias: cat
+permalink: "/products/{{ cat.key }}/"
+eleventyComputed:
+  title: "{{ cat.name }} flooring"
+---
+<section class="wrap page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/products/">Products</a> / <span>{{ cat.name }}</span></nav>
+  <h1>{{ cat.name }}</h1>
+  <p class="lead">{{ cat.blurb }}</p>
+  {% set items = collections.catalogue | inCategory(cat.key) %}
+  {% if items.length %}
+  <div class="grid">
+    {% for p in items %}{% include "card.njk" %}{% endfor %}
+  </div>
+  {% else %}
+  <p class="empty">Range being added. <a href="/quote/">Request a free quote</a> and we will bring {{ cat.name | lower }} samples to you.</p>
+  {% endif %}
+</section>

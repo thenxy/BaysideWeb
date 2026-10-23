@@ -1,0 +1,60 @@
+---
+layout: base.njk
+title: Flooring supply and install, Sydney
+description: Carpet, hybrid, timber and laminate flooring supplied and installed across Sydney. Free mobile on-site quotes.
+---
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">Mobile showroom &middot; Sydney wide</p>
+      <h1>The showroom <em>comes to your floor.</em></h1>
+      <p class="lead">We bring the samples, measure the rooms and quote on the spot. No obligation, no trip to a warehouse, no charge.</p>
+      <div class="hero__cta">
+        <a class="btn" href="/quote/">Book a free on-site quote</a>
+        <a class="btn btn--ghost" href="/products/">Browse the range</a>
+      </div>
+      <ul class="ticks">
+        <li>Free measure and quote</li>
+        <li>Supply and install</li>
+        <li>Family run, local</li>
+      </ul>
+    </div>
+    <div class="planks" aria-hidden="true">
+      {% for i in range(0, 14) %}<span></span>{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="wrap block">
+  <div class="block__head">
+    <h2>Find your floor</h2>
+    <a href="/products/">See everything</a>
+  </div>
+  <div class="cats">
+    {% for c in categories %}
+    <a class="cat" href="/products/{{ c.key }}/" style="--t1:{{ c.tones[0] }};--t2:{{ c.tones[1] }};--t3:{{ c.tones[2] }}">
+      <span class="cat__chip" aria-hidden="true"><i></i><i></i><i></i></span>
+      <h3>{{ c.name }}</h3>
+      <p>{{ c.blurb }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>How a free quote works</h2>
+    <ol>
+      <li><strong>Tell us about the job.</strong> A few details through the form or a quick call.</li>
+      <li><strong>We visit you.</strong> Samples, measuring and honest advice in your own light.</li>
+      <li><strong>Quote on the spot.</strong> Supply and install, itemised, with no pressure.</li>
+      <li><strong>Installed properly.</strong> Booked in to suit you, with the old floor taken away if needed.</li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap block areas">
+  <h2>Where we work</h2>
+  <p>Across Sydney, including {% for a in site.areas %}{{ a }}{% if not loop.last %}, {% endif %}{% endfor %}. Not on the list? Ask us.</p>
+  <a class="btn" href="/quote/">Get a quote</a>
+</section>
