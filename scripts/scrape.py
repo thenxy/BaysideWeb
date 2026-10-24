@@ -26,7 +26,8 @@ import fetch  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PRODUCTS = ROOT / "src" / "products"
 IMG = ROOT / "src" / "img" / "products"
-IMG_WIDTH = 800
+IMG_WIDTH = 1000
+THUMB_WIDTH = 480
 
 JIMS_CATEGORY = {
     "Hybrid Flooring": ("hybrid", None),
@@ -302,17 +303,22 @@ def scrape_everfloor(cache):
 
 # ----------------------------------------------------------------- output
 def save_image(urls, dest, cache):
-    if dest.exists():
+    """Save a large version (dest) and a small grid/swatch version (<name>-t.webp)."""
+    thumb = dest.with_name(dest.stem + "-t.webp")
+    if dest.exists() and thumb.exists():
         return True
+    last = None
     for url in ([urls] if isinstance(urls, str) else urls):
         try:
             raw = fetch.get(url, cache, binary=True)
             im = Image.open(io.BytesIO(raw))
             im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
-            if im.width > IMG_WIDTH:
-                im = im.resize((IMG_WIDTH, round(im.height * IMG_WIDTH / im.width)), Image.LANCZOS)
             dest.parent.mkdir(parents=True, exist_ok=True)
-            im.save(dest, "WEBP", quality=72, method=6)
+            for path, width, q in ((dest, IMG_WIDTH, 76), (thumb, THUMB_WIDTH, 70)):
+                out = im
+                if im.width > width:
+                    out = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
+                out.save(path, "WEBP", quality=q, method=4)
             return True
         except Exception as e:  # noqa: BLE001
             last = e
@@ -453,7 +459,7 @@ def main():
     for f in PRODUCTS.glob("*.md"):
         used |= set(re.findall(r"/img/products/([^\s]+\.webp)", f.read_text(encoding="utf8")))
     for im in IMG.glob("*.webp"):
-        if im.name not in used:
+        if re.sub(r"-t\.webp$", ".webp", im.name) not in used:
             im.unlink()
     print("wrote", len(products), "products")
 

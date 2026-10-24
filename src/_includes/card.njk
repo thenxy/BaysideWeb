@@ -1,7 +1,7 @@
 <a class="card" href="{{ p.url }}" data-cat="{{ p.data.category }}" data-search="{% for c in p.data.colours %}{{ c.name }} {% endfor %}">
   <div class="card__img">
     {% if p.data.image %}
-      <img src="{{ p.data.image }}" alt="{{ p.data.title }}" loading="lazy">
+      <img src="{{ p.data.image | thumb }}" alt="{{ p.data.title }}" loading="lazy">
     {% else %}
       <span class="swatch" aria-hidden="true"></span>
     {% endif %}

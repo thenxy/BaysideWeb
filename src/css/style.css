@@ -204,3 +204,7 @@ em { font-style: italic; color: var(--oak-dark); }
 .sw:focus-visible { outline: 2px solid var(--oak); outline-offset: 2px; }
 .specs--colour { margin-top: 12px; margin-bottom: 0; }
 .specs--colour[hidden] { display: none; }
+
+/* source photo is small: show it at its own size instead of blowing it up */
+.pdp__media { background: transparent; }
+.pdp__media img.is-lowres { width: auto; max-width: 100%; aspect-ratio: auto; margin: 0; background: #e9e1d2; }

@@ -1,3 +1,5 @@
+const fs = require("fs");
+const path = require("path");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function (eleventyConfig) {
@@ -16,6 +18,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("pluck", (items, key) =>
     items.map((p) => p.data[key]).filter(Boolean)
   );
+  // Small version of a scraped photo (name-t.webp) when one exists, otherwise the photo itself.
+  eleventyConfig.addFilter("thumb", (img) => {
+    if (!img) return img;
+    const t = img.replace(/\.webp$/, "-t.webp");
+    return t !== img && fs.existsSync(path.join("src", t)) ? t : img;
+  });
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
   eleventyConfig.addCollection("catalogue", (api) =>

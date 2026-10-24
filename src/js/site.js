@@ -66,6 +66,14 @@
     });
   }
 
+  // Small source photos are shown at their own size rather than stretched
+  var hero = document.getElementById("pdp-img");
+  if (hero) {
+    var fit = function () { hero.classList.toggle("is-lowres", hero.naturalWidth > 0 && hero.naturalWidth < 640); };
+    hero.addEventListener("load", fit);
+    if (hero.complete) fit();
+  }
+
   // Product page colour picker
   var colours = document.getElementById("colours");
   if (colours) {
@@ -74,6 +82,7 @@
     var csp = document.getElementById("colour-specs");
     var quote = document.getElementById("quote-btn");
     var swatches = [].slice.call(colours.querySelectorAll(".sw"));
+
     swatches.forEach(function (b) {
       b.addEventListener("click", function () {
         swatches.forEach(function (x) { x.classList.remove("is-on"); x.setAttribute("aria-pressed", "false"); });
@@ -81,8 +90,7 @@
         b.setAttribute("aria-pressed", "true");
         var name = b.dataset.name;
         label.textContent = name;
-        var thumb = b.querySelector("img");
-        if (thumb && big) { big.src = thumb.getAttribute("src"); big.alt = name; }
+        if (b.dataset.img && big) { big.src = b.dataset.img; big.alt = name; }
         if (csp) {
           var sp = {};
           try { sp = JSON.parse(b.dataset.specs || "{}"); } catch (e) {}

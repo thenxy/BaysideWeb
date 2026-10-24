@@ -21,8 +21,8 @@ layout: base.njk
         <p class="colours__label">Colour: <strong id="colour-name">{{ colours[0].name }}</strong> <span class="colours__count">{{ colours.length }} available</span></p>
         <ul class="swatches" role="list">
           {% for c in colours %}
-          <li><button type="button" class="sw{% if loop.first %} is-on{% endif %}" aria-pressed="{{ 'true' if loop.first else 'false' }}" title="{{ c.name }}" data-name="{{ c.name }}" data-specs="{{ (c.specs or {}) | dump }}">
-            {% if c.image %}<img src="{{ c.image }}" alt="{{ c.name }}" loading="lazy">{% else %}<span>{{ c.name }}</span>{% endif %}
+          <li><button type="button" class="sw{% if loop.first %} is-on{% endif %}" aria-pressed="{{ 'true' if loop.first else 'false' }}" title="{{ c.name }}" data-name="{{ c.name }}" data-img="{{ c.image | url }}" data-specs="{{ (c.specs or {}) | dump }}">
+            {% if c.image %}<img src="{{ c.image | thumb }}" alt="{{ c.name }}" loading="lazy">{% else %}<span>{{ c.name }}</span>{% endif %}
           </button></li>
           {% endfor %}
         </ul>
