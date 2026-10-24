@@ -13,13 +13,6 @@ specs:
   Resilience: Remarkable - SDN nylon wear and tear resistance
   Traffic Rating: High Traffic
   Suitable For: Corporate offices, healthcare, education, hospitality
-  Tile Size: To be confirmed
-  Pile Style: To be confirmed
-  Pile Height: To be confirmed
-  Total Thickness: To be confirmed
-  Pile Weight: To be confirmed
-  Colours Available: To be confirmed
-  Backing Options: To be confirmed
 source: https://jimsflooring.com.au/product/elegance-airlay/
 ---
 Elegance Airlay defines simplicity through a neutral refined carpet tile collection that elevates any commercial interior without overwhelming it. Specifically, the neutral palette and refined patterning create a floor that suits any aesthetic direction with effortless confidence.

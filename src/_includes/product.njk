@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 ---
+{% set rangeName = range if range is string else "" %}
 {% set cat = categories | selectattr("key", "equalto", category) | first %}
 <section class="wrap pdp">
   <nav class="crumbs" aria-label="Breadcrumb">
@@ -12,16 +13,16 @@ layout: base.njk
       {% for g in gallery %}<img src="{{ g }}" alt="{{ title }} detail" loading="lazy">{% endfor %}
     </div>
     <div class="pdp__info">
-      {% if range %}<p class="eyebrow">{{ range }}</p>{% endif %}
+      {% if rangeName %}<p class="eyebrow">{{ rangeName }}</p>{% endif %}
       <h1>{{ title }}</h1>
       <div class="prose">{{ content | safe }}</div>
       {% if specs %}
       <dl class="specs">
-        {% for key, val in specs %}<div><dt>{{ key }}</dt><dd>{{ val }}</dd></div>{% endfor %}
+        {% for key, val in specs %}{% if val and "confirm" not in (val | string | lower) %}<div><dt>{{ key }}</dt><dd>{{ val }}</dd></div>{% endif %}{% endfor %}
       </dl>
       {% endif %}
       <div class="pdp__cta">
-        <a class="btn" href="/quote/?product={{ ((range + ' ' if range else '') + title) | urlencode }}">Request a free quote</a>
+        <a class="btn" href="/quote/?product={{ ((rangeName + ' ' if rangeName else '') + title) | urlencode }}">Request a free quote</a>
         <p class="note">Pricing on request. We bring samples to you and measure up for free.</p>
       </div>
     </div>

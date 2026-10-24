@@ -13,10 +13,6 @@ specs:
   Colours Available: 7 Contemporary Colours
   Backing Options: PVC Back / Cushion Back
   Suitable For: Eco-friendly commercial fit-outs
-  Tile Size: To be confirmed
-  Pile Height: To be confirmed
-  Total Thickness: To be confirmed
-  Pile Weight: To be confirmed
 source: https://jimsflooring.com.au/product/dynamic-airlay/
 ---
 Dynamic Airlay brings energy and movement to any commercial interior. Specifically, the energetic fluid design of the Dynamic collection creates a floor surface that feels deliberately considered rather than purely functional.

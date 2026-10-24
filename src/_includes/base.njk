@@ -19,12 +19,19 @@
         <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i></span>
         <span class="brand__name">Bayside <em>Flooring Studio</em></span>
       </a>
-      <nav class="nav" aria-label="Main">
-        <a href="/products/">Products</a>
-        {% for c in categories %}<a class="nav__cat" href="/products/{{ c.key }}/">{{ c.name }}</a>{% endfor %}
+      <nav class="nav" id="nav" aria-label="Main">
+        <div class="nav__group">
+          <button class="nav__btn" type="button" aria-expanded="false" aria-controls="flooring-menu">Flooring <span class="nav__chev" aria-hidden="true"></span></button>
+          <div class="nav__menu" id="flooring-menu">
+            <a href="/products/">All products</a>
+            {% for c in categories %}{% if c.key != "carpet" %}<a href="/products/{{ c.key }}/">{{ c.name }}</a>{% endif %}{% endfor %}
+          </div>
+        </div>
+        <a href="/products/carpet/">Carpet</a>
         <a href="/about/">About</a>
       </nav>
-      <a class="btn btn--sm" href="/quote/">Free quote</a>
+      <a class="btn btn--sm top__quote" href="/quote/">Free quote</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 

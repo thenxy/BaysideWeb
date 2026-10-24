@@ -13,11 +13,6 @@ specs:
   Stain Resistance: Yes - SDN fibre-level protection
   Traffic Rating: Heavy Traffic
   Suitable For: Offices, retail, hospitality, education, aged care
-  Tile Size: To be confirmed
-  Pile Height: To be confirmed
-  Total Thickness: To be confirmed
-  Pile Weight: To be confirmed
-  Backing Options: To be confirmed
 source: https://jimsflooring.com.au/product/altitude-airlay/
 ---
 Altitude Airlay elevates any commercial interior with a multi level loop carpet tile that handles heavy traffic without losing its character. Specifically, the tufted multi-level loop texture creates a surface that catches light beautifully and resists the wear patterns that flat loop tiles develop over time.

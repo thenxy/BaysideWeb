@@ -13,9 +13,6 @@ specs:
   Pack Weight: 19.25kg
   Residential Warranty: 30 years
   Commercial Warranty: 10 years
-  Installation Method: To be confirmed
-  Core Type: To be confirmed
-  Wear Layer: To be confirmed
   Product Warranty: Download
   Installation Instructions: Download
   Care and Maintenance: Download

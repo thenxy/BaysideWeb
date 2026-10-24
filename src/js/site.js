@@ -41,4 +41,28 @@
     var p = new URLSearchParams(location.search).get("product");
     if (p) field.value = p;
   }
+
+  // Navigation: Flooring dropdown (click/tap) and mobile menu
+  var group = document.querySelector(".nav__group");
+  var navBtn = document.querySelector(".nav__btn");
+  var nav = document.getElementById("nav");
+  var burger = document.querySelector(".burger");
+  if (group && navBtn) {
+    var setOpen = function (open) {
+      group.classList.toggle("is-open", open);
+      navBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    navBtn.addEventListener("click", function () { setOpen(!group.classList.contains("is-open")); });
+    document.addEventListener("click", function (e) {
+      if (!group.contains(e.target)) setOpen(false);
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
+  }
+  if (burger && nav) {
+    burger.addEventListener("click", function () {
+      var open = !nav.classList.contains("is-open");
+      nav.classList.toggle("is-open", open);
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
 })();

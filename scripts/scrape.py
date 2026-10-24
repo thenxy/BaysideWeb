@@ -300,6 +300,9 @@ def tidy(t):
     return re.sub(r"\b[A-Z]{4,}\b", lambda m: m.group().title(), t)
 
 
+UNCONFIRMED = re.compile(r"to be (?:confirmed|advised|announced)|\btbc\b|\btba\b|coming soon|^\W*(?:n/?a|-+|tbd)\W*$", re.I)
+
+
 def scrub_text(t):
     """Like scrub() but keeps sentence punctuation intact."""
     t = SCRUB.sub(" ", t or "")
@@ -310,7 +313,11 @@ def write_product(p, slugs, cache, images=True):
     p["title"], p["range"] = tidy(p["title"]), tidy(p["range"]) or None
     p["desc"] = scrub_text(p.get("desc"))
     if p.get("specs"):
-        p["specs"] = {k: scrub_text(v) for k, v in p["specs"].items() if scrub_text(v)}
+        p["specs"] = {k: scrub_text(v) for k, v in p["specs"].items()
+                      if scrub_text(v) and not UNCONFIRMED.search(scrub_text(v))}
+    for k in ("thickness", "sku"):
+        if p.get(k) and UNCONFIRMED.search(str(p[k])):
+            p[k] = None
     base = slugify(f"{p['range'] or ''} {p['title']}")
     slug, n = base, 2
     while slug in slugs:

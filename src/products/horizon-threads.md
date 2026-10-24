@@ -14,10 +14,6 @@ specs:
   Pet Friendly: 'Yes'
   Family Friendly: 'Yes'
   Colours Available: '12'
-  Pile Construction: To be confirmed
-  Pile Height: To be confirmed
-  GSM: To be confirmed
-  Roll Width: To be confirmed
 source: https://jimsflooring.com.au/product/horizon-threads/
 ---
 Horizon Threads brings everything a family home needs from a carpet and packages it in a super soft finish that you actually want to live with. As a Solution Dyed Nylon carpet, it locks colour deep into every fibre strand, delivering UV fade resistance, easy cleaning, and a vibrancy that stays consistent for years without fading or dulling.

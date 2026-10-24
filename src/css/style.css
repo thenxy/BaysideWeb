@@ -162,3 +162,32 @@ em { font-style: italic; color: var(--oak-dark); }
   .brand__name { font-size: .95rem; line-height: 1.15; }
   .btn--sm { white-space: nowrap; }
 }
+
+/* navigation: Flooring dropdown, Carpet, About */
+.nav__group { position: relative; }
+.nav__btn { font: inherit; font-weight: 500; font-size: .95rem; color: var(--ink); background: none; border: 0; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.nav__btn:hover { color: var(--oak-dark); }
+.nav__chev { width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg) translate(-2px, -2px); transition: transform .15s; }
+.nav__menu { display: none; position: absolute; top: 100%; left: -16px; min-width: 190px; padding: 14px 8px 8px; z-index: 30; }
+.nav__menu::before { content: ""; position: absolute; inset: 8px 0 0 0; background: var(--chalk); border: 1px solid var(--line); border-radius: var(--r); box-shadow: 0 10px 28px rgba(31,42,39,.14); z-index: -1; }
+.nav__menu a { display: block; padding: 9px 16px; border-radius: 4px; }
+.nav__menu a:hover { background: var(--paper); }
+.nav__group:hover .nav__menu, .nav__group.is-open .nav__menu { display: block; }
+.nav__group.is-open .nav__chev, .nav__group:hover .nav__chev { transform: rotate(-135deg) translate(-2px, -2px); }
+.burger { display: inline-flex; flex-direction: column; justify-content: center; gap: 5px; width: 40px; height: 40px; padding: 10px; background: none; border: 1px solid var(--line); border-radius: var(--r); cursor: pointer; }
+.burger span { display: block; height: 2px; background: var(--ink); }
+@media (max-width: 959px) {
+  .top__in { gap: 12px; }
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--chalk); border-bottom: 1px solid var(--line); padding: 8px 16px 16px; box-shadow: 0 12px 24px rgba(31,42,39,.1); }
+  .nav.is-open { display: flex; }
+  .nav a, .nav__btn { padding: 12px 4px; font-size: 1.05rem; }
+  .nav__btn { width: 100%; justify-content: space-between; }
+  .nav__menu { display: none; position: static; padding: 0 0 6px 12px; min-width: 0; }
+  .nav__menu::before { display: none; }
+  .nav__group:hover .nav__menu { display: none; }
+  .nav__group.is-open .nav__menu { display: block; }
+}
+@media (min-width: 960px) {
+  .burger { display: none; }
+  .nav { display: flex; align-items: center; }
+}
