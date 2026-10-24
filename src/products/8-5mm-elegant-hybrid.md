@@ -1,11 +1,19 @@
 ---
 title: 8.5mm Elegant Hybrid
 category: hybrid
-sku: HYB008
 thickness: 8.5mm
-image: /img/products/8-5mm-elegant-hybrid.webp
-gallery:
-- /img/products/8-5mm-elegant-hybrid-2.webp
+colours:
+- name: Wild Spotted Gum
+  image: /img/products/8-5mm-elegant-hybrid-wild-spotted-gum.webp
+- name: Nsw Blackbutt
+  image: /img/products/8-5mm-elegant-hybrid-nsw-blackbutt.webp
+- name: Grey Oak
+  image: /img/products/8-5mm-elegant-hybrid-grey-oak.webp
+- name: Nsw Black Butt
+  image: /img/products/8-5mm-elegant-hybrid-nsw-black-butt.webp
+- name: Natural Oak
+  image: /img/products/8-5mm-elegant-hybrid-natural-oak.webp
+image: /img/products/8-5mm-elegant-hybrid-wild-spotted-gum.webp
 specs:
   Thickness: 8.5mm
   Application: Residential and Commercial

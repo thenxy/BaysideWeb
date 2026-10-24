@@ -13,7 +13,7 @@
       var term = q.value.trim().toLowerCase();
       var matches = cards.filter(function (c) {
         return (cat === "all" || c.dataset.cat === cat) &&
-          (!term || c.textContent.toLowerCase().indexOf(term) > -1);
+          (!term || (c.textContent + " " + (c.dataset.search || "")).toLowerCase().indexOf(term) > -1);
       });
       cards.forEach(function (c) { c.hidden = true; });
       matches.slice(0, limit).forEach(function (c) { c.hidden = false; });
@@ -63,6 +63,44 @@
       var open = !nav.classList.contains("is-open");
       nav.classList.toggle("is-open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  // Product page colour picker
+  var colours = document.getElementById("colours");
+  if (colours) {
+    var big = document.getElementById("pdp-img");
+    var label = document.getElementById("colour-name");
+    var csp = document.getElementById("colour-specs");
+    var quote = document.getElementById("quote-btn");
+    var swatches = [].slice.call(colours.querySelectorAll(".sw"));
+    swatches.forEach(function (b) {
+      b.addEventListener("click", function () {
+        swatches.forEach(function (x) { x.classList.remove("is-on"); x.setAttribute("aria-pressed", "false"); });
+        b.classList.add("is-on");
+        b.setAttribute("aria-pressed", "true");
+        var name = b.dataset.name;
+        label.textContent = name;
+        var thumb = b.querySelector("img");
+        if (thumb && big) { big.src = thumb.getAttribute("src"); big.alt = name; }
+        if (csp) {
+          var sp = {};
+          try { sp = JSON.parse(b.dataset.specs || "{}"); } catch (e) {}
+          csp.textContent = "";
+          Object.keys(sp).forEach(function (k) {
+            var row = document.createElement("div");
+            var dt = document.createElement("dt"); dt.textContent = k;
+            var dd = document.createElement("dd"); dd.textContent = sp[k];
+            row.appendChild(dt); row.appendChild(dd); csp.appendChild(row);
+          });
+          csp.hidden = !Object.keys(sp).length;
+        }
+        if (quote) {
+          var u = new URL(quote.getAttribute("href"), location.href);
+          u.searchParams.set("product", quote.dataset.product + " - " + name);
+          quote.setAttribute("href", u.pathname + u.search);
+        }
+      });
     });
   }
 })();

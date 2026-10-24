@@ -2,10 +2,22 @@
 title: Graceful Living
 category: carpet
 subcategory: Nylon
-sku: CPTNYL003
-image: /img/products/graceful-living.webp
-gallery:
-- /img/products/graceful-living-2.webp
+colours:
+- name: Graceful Living
+  image: /img/products/graceful-living-graceful-living.webp
+- name: Regal Stone
+  image: /img/products/graceful-living-regal-stone.webp
+- name: Polished Alloy
+  image: /img/products/graceful-living-polished-alloy.webp
+- name: Stirling Grey
+  image: /img/products/graceful-living-stirling-grey.webp
+- name: Iron Weave
+  image: /img/products/graceful-living-iron-weave.webp
+- name: Opal Beige
+  image: /img/products/graceful-living-opal-beige.webp
+- name: Truffle Weave
+  image: /img/products/graceful-living-truffle-weave.webp
+image: /img/products/graceful-living-graceful-living.webp
 specs:
   Pile Type: Cut Pile Twist
   Fibre / Fabric: 100% Greenstrand™ Solution Dyed Nylon

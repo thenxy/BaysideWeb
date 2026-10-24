@@ -2,9 +2,32 @@
 title: Vinyl Plank - 4mm Oak Vinyl
 category: vinyl
 thickness: 4mm
-image: /img/products/vinyl-plank-4mm-oak-vinyl.webp
-gallery:
-- /img/products/vinyl-plank-4mm-oak-vinyl-2.webp
+colours:
+- name: Eclipse
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-eclipse.webp
+- name: Glacier
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-glacier.webp
+- name: Sandridge
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-sandridge.webp
+- name: Golden Oak
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-golden-oak.webp
+- name: Soft Pine
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-soft-pine.webp
+- name: Claywood
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-claywood.webp
+- name: Chrome Mist
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-chrome-mist.webp
+- name: Alpha Spotted Gum
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-alpha-spotted-gum.webp
+- name: Saffron Oak
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-saffron-oak.webp
+- name: Blackbutt
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-blackbutt.webp
+- name: Earthwood
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-earthwood.webp
+- name: Spotted Gum
+  image: /img/products/vinyl-plank-4mm-oak-vinyl-spotted-gum.webp
+image: /img/products/vinyl-plank-4mm-oak-vinyl-eclipse.webp
 specs:
   Plank Size: 233 × 1540mm
   Thickness: 4mm

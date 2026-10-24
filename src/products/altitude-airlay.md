@@ -2,9 +2,24 @@
 title: Altitude - Airlay
 category: carpet
 subcategory: Carpet tiles
-image: /img/products/altitude-airlay.webp
-gallery:
-- /img/products/altitude-airlay-2.webp
+colours:
+- name: Elevation
+  image: /img/products/altitude-airlay-elevation.webp
+- name: Highland
+  image: /img/products/altitude-airlay-highland.webp
+- name: Peak
+  image: /img/products/altitude-airlay-peak.webp
+- name: Platform
+  image: /img/products/altitude-airlay-platform.webp
+- name: Ridge
+  image: /img/products/altitude-airlay-ridge.webp
+- name: Apex
+  image: /img/products/altitude-airlay-apex.webp
+- name: Summit
+  image: /img/products/altitude-airlay-summit.webp
+- name: Vertex
+  image: /img/products/altitude-airlay-vertex.webp
+image: /img/products/altitude-airlay-elevation.webp
 specs:
   Brand: Airlay
   Type: Tufted Multi-Level Loop Carpet Tile

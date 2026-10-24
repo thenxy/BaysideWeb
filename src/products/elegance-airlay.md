@@ -2,9 +2,26 @@
 title: Elegance - Airlay
 category: carpet
 subcategory: Carpet tiles
-image: /img/products/elegance-airlay.webp
-gallery:
-- /img/products/elegance-airlay-2.webp
+colours:
+- name: Putty
+  image: /img/products/elegance-airlay-putty.webp
+- name: Coast
+  image: /img/products/elegance-airlay-coast.webp
+- name: Terrain
+  image: /img/products/elegance-airlay-terrain.webp
+- name: Shale
+  image: /img/products/elegance-airlay-shale.webp
+- name: Silver
+  image: /img/products/elegance-airlay-silver.webp
+- name: Steel
+  image: /img/products/elegance-airlay-steel.webp
+- name: Pewter
+  image: /img/products/elegance-airlay-pewter.webp
+- name: Boulder
+  image: /img/products/elegance-airlay-boulder.webp
+- name: Maritime
+  image: /img/products/elegance-airlay-maritime.webp
+image: /img/products/elegance-airlay-putty.webp
 specs:
   Brand: Airlay
   Fibre: Solution Dyed Nylon

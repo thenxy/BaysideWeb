@@ -2,9 +2,12 @@
 title: Safeguard R10
 category: vinyl
 thickness: 2mm
-image: /img/products/safeguard-r10.webp
-gallery:
-- /img/products/safeguard-r10-2.webp
+colours:
+- name: Au Afp Safeguard R10 Beige2
+  image: /img/products/safeguard-r10-au-afp-safeguard-r10-beige2.webp
+- name: Au Afp Safeguard R10 Mid Grey2
+  image: /img/products/safeguard-r10-au-afp-safeguard-r10-mid-grey2.webp
+image: /img/products/safeguard-r10-au-afp-safeguard-r10-beige2.webp
 specs:
   Type: Safety Vinyl Floor
   Dimensions: 20m × 2m

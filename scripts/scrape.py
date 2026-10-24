@@ -26,7 +26,6 @@ import fetch  # noqa: E402
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 PRODUCTS = ROOT / "src" / "products"
 IMG = ROOT / "src" / "img" / "products"
-MAX_IMAGES = 2
 IMG_WIDTH = 800
 
 JIMS_CATEGORY = {
@@ -124,21 +123,44 @@ def scrape_jims(cache):
             tds = [td.get_text(" ", strip=True) for td in tr.find_all("td")]
             if len(tds) == 2 and tds[0] and tds[1] and tds[0].lower() not in ("product name", "specification"):
                 specs[tds[0]] = tds[1]
-        colours = []
+        colours = {}
         for im in s.select("img.product-thumb"):
-            v = im.get("data-variant")
-            if v and v not in colours:
-                colours.append(v)
-        images = [urllib.parse.urljoin(base, i) for i in (ld.get("image") or [])]
+            nm = clean_variant(im.get("data-variant"))
+            src = im.get("data-full-src") or im.get("src")
+            if nm and src:
+                full = urllib.parse.urljoin(base, src)
+                colours.setdefault(nm, []).append([re.sub(r"-\d+x\d+(?=\.\w+$)", "", full), full])
+        images = [[urllib.parse.urljoin(base, i)] for i in (ld.get("image") or [])]
         out.append(dict(
-            title=name, brand=brand, range=None, category=cat, subcategory=sub,
-            sku=sku.group(1).strip() if sku else None,
+            title=name, category=cat, subcategory=sub,
             thickness=thickness_of(name, specs.get("Dimensions"), specs.get("Thickness")),
-            colours=colours or None, specs=specs or None,
+            colours=[dict(name=n, images=[v[0]]) for n, v in colours.items()] or None,
+            specs=specs or None,
             desc=short(short_desc.get_text(" ") if short_desc else ld.get("description", "")),
             images=images, source=u, supplier="Jim's Flooring",
         ))
     return out
+
+
+JUNK_TOKEN = re.compile(
+    r"^(?:\d+p?|\d+x\d*\w*|[a-z]|swatch|lo|hi|res|lr|hr|web|ok|scaled|\d?sm|z|k|gf|pdf|hn\d+\w*|(?=[0-9a-f]*\d)[0-9a-f]{3,})$",
+    re.I)
+
+
+def clean_variant(v):
+    """Colour names come from image file names; drop spec-sheet / montage / code-only entries."""
+    v = re.sub(r"\s+", " ", v or "").strip()
+    if (not v or re.search(r"spec|brochure|pdf|data ?sheet|swatch card", v, re.I) or re.match(r"^\d+[A-Za-z]+\d", v)
+            or re.match(r"^(?:img|image|dsc|photo|screenshot)\b", v, re.I)):
+        return None
+    toks = []
+    for t in v.split():
+        t = re.sub(r"(?i)^(?:armstrong|floortex|dunlop|jims)(?=[a-z])", "", t)  # brand glued to a word
+        t = re.sub(r"^20(?=[A-Za-z])", "", t)  # "%20" left over from a URL-encoded space
+        if t and not JUNK_TOKEN.match(t):
+            toks.append(t[0].upper() + t[1:] if t.islower() else t)
+    v = scrub(" ".join(toks))
+    return v if len(v) > 1 else None
 
 
 # ------------------------------------------------------ The Flooring Lab
@@ -151,7 +173,7 @@ def scrape_flooringlab(cache):
     base = "https://theflooringlab.com.au"
     urls = [u for u in fetch.locs(fetch.get(base + "/sitemap.xml", cache))
             if re.search(r"/colours/(phoenix|lumina)-", u)]
-    out = []
+    groups = {}
     for u in urls:
         h = fetch.get(u, cache)
         ld = ld_product(h)
@@ -170,15 +192,17 @@ def scrape_flooringlab(cache):
         if not dims or not t or t[:-2] != FL_RANGES[rng]:
             print(f"  ! skipping {u}: thickness {t} not {FL_RANGES[rng]}mm")
             continue
-        rname = rng.title()
-        out.append(dict(
-            title=name, brand="The Flooring Lab", range=f"{rname} {t} Hybrid", category="hybrid",
-            subcategory=None, sku=ld.get("sku"), thickness=t, colours=None, specs=specs,
-            desc=f"{name} from the {rname} collection: a {t} hybrid plank with a "
-                 f"{specs.get('Wear Layer', '0.5 mm').replace(' ', '')} wear layer and a "
-                 f"{re.sub(r'(?i)\s*years?$', '', specs.get('Residential Warranty', '25 years'))}-year residential warranty.",
-            images=[ld["image"]] if ld.get("image") else [], source=u, supplier="The Flooring Lab",
-        ))
+        g = groups.setdefault(rng, dict(title=f"{rng.title()} {t} Hybrid", category="hybrid", subcategory=None,
+                                        thickness=t, specs=specs, colours=[], images=[], source=base + f"/collections/{rng}",
+                                        supplier="The Flooring Lab"))
+        g["colours"].append(dict(name=name, images=[ld["image"]] if ld.get("image") else []))
+    out = []
+    for g in groups.values():
+        sp = g["specs"]
+        w = re.sub(r"(?i)\s*years?$", "", sp.get("Residential Warranty", "25 years"))
+        g["desc"] = (f"A {g['thickness']} hybrid plank in {len(g['colours'])} colours, with a "
+                     f"{sp.get('Wear Layer', '0.5 mm').replace(' ', '')} wear layer and a {w}-year residential warranty.")
+        out.append(g)
     return out
 
 
@@ -206,13 +230,17 @@ def scrape_everfloor(cache):
         for p in set(re.findall(r'href="/product/([^"]+)"', page)):
             prod_cat[p] = cat_of.get(slug, "accessories")
             prod_range[p] = range_name[slug]
-    out = []
+    groups = {}
+    rkey = lambda r: " ".join(sorted(t for t in re.findall(r"[a-z0-9.]+", r.lower().replace("-", " "))  # noqa: E731
+                                     if t not in ("laminate", "flooring")))
     for u in [u for u in sm if "/product/" in u]:
         slug = u.rsplit("/", 1)[1]
         h = fetch.get(u, cache)
         s = BeautifulSoup(h, "lxml")
         h1 = s.find("h1")
         colour = h1.get_text(strip=True) if h1 else (s.title.string or slug)
+        if "coming soon" in colour.lower():
+            continue
         specs = {}
         for k in s.select("p.product-details"):
             v = k.find_next_sibling("p", class_="details-specs")
@@ -232,10 +260,8 @@ def scrape_everfloor(cache):
         if not imgs and h1:  # own image shown twice (main + zoom) while "related" ones appear once
             after = [i.get("src", "") for i in h1.find_all_next("img")
                      if re.search(r"\.(jpe?g|png|webp)$", i.get("src", ""), re.I) and "EF%20Sample" not in i.get("src", "")]
-            imgs = [u for u in dict.fromkeys(after) if after.count(u) >= 2][:MAX_IMAGES]
+            imgs = [x for x in dict.fromkeys(after) if after.count(x) >= 2][:1]
         title_tag = (s.title.string or "").strip()
-        if "coming soon" in colour.lower():
-            continue
         cat = prod_cat.get(slug)
         rng = prod_range.get(slug)
         if not cat:  # not listed on any category page: infer from the product title
@@ -245,38 +271,53 @@ def scrape_everfloor(cache):
                         if w in low), "accessories")
             rng = re.sub(r"\s+-\s+.*$", "", title_tag) if cat != "accessories" else "Flooring Trims"
         rng = re.sub(r"\s+", " ", rng or "").strip()
-        bits = [specs.get("Finish"), specs.get("Size")]
-        desc = f"{colour} from the {rng} range"
-        desc += (": " + ", ".join(b for b in bits if b) + ".") if any(bits) else "."
-        if specs.get("Warranty"):
-            w = re.sub(r"(?i)\s*years?$", "", specs["Warranty"]).strip()
-            desc += f" {w}-year warranty." if w.isdigit() else f" Warranty: {specs['Warranty']}."
-        out.append(dict(
-            title=colour, brand="Everfloor", range=rng,
-            category=cat, subcategory=None, sku=None,
-            thickness=thickness_of(specs.get("Size"), rng, title_tag),
-            colours=None, specs=specs or None, desc=desc, images=imgs, source=u,
-            supplier="Everfloor",
-        ))
+        g = groups.get(rkey(rng))
+        if g is None:
+            g = groups[rkey(rng)] = dict(title=rng, category=cat, subcategory=None, colours=[], images=[],
+                                         source=u, supplier="Everfloor", _specs=[])
+        g["colours"].append(dict(name=colour, images=imgs[:1], _specs=specs))
+    out = []
+    for g in groups.values():
+        cols = g["colours"]
+        allspecs = [c.pop("_specs") for c in cols]
+        keys = list(dict.fromkeys(k for sp in allspecs for k in sp))
+        common = {k: allspecs[0][k] for k in keys
+                  if all(sp.get(k) == allspecs[0].get(k) for sp in allspecs) and k in allspecs[0]}
+        for c, sp in zip(cols, allspecs):
+            diff = {k: v for k, v in sp.items() if k not in common}
+            if diff:
+                c["specs"] = diff
+        g["specs"] = common or None
+        g.pop("_specs", None)
+        g["thickness"] = thickness_of(common.get("Size"), g["title"], *(sp.get("Size") for sp in allspecs))
+        bits = [common.get("Finish")]
+        g["desc"] = f"{g['title']} is available in {len(cols)} colour{'s' if len(cols) != 1 else ''}." + (
+            f" Finish: {common['Finish']}." if common.get("Finish") else "")
+        if common.get("Warranty"):
+            w = re.sub(r"(?i)\s*years?$", "", common["Warranty"]).strip()
+            g["desc"] += f" {w}-year warranty." if w.isdigit() else f" Warranty: {common['Warranty']}."
+        out.append(g)
     return out
 
 
 # ----------------------------------------------------------------- output
-def save_image(url, dest, cache):
+def save_image(urls, dest, cache):
     if dest.exists():
         return True
-    try:
-        raw = fetch.get(url, cache, binary=True)
-        im = Image.open(io.BytesIO(raw))
-        im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
-        if im.width > IMG_WIDTH:
-            im = im.resize((IMG_WIDTH, round(im.height * IMG_WIDTH / im.width)), Image.LANCZOS)
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        im.save(dest, "WEBP", quality=72, method=6)
-        return True
-    except Exception as e:  # noqa: BLE001
-        print("  ! image failed", url, e)
-        return False
+    for url in ([urls] if isinstance(urls, str) else urls):
+        try:
+            raw = fetch.get(url, cache, binary=True)
+            im = Image.open(io.BytesIO(raw))
+            im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
+            if im.width > IMG_WIDTH:
+                im = im.resize((IMG_WIDTH, round(im.height * IMG_WIDTH / im.width)), Image.LANCZOS)
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            im.save(dest, "WEBP", quality=72, method=6)
+            return True
+        except Exception as e:  # noqa: BLE001
+            last = e
+    print("  ! image failed", urls, last)
+    return False
 
 
 # Company names that must never appear on the public site.
@@ -309,36 +350,69 @@ def scrub_text(t):
     return re.sub(r"\s+", " ", t).strip()
 
 
+def clean_specs(sp):
+    out = {}
+    for k, v in (sp or {}).items():
+        v = scrub_text(str(v))
+        if v and not UNCONFIRMED.search(v):
+            out[k] = v
+    return out
+
+
 def write_product(p, slugs, cache, images=True):
-    p["title"], p["range"] = tidy(p["title"]), tidy(p["range"]) or None
+    p["title"] = tidy(p["title"])
     p["desc"] = scrub_text(p.get("desc"))
-    if p.get("specs"):
-        p["specs"] = {k: scrub_text(v) for k, v in p["specs"].items()
-                      if scrub_text(v) and not UNCONFIRMED.search(scrub_text(v))}
-    for k in ("thickness", "sku"):
-        if p.get(k) and UNCONFIRMED.search(str(p[k])):
-            p[k] = None
-    base = slugify(f"{p['range'] or ''} {p['title']}")
+    p["specs"] = clean_specs(p.get("specs"))
+    if p.get("thickness") and UNCONFIRMED.search(str(p["thickness"])):
+        p["thickness"] = None
+    base = slugify(p["title"])
     slug, n = base, 2
     while slug in slugs:
         slug = f"{base}-{n}"
         n += 1
     slugs.add(slug)
-    saved = []
-    if images:
-        for i, url in enumerate(p["images"][:MAX_IMAGES]):
-            name = f"{slug}.webp" if i == 0 else f"{slug}-{i + 1}.webp"
-            if save_image(url, IMG / name, cache):
-                saved.append(f"/img/products/{name}")
+    colours, used = [], set()
+    for c in p.get("colours") or []:
+        name = tidy(c["name"])
+        if name.lower().startswith(p["title"].lower() + " "):  # drop a repeated product-line prefix
+            name = name[len(p["title"]) + 1:]
+        if not name:
+            continue
+        cs = slugify(name) or "colour"
+        while cs in used:
+            cs += "-x"
+        used.add(cs)
+        entry = {"name": name}
+        if images and c.get("images"):
+            fn = f"{slug}-{cs}.webp"
+            if save_image(c["images"][0], IMG / fn, cache):
+                entry["image"] = f"/img/products/{fn}"
+        sp = clean_specs(c.get("specs"))
+        if sp:
+            entry["specs"] = sp
+        colours.append(entry)
     fm = {"title": p["title"], "category": p["category"]}
-    for k in ("range", "subcategory", "sku", "thickness"):
+    for k in ("subcategory", "thickness"):
         if p.get(k):
             fm[k] = p[k]
-    if saved:
-        fm["image"] = saved[0]
-        if len(saved) > 1:
-            fm["gallery"] = saved[1:]
-    if p.get("specs"):
+    if len(colours) > 1:
+        fm["colours"] = colours
+        first = next((c["image"] for c in colours if c.get("image")), None)
+        if first:
+            fm["image"] = first
+    else:
+        saved = []
+        imgs = [c for c in (p.get("images") or [])] or [[u] for c in (p.get("colours") or []) for u in c.get("images", [])]
+        if images:
+            for i, urls in enumerate(imgs[:3]):
+                fn = f"{slug}.webp" if i == 0 else f"{slug}-{i + 1}.webp"
+                if save_image(urls, IMG / fn, cache):
+                    saved.append(f"/img/products/{fn}")
+        if saved:
+            fm["image"] = saved[0]
+            if len(saved) > 1:
+                fm["gallery"] = saved[1:]
+    if p["specs"]:
         fm["specs"] = p["specs"]
     fm["source"] = p["source"]
     text = "---\n" + yaml.safe_dump(fm, allow_unicode=True, sort_keys=False, width=100) + "---\n"

@@ -1,11 +1,25 @@
 ---
 title: La Vida
 category: laminate
-sku: LAM009
 thickness: 236mm
-image: /img/products/la-vida.webp
-gallery:
-- /img/products/la-vida-2.webp
+colours:
+- name: Nsw Spotted Gum Install
+  image: /img/products/la-vida-nsw-spotted-gum-install.webp
+- name: Santa Monica Install
+  image: /img/products/la-vida-santa-monica-install.webp
+- name: Pale Oak Install
+  image: /img/products/la-vida-pale-oak-install.webp
+- name: Loft Grey Install
+  image: /img/products/la-vida-loft-grey-install.webp
+- name: Finesse Install
+  image: /img/products/la-vida-finesse-install.webp
+- name: Elegance Install
+  image: /img/products/la-vida-elegance-install.webp
+- name: Driftwood Install
+  image: /img/products/la-vida-driftwood-install.webp
+- name: Bellagio Oak Install
+  image: /img/products/la-vida-bellagio-oak-install.webp
+image: /img/products/la-vida-nsw-spotted-gum-install.webp
 specs:
   Type: 4D Laminate Flooring
   Dimensions: 2260 × 236mm

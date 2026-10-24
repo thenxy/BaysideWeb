@@ -1,11 +1,21 @@
 ---
 title: 7mm Oak hybrid
 category: hybrid
-sku: HYB006B
 thickness: 7mm
-image: /img/products/7mm-oak-hybrid.webp
-gallery:
-- /img/products/7mm-oak-hybrid-2.webp
+colours:
+- name: Velvet Allure
+  image: /img/products/7mm-oak-hybrid-velvet-allure.webp
+- name: Winter Blossom
+  image: /img/products/7mm-oak-hybrid-winter-blossom.webp
+- name: Snowdrift
+  image: /img/products/7mm-oak-hybrid-snowdrift.webp
+- name: Marigold
+  image: /img/products/7mm-oak-hybrid-marigold.webp
+- name: Lunar Ash
+  image: /img/products/7mm-oak-hybrid-lunar-ash.webp
+- name: Sunflower
+  image: /img/products/7mm-oak-hybrid-sunflower.webp
+image: /img/products/7mm-oak-hybrid-velvet-allure.webp
 specs:
   Plank Size: 180 × 1840 × 7mm
   Structure: 6.0mm SPC Core

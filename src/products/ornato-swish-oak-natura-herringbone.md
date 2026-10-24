@@ -1,11 +1,21 @@
 ---
 title: Ornato Swish Oak Natura Herringbone
 category: timber
-sku: TIM011
 thickness: 3mm
-image: /img/products/ornato-swish-oak-natura-herringbone.webp
-gallery:
-- /img/products/ornato-swish-oak-natura-herringbone-2.webp
+colours:
+- name: French Natural Herringbone
+  image: /img/products/ornato-swish-oak-natura-herringbone-french-natural-herringbone.webp
+- name: French Ghost Herring
+  image: /img/products/ornato-swish-oak-natura-herringbone-french-ghost-herring.webp
+- name: French Carbon Herringbone
+  image: /img/products/ornato-swish-oak-natura-herringbone-french-carbon-herringbone.webp
+- name: Fiona Brown
+  image: /img/products/ornato-swish-oak-natura-herringbone-fiona-brown.webp
+- name: Danish White Herri
+  image: /img/products/ornato-swish-oak-natura-herringbone-danish-white-herri.webp
+- name: Ambient Sand Herringbone
+  image: /img/products/ornato-swish-oak-natura-herringbone-ambient-sand-herringbone.webp
+image: /img/products/ornato-swish-oak-natura-herringbone-french-natural-herringbone.webp
 specs:
   Product Code: SHO-03
   Type: Engineered Oak Floating Floor

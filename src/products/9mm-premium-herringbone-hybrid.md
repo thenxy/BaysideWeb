@@ -1,10 +1,10 @@
 ---
 title: 9MM Premium Herringbone Hybrid
 category: hybrid
-sku: HYB013
 image: /img/products/9mm-premium-herringbone-hybrid.webp
 gallery:
 - /img/products/9mm-premium-herringbone-hybrid-2.webp
+- /img/products/9mm-premium-herringbone-hybrid-3.webp
 specs:
   Size: 600 × 125 × 9 mm
   Total Thickness: 9mm

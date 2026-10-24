@@ -2,9 +2,26 @@
 title: Dusk - Airlay
 category: carpet
 subcategory: Carpet tiles
-image: /img/products/dusk-airlay.webp
-gallery:
-- /img/products/dusk-airlay-2.webp
+colours:
+- name: Nighttide
+  image: /img/products/dusk-airlay-nighttide.webp
+- name: Afterdark
+  image: /img/products/dusk-airlay-afterdark.webp
+- name: Twilight
+  image: /img/products/dusk-airlay-twilight.webp
+- name: Midnight
+  image: /img/products/dusk-airlay-midnight.webp
+- name: Blacksea
+  image: /img/products/dusk-airlay-blacksea.webp
+- name: Nightsky
+  image: /img/products/dusk-airlay-nightsky.webp
+- name: Dusk Range Pitchblack
+  image: /img/products/dusk-airlay-dusk-range-pitchblack.webp
+- name: Dusk Range Starlight
+  image: /img/products/dusk-airlay-dusk-range-starlight.webp
+- name: Dusk Range Moonlight
+  image: /img/products/dusk-airlay-dusk-range-moonlight.webp
+image: /img/products/dusk-airlay-nighttide.webp
 specs:
   Brand: Airlay
   Design Character: Deliberately dark and moody - deep tones and rich textures

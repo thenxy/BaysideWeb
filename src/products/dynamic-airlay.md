@@ -2,9 +2,22 @@
 title: Dynamic - Airlay
 category: carpet
 subcategory: Carpet tiles
-image: /img/products/dynamic-airlay.webp
-gallery:
-- /img/products/dynamic-airlay-2.webp
+colours:
+- name: Effect New
+  image: /img/products/dynamic-airlay-effect-new.webp
+- name: Drive New
+  image: /img/products/dynamic-airlay-drive-new.webp
+- name: Bold New
+  image: /img/products/dynamic-airlay-bold-new.webp
+- name: Lively New
+  image: /img/products/dynamic-airlay-lively-new.webp
+- name: Energy New
+  image: /img/products/dynamic-airlay-energy-new.webp
+- name: Active New
+  image: /img/products/dynamic-airlay-active-new.webp
+- name: Vital
+  image: /img/products/dynamic-airlay-vital.webp
+image: /img/products/dynamic-airlay-effect-new.webp
 specs:
   Brand: Airlay
   Type: Multi-Loop Carpet Tile

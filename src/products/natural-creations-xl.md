@@ -5,6 +5,7 @@ thickness: 230mm
 image: /img/products/natural-creations-xl.webp
 gallery:
 - /img/products/natural-creations-xl-2.webp
+- /img/products/natural-creations-xl-3.webp
 specs:
   Type: Luxury Vinyl Plank
   Dimensions: 1500 × 230mm

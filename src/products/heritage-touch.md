@@ -2,10 +2,28 @@
 title: Heritage Touch
 category: carpet
 subcategory: Nylon
-sku: CPTNYL005
-image: /img/products/heritage-touch.webp
-gallery:
-- /img/products/heritage-touch-2.webp
+colours:
+- name: Heritage Touch
+  image: /img/products/heritage-touch-heritage-touch.webp
+- name: Crystal Silver
+  image: /img/products/heritage-touch-crystal-silver.webp
+- name: Stirling Alloy
+  image: /img/products/heritage-touch-stirling-alloy.webp
+- name: Twilight Cloud
+  image: /img/products/heritage-touch-twilight-cloud.webp
+- name: Velvet Ash
+  image: /img/products/heritage-touch-velvet-ash.webp
+- name: Luxe Graphite
+  image: /img/products/heritage-touch-luxe-graphite.webp
+- name: Marble Essence
+  image: /img/products/heritage-touch-marble-essence.webp
+- name: Mocha Stone
+  image: /img/products/heritage-touch-mocha-stone.webp
+- name: Opal Sand
+  image: /img/products/heritage-touch-opal-sand.webp
+- name: Lunar Grey
+  image: /img/products/heritage-touch-lunar-grey.webp
+image: /img/products/heritage-touch-heritage-touch.webp
 specs:
   Pile Type: Cut Pile Twist
   Fibre / Fabric: 100% Greenstrand™ Solution Dyed Nylon

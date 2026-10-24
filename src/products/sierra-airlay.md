@@ -2,9 +2,36 @@
 title: Sierra - Airlay
 category: carpet
 subcategory: Carpet tiles
-image: /img/products/sierra-airlay.webp
-gallery:
-- /img/products/sierra-airlay-2.webp
+colours:
+- name: Stone
+  image: /img/products/sierra-airlay-stone.webp
+- name: Sierra Stone
+  image: /img/products/sierra-airlay-sierra-stone.webp
+- name: Sierra Paperbark
+  image: /img/products/sierra-airlay-sierra-paperbark.webp
+- name: Sierra Pepper
+  image: /img/products/sierra-airlay-sierra-pepper.webp
+- name: Sierra Smoke
+  image: /img/products/sierra-airlay-sierra-smoke.webp
+- name: Sierra Antique
+  image: /img/products/sierra-airlay-sierra-antique.webp
+- name: Coal Small
+  image: /img/products/sierra-airlay-coal-small.webp
+- name: Sierra Cobalt
+  image: /img/products/sierra-airlay-sierra-cobalt.webp
+- name: Pepper
+  image: /img/products/sierra-airlay-pepper.webp
+- name: Sierra Cobaltpaperbark
+  image: /img/products/sierra-airlay-sierra-cobaltpaperbark.webp
+- name: Cobalt
+  image: /img/products/sierra-airlay-cobalt.webp
+- name: Paper Bark
+  image: /img/products/sierra-airlay-paper-bark.webp
+- name: Paperbark And Pepper
+  image: /img/products/sierra-airlay-paperbark-and-pepper.webp
+- name: Stone Paper Bark
+  image: /img/products/sierra-airlay-stone-paper-bark.webp
+image: /img/products/sierra-airlay-stone.webp
 specs:
   Brand: Airlay
   Fibre: Solution Dyed Nylon

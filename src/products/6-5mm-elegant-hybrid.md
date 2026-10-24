@@ -1,11 +1,23 @@
 ---
 title: 6.5mm Elegant Hybrid
 category: hybrid
-sku: HYB002
 thickness: 6.5mm
-image: /img/products/6-5mm-elegant-hybrid.webp
-gallery:
-- /img/products/6-5mm-elegant-hybrid-2.webp
+colours:
+- name: Blackbutt
+  image: /img/products/6-5mm-elegant-hybrid-blackbutt.webp
+- name: Dark Rock
+  image: /img/products/6-5mm-elegant-hybrid-dark-rock.webp
+- name: Opera House
+  image: /img/products/6-5mm-elegant-hybrid-opera-house.webp
+- name: Grey Stone
+  image: /img/products/6-5mm-elegant-hybrid-grey-stone.webp
+- name: Spotted Gum
+  image: /img/products/6-5mm-elegant-hybrid-spotted-gum.webp
+- name: Walnut
+  image: /img/products/6-5mm-elegant-hybrid-walnut.webp
+- name: Timber Look
+  image: /img/products/6-5mm-elegant-hybrid-timber-look.webp
+image: /img/products/6-5mm-elegant-hybrid-blackbutt.webp
 specs:
   Dimensions: 1524 × 228 × 6.5mm
   Structure: Rigid Core

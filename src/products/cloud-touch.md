@@ -2,10 +2,24 @@
 title: Cloud Touch
 category: carpet
 subcategory: Polyester
-sku: CPTPOL005
-image: /img/products/cloud-touch.webp
-gallery:
-- /img/products/cloud-touch-2.webp
+colours:
+- name: Cloud Touch
+  image: /img/products/cloud-touch-cloud-touch.webp
+- name: Morning Sky
+  image: /img/products/cloud-touch-morning-sky.webp
+- name: Shadow Rock
+  image: /img/products/cloud-touch-shadow-rock.webp
+- name: Crystal Ash
+  image: /img/products/cloud-touch-crystal-ash.webp
+- name: Urban Slate
+  image: /img/products/cloud-touch-urban-slate.webp
+- name: Silver Haze
+  image: /img/products/cloud-touch-silver-haze.webp
+- name: Nutmeg
+  image: /img/products/cloud-touch-nutmeg.webp
+- name: Earthstone
+  image: /img/products/cloud-touch-earthstone.webp
+image: /img/products/cloud-touch-cloud-touch.webp
 specs:
   Pile Type: Cut Pile Twist
   Fibre / Fabric: 100% PET (Polyester)

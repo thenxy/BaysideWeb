@@ -2,10 +2,28 @@
 title: Coastal Essence
 category: carpet
 subcategory: Nylon
-sku: CPTNYL002
-image: /img/products/coastal-essence.webp
-gallery:
-- /img/products/coastal-essence-2.webp
+colours:
+- name: Marina Bay
+  image: /img/products/coastal-essence-marina-bay.webp
+- name: Iron Black
+  image: /img/products/coastal-essence-iron-black.webp
+- name: Thunder
+  image: /img/products/coastal-essence-thunder.webp
+- name: Gunmetal
+  image: /img/products/coastal-essence-gunmetal.webp
+- name: Stormy Sky
+  image: /img/products/coastal-essence-stormy-sky.webp
+- name: Silver Wing
+  image: /img/products/coastal-essence-silver-wing.webp
+- name: Pebble Sand
+  image: /img/products/coastal-essence-pebble-sand.webp
+- name: Soft Clay
+  image: /img/products/coastal-essence-soft-clay.webp
+- name: Stone Whisper
+  image: /img/products/coastal-essence-stone-whisper.webp
+- name: Rustic Wheat
+  image: /img/products/coastal-essence-rustic-wheat.webp
+image: /img/products/coastal-essence-marina-bay.webp
 specs:
   Fibre / Fabric: Solution Dyed Nylon
   Stain Resistance: Yes - synthetic solution dyed construction

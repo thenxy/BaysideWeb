@@ -1,11 +1,25 @@
 ---
 title: Nature Line Series
 category: timber
-sku: TIM003
 thickness: 14mm
-image: /img/products/nature-line-series.webp
-gallery:
-- /img/products/nature-line-series-2.webp
+colours:
+- name: Sandstone
+  image: /img/products/nature-line-series-sandstone.webp
+- name: Dark Wing
+  image: /img/products/nature-line-series-dark-wing.webp
+- name: Safari Tan
+  image: /img/products/nature-line-series-safari-tan.webp
+- name: Redrock
+  image: /img/products/nature-line-series-redrock.webp
+- name: Warm Glow
+  image: /img/products/nature-line-series-warm-glow.webp
+- name: Rustic Spice
+  image: /img/products/nature-line-series-rustic-spice.webp
+- name: Honeywood
+  image: /img/products/nature-line-series-honeywood.webp
+- name: Sea Blush
+  image: /img/products/nature-line-series-sea-blush.webp
+image: /img/products/nature-line-series-sandstone.webp
 specs:
   Series: Nature Line
   Grade: Feature Grade

@@ -1,10 +1,20 @@
 ---
 title: Engineered Timber 15/3
 category: timber
-sku: TIM004
-image: /img/products/engineered-timber-15-3.webp
-gallery:
-- /img/products/engineered-timber-15-3-2.webp
+colours:
+- name: Sand Stone Oak
+  image: /img/products/engineered-timber-15-3-sand-stone-oak.webp
+- name: Brown Oak
+  image: /img/products/engineered-timber-15-3-brown-oak.webp
+- name: Harmony Oak
+  image: /img/products/engineered-timber-15-3-harmony-oak.webp
+- name: Natural Oak
+  image: /img/products/engineered-timber-15-3-natural-oak.webp
+- name: Blonde Oak
+  image: /img/products/engineered-timber-15-3-blonde-oak.webp
+- name: Himalayan Oak
+  image: /img/products/engineered-timber-15-3-himalayan-oak.webp
+image: /img/products/engineered-timber-15-3-sand-stone-oak.webp
 specs:
   Size: 1900 × 190 × 15/3 mm
   Species: Oak

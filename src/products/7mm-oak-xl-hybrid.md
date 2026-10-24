@@ -1,11 +1,25 @@
 ---
 title: 7mm Oak XL Hybrid
 category: hybrid
-sku: HYB007
 thickness: 7mm
-image: /img/products/7mm-oak-xl-hybrid.webp
-gallery:
-- /img/products/7mm-oak-xl-hybrid-2.webp
+colours:
+- name: Tidal Grey
+  image: /img/products/7mm-oak-xl-hybrid-tidal-grey.webp
+- name: Flint Oak
+  image: /img/products/7mm-oak-xl-hybrid-flint-oak.webp
+- name: Iron Mist
+  image: /img/products/7mm-oak-xl-hybrid-iron-mist.webp
+- name: Autumn Grain
+  image: /img/products/7mm-oak-xl-hybrid-autumn-grain.webp
+- name: Heritage Brown
+  image: /img/products/7mm-oak-xl-hybrid-heritage-brown.webp
+- name: Duskwood
+  image: /img/products/7mm-oak-xl-hybrid-duskwood.webp
+- name: Cloudwood
+  image: /img/products/7mm-oak-xl-hybrid-cloudwood.webp
+- name: Honeywood
+  image: /img/products/7mm-oak-xl-hybrid-honeywood.webp
+image: /img/products/7mm-oak-xl-hybrid-tidal-grey.webp
 specs:
   Plank Size: 228 × 1840 × 7mm
   Structure: 6.0mm SPC Core

@@ -1,11 +1,13 @@
 ---
 title: Fontaine - 190mm Wide Oak
 category: timber
-sku: TIM 014
 thickness: 190mm
-image: /img/products/fontaine-190mm-wide-oak.webp
-gallery:
-- /img/products/fontaine-190mm-wide-oak-2.webp
+colours:
+- name: Natural
+  image: /img/products/fontaine-190mm-wide-oak-natural.webp
+- name: French Grey
+  image: /img/products/fontaine-190mm-wide-oak-french-grey.webp
+image: /img/products/fontaine-190mm-wide-oak-natural.webp
 specs:
   Species: European Oak
   Dimensions: 1900 × 190 × 15mm

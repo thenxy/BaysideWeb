@@ -1,28 +1,44 @@
 ---
 layout: base.njk
 ---
-{% set rangeName = range if range is string else "" %}
 {% set cat = categories | selectattr("key", "equalto", category) | first %}
+{% set multi = colours and colours.length > 1 %}
 <section class="wrap pdp">
   <nav class="crumbs" aria-label="Breadcrumb">
     <a href="/products/">Products</a> / <a href="/products/{{ category }}/">{{ cat.name }}</a> / <span>{{ title }}</span>
   </nav>
   <div class="pdp__grid">
     <div class="pdp__media">
-      {% if image %}<img src="{{ image }}" alt="{{ title }}">{% else %}<span class="swatch swatch--lg" aria-hidden="true"></span>{% endif %}
-      {% for g in gallery %}<img src="{{ g }}" alt="{{ title }} detail" loading="lazy">{% endfor %}
+      {% if image %}<img id="pdp-img" src="{{ image }}" alt="{{ title }}">{% else %}<span class="swatch swatch--lg" aria-hidden="true"></span>{% endif %}
+      {% if not multi %}{% for g in gallery %}<img src="{{ g }}" alt="{{ title }} detail" loading="lazy">{% endfor %}{% endif %}
     </div>
     <div class="pdp__info">
-      {% if rangeName %}<p class="eyebrow">{{ rangeName }}</p>{% endif %}
       <h1>{{ title }}</h1>
       <div class="prose">{{ content | safe }}</div>
+
+      {% if multi %}
+      <div class="colours" id="colours">
+        <p class="colours__label">Colour: <strong id="colour-name">{{ colours[0].name }}</strong> <span class="colours__count">{{ colours.length }} available</span></p>
+        <ul class="swatches" role="list">
+          {% for c in colours %}
+          <li><button type="button" class="sw{% if loop.first %} is-on{% endif %}" aria-pressed="{{ 'true' if loop.first else 'false' }}" title="{{ c.name }}" data-name="{{ c.name }}" data-specs="{{ (c.specs or {}) | dump }}">
+            {% if c.image %}<img src="{{ c.image }}" alt="{{ c.name }}" loading="lazy">{% else %}<span>{{ c.name }}</span>{% endif %}
+          </button></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if multi %}<dl class="specs specs--colour" id="colour-specs"{% if not colours[0].specs %} hidden{% endif %}>
+        {% for key, val in colours[0].specs %}<div><dt>{{ key }}</dt><dd>{{ val }}</dd></div>{% endfor %}
+      </dl>{% endif %}
       {% if specs %}
       <dl class="specs">
         {% for key, val in specs %}{% if val and "confirm" not in (val | string | lower) %}<div><dt>{{ key }}</dt><dd>{{ val }}</dd></div>{% endif %}{% endfor %}
       </dl>
       {% endif %}
       <div class="pdp__cta">
-        <a class="btn" href="/quote/?product={{ ((rangeName + ' ' if rangeName else '') + title) | urlencode }}">Request a free quote</a>
+        <a class="btn" id="quote-btn" data-product="{{ title }}" href="/quote/?product={{ title | urlencode }}">Request a free quote</a>
         <p class="note">Pricing on request. We bring samples to you and measure up for free.</p>
       </div>
     </div>

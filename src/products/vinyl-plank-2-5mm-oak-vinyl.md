@@ -2,9 +2,32 @@
 title: Vinyl Plank - 2.5mm Oak Vinyl
 category: vinyl
 thickness: 2.5mm
-image: /img/products/vinyl-plank-2-5mm-oak-vinyl.webp
-gallery:
-- /img/products/vinyl-plank-2-5mm-oak-vinyl-2.webp
+colours:
+- name: Gold Rush
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-gold-rush.webp
+- name: Blackbutt
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-blackbutt.webp
+- name: Ash Wood
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-ash-wood.webp
+- name: Butter Cup
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-butter-cup.webp
+- name: Gentle Sand
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-gentle-sand.webp
+- name: Grey Wolf
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-grey-wolf.webp
+- name: Platinum Haze
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-platinum-haze.webp
+- name: Savannah
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-savannah.webp
+- name: Terracotta
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-terracotta.webp
+- name: Silver Sun
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-silver-sun.webp
+- name: Arctic Storm
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-arctic-storm.webp
+- name: Spotted Gum
+  image: /img/products/vinyl-plank-2-5mm-oak-vinyl-spotted-gum.webp
+image: /img/products/vinyl-plank-2-5mm-oak-vinyl-gold-rush.webp
 specs:
   Plank Size: 189 × 1229mm
   Thickness: 2.5mm

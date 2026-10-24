@@ -1,11 +1,29 @@
 ---
 title: Pinaco Selection
 category: laminate
-sku: LAM006
 thickness: 12mm
-image: /img/products/pinaco-selection.webp
-gallery:
-- /img/products/pinaco-selection-2.webp
+colours:
+- name: Saba
+  image: /img/products/pinaco-selection-saba.webp
+- name: Toscano
+  image: /img/products/pinaco-selection-toscano.webp
+- name: P002 Toscano
+  image: /img/products/pinaco-selection-p002-toscano.webp
+- name: Nerabella
+  image: /img/products/pinaco-selection-nerabella.webp
+- name: Moscato
+  image: /img/products/pinaco-selection-moscato.webp
+- name: Lumie
+  image: /img/products/pinaco-selection-lumie.webp
+- name: Saya
+  image: /img/products/pinaco-selection-saya.webp
+- name: Arpa
+  image: /img/products/pinaco-selection-arpa.webp
+- name: Gris
+  image: /img/products/pinaco-selection-gris.webp
+- name: Behaney
+  image: /img/products/pinaco-selection-behaney.webp
+image: /img/products/pinaco-selection-saba.webp
 specs:
   Type: Laminate Flooring
   Dimensions: 1215 × 196 × 12mm

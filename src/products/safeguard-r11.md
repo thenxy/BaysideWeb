@@ -5,6 +5,7 @@ thickness: 2mm
 image: /img/products/safeguard-r11.webp
 gallery:
 - /img/products/safeguard-r11-2.webp
+- /img/products/safeguard-r11-3.webp
 specs:
   Type: Safety Sheet Vinyl Flooring
   Dimensions: 20m × 2m

@@ -9,13 +9,12 @@ content:
     exclude: [products.json]
     filename: "{fields.title}.md"
     view:
-      fields: [title, category, range]
+      fields: [title, category]
       primary: title
-      sort: [range, title]
+      sort: [title]
       group: [category]
     fields:
       - { name: title, label: Name, type: string, required: true }
-      - { name: range, label: Range / collection name, type: string }
       - name: category
         label: Category
         type: select
@@ -26,7 +25,15 @@ content:
       - { name: finish, label: Finish, type: string }
       - { name: subcategory, label: Sub-category (e.g. Nylon, Underlay), type: string }
       - { name: image, label: Main photo, type: image }
-      - { name: gallery, label: More photos, type: image, list: true }
+      - { name: gallery, label: More photos (only for products without colours), type: image, list: true }
+      - name: colours
+        label: Colours (shows a colour picker when there are 2 or more)
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Colour name, type: string }
+          - { name: image, label: Photo, type: image }
+          - { name: specs, label: Details that differ for this colour, type: object, fields: [] }
       - { name: specs, label: Specs, type: object, fields: [] }
       - { name: body, label: Description, type: rich-text }
   - name: site

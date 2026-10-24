@@ -1,11 +1,29 @@
 ---
 title: Fusion 3D Water Resistant
 category: laminate
-sku: LAM003
 thickness: 12.3mm
-image: /img/products/fusion-3d-water-resistant.webp
-gallery:
-- /img/products/fusion-3d-water-resistant-2.webp
+colours:
+- name: Fd8801S
+  image: /img/products/fusion-3d-water-resistant-fd8801s.webp
+- name: Fd8802S
+  image: /img/products/fusion-3d-water-resistant-fd8802s.webp
+- name: Fd8803S
+  image: /img/products/fusion-3d-water-resistant-fd8803s.webp
+- name: Fd8804S
+  image: /img/products/fusion-3d-water-resistant-fd8804s.webp
+- name: Fd8805S
+  image: /img/products/fusion-3d-water-resistant-fd8805s.webp
+- name: Fd8806S
+  image: /img/products/fusion-3d-water-resistant-fd8806s.webp
+- name: Fd8807S
+  image: /img/products/fusion-3d-water-resistant-fd8807s.webp
+- name: Fd8808S
+  image: /img/products/fusion-3d-water-resistant-fd8808s.webp
+- name: Fd8809S
+  image: /img/products/fusion-3d-water-resistant-fd8809s.webp
+- name: Fd8810S
+  image: /img/products/fusion-3d-water-resistant-fd8810s.webp
+image: /img/products/fusion-3d-water-resistant-fd8801s.webp
 specs:
   Type: Water Resistant Laminate Flooring
   Dimensions: 1830 × 235 × 12.3mm

@@ -1,11 +1,13 @@
 ---
 title: Oakitecture - Designer Wide Board
 category: timber
-sku: TIM 015
 thickness: 15mm
-image: /img/products/oakitecture-designer-wide-board.webp
-gallery:
-- /img/products/oakitecture-designer-wide-board-2.webp
+colours:
+- name: Copy Of
+  image: /img/products/oakitecture-designer-wide-board-copy-of.webp
+- name: Copy Of Natural
+  image: /img/products/oakitecture-designer-wide-board-copy-of-natural.webp
+image: /img/products/oakitecture-designer-wide-board-copy-of.webp
 specs:
   Species: European Oak
   Dimensions: 2200 × 220 × 15mm

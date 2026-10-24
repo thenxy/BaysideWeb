@@ -2,10 +2,32 @@
 title: Horizon Threads
 category: carpet
 subcategory: Nylon
-sku: CPTNYL008
-image: /img/products/horizon-threads.webp
-gallery:
-- /img/products/horizon-threads-2.webp
+colours:
+- name: Glow Beige
+  image: /img/products/horizon-threads-glow-beige.webp
+- name: Riverside
+  image: /img/products/horizon-threads-riverside.webp
+- name: Earthy
+  image: /img/products/horizon-threads-earthy.webp
+- name: Feather
+  image: /img/products/horizon-threads-feather.webp
+- name: Dawn Mist
+  image: /img/products/horizon-threads-dawn-mist.webp
+- name: Dusk Mist
+  image: /img/products/horizon-threads-dusk-mist.webp
+- name: Soft Fog
+  image: /img/products/horizon-threads-soft-fog.webp
+- name: Misty Mocha
+  image: /img/products/horizon-threads-misty-mocha.webp
+- name: Vivid
+  image: /img/products/horizon-threads-vivid.webp
+- name: Allure
+  image: /img/products/horizon-threads-allure.webp
+- name: Slate
+  image: /img/products/horizon-threads-slate.webp
+- name: Shadow
+  image: /img/products/horizon-threads-shadow.webp
+image: /img/products/horizon-threads-glow-beige.webp
 specs:
   Collection: Super Soft Collection
   Fibre: Solution Dyed Nylon (SDN)

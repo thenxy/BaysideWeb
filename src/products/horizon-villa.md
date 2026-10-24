@@ -2,10 +2,24 @@
 title: Horizon Villa
 category: carpet
 subcategory: Nylon
-sku: CPTNYL009
-image: /img/products/horizon-villa.webp
-gallery:
-- /img/products/horizon-villa-2.webp
+colours:
+- name: Harvest
+  image: /img/products/horizon-villa-harvest.webp
+- name: Villa Heights
+  image: /img/products/horizon-villa-villa-heights.webp
+- name: Rainfall
+  image: /img/products/horizon-villa-rainfall.webp
+- name: Winter Haze
+  image: /img/products/horizon-villa-winter-haze.webp
+- name: Glacier
+  image: /img/products/horizon-villa-glacier.webp
+- name: Foglight
+  image: /img/products/horizon-villa-foglight.webp
+- name: Vanilla
+  image: /img/products/horizon-villa-vanilla.webp
+- name: Stone Dune
+  image: /img/products/horizon-villa-stone-dune.webp
+image: /img/products/horizon-villa-harvest.webp
 specs:
   Range: Solution Dyed Nylon Loop Pile Range
   Fibre: Solution Dyed Nylon (SDN)

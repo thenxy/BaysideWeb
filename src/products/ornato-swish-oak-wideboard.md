@@ -1,11 +1,29 @@
 ---
 title: Ornato Swish Oak Wideboard
 category: timber
-sku: TIM012
 thickness: 4mm
-image: /img/products/ornato-swish-oak-wideboard.webp
-gallery:
-- /img/products/ornato-swish-oak-wideboard-2.webp
+colours:
+- name: Country Caramel Oak
+  image: /img/products/ornato-swish-oak-wideboard-country-caramel-oak.webp
+- name: Urban Limewash Oak
+  image: /img/products/ornato-swish-oak-wideboard-urban-limewash-oak.webp
+- name: Urban Antique Oak
+  image: /img/products/ornato-swish-oak-wideboard-urban-antique-oak.webp
+- name: Paris Summer Oak5
+  image: /img/products/ornato-swish-oak-wideboard-paris-summer-oak5.webp
+- name: Paris Natural Oak1
+  image: /img/products/ornato-swish-oak-wideboard-paris-natural-oak1.webp
+- name: Elegant White Oak1
+  image: /img/products/ornato-swish-oak-wideboard-elegant-white-oak1.webp
+- name: Elegant Walnut Oak3
+  image: /img/products/ornato-swish-oak-wideboard-elegant-walnut-oak3.webp
+- name: Elegant Sandy Oak1
+  image: /img/products/ornato-swish-oak-wideboard-elegant-sandy-oak1.webp
+- name: Elegant Cloud Oak New3
+  image: /img/products/ornato-swish-oak-wideboard-elegant-cloud-oak-new3.webp
+- name: Country Smoked Oak
+  image: /img/products/ornato-swish-oak-wideboard-country-smoked-oak.webp
+image: /img/products/ornato-swish-oak-wideboard-country-caramel-oak.webp
 specs:
   Product Code: SO-05
   Type: Engineered Oak Floor

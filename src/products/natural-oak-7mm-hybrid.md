@@ -2,9 +2,20 @@
 title: Natural Oak 7mm Hybrid
 category: hybrid
 thickness: 7mm
-image: /img/products/natural-oak-7mm-hybrid.webp
-gallery:
-- /img/products/natural-oak-7mm-hybrid-2.webp
+colours:
+- name: Natural Oak Tempest
+  image: /img/products/natural-oak-7mm-hybrid-natural-oak-tempest.webp
+- name: Natural Oak Sahara Dune
+  image: /img/products/natural-oak-7mm-hybrid-natural-oak-sahara-dune.webp
+- name: Natural Oak Provincial Grey
+  image: /img/products/natural-oak-7mm-hybrid-natural-oak-provincial-grey.webp
+- name: Natural Oak Oslo White
+  image: /img/products/natural-oak-7mm-hybrid-natural-oak-oslo-white.webp
+- name: Natural Oak Nevada Plain
+  image: /img/products/natural-oak-7mm-hybrid-natural-oak-nevada-plain.webp
+- name: Natural Oak Moonstone
+  image: /img/products/natural-oak-7mm-hybrid-natural-oak-moonstone.webp
+image: /img/products/natural-oak-7mm-hybrid-natural-oak-tempest.webp
 specs:
   Plank Size: 180 × 1840mm
   Thickness: 7mm

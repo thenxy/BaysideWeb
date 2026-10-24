@@ -1,11 +1,17 @@
 ---
 title: Australian Species HD series
 category: laminate
-sku: LAM002
 thickness: 12mm
-image: /img/products/australian-species-hd-series.webp
-gallery:
-- /img/products/australian-species-hd-series-2.webp
+colours:
+- name: Nsw Spotted Gum
+  image: /img/products/australian-species-hd-series-nsw-spotted-gum.webp
+- name: Coastal Blackbutt
+  image: /img/products/australian-species-hd-series-coastal-blackbutt.webp
+- name: Sydney Blue Gum
+  image: /img/products/australian-species-hd-series-sydney-blue-gum.webp
+- name: Jarrah
+  image: /img/products/australian-species-hd-series-jarrah.webp
+image: /img/products/australian-species-hd-series-nsw-spotted-gum.webp
 specs:
   Type: Laminate Flooring
   Thickness: 12mm

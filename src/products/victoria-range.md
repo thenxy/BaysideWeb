@@ -2,10 +2,18 @@
 title: Victoria Range
 category: carpet
 subcategory: Polyester
-sku: CPTPOL001
-image: /img/products/victoria-range.webp
-gallery:
-- /img/products/victoria-range-2.webp
+colours:
+- name: Brighton
+  image: /img/products/victoria-range-brighton.webp
+- name: St Kilda
+  image: /img/products/victoria-range-st-kilda.webp
+- name: Flinders
+  image: /img/products/victoria-range-flinders.webp
+- name: Mcg
+  image: /img/products/victoria-range-mcg.webp
+- name: Sovereign Hill
+  image: /img/products/victoria-range-sovereign-hill.webp
+image: /img/products/victoria-range-brighton.webp
 specs:
   Style: Cut Pile Twist
   Fibre: Polyester Carpet

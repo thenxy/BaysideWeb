@@ -1,11 +1,25 @@
 ---
 title: Legacy Series
 category: timber
-sku: TIM002
 thickness: 14mm
-image: /img/products/legacy-series.webp
-gallery:
-- /img/products/legacy-series-2.webp
+colours:
+- name: Golden Nector
+  image: /img/products/legacy-series-golden-nector.webp
+- name: Smoke Wood
+  image: /img/products/legacy-series-smoke-wood.webp
+- name: Sunlit Sand
+  image: /img/products/legacy-series-sunlit-sand.webp
+- name: Bronze
+  image: /img/products/legacy-series-bronze.webp
+- name: Espresso
+  image: /img/products/legacy-series-espresso.webp
+- name: Sterling
+  image: /img/products/legacy-series-sterling.webp
+- name: Spark
+  image: /img/products/legacy-series-spark.webp
+- name: Sunflower
+  image: /img/products/legacy-series-sunflower.webp
+image: /img/products/legacy-series-golden-nector.webp
 specs:
   Species: European Oak
   Thickness: 14mm

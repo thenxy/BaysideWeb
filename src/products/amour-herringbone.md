@@ -1,11 +1,21 @@
 ---
 title: Amour Herringbone
 category: timber
-sku: TIM 001
 thickness: 14mm
-image: /img/products/amour-herringbone.webp
-gallery:
-- /img/products/amour-herringbone-2.webp
+colours:
+- name: Espresso
+  image: /img/products/amour-herringbone-espresso.webp
+- name: Smoke Wood
+  image: /img/products/amour-herringbone-smoke-wood.webp
+- name: Sunlit Sand
+  image: /img/products/amour-herringbone-sunlit-sand.webp
+- name: Bronze
+  image: /img/products/amour-herringbone-bronze.webp
+- name: Spark
+  image: /img/products/amour-herringbone-spark.webp
+- name: Summer
+  image: /img/products/amour-herringbone-summer.webp
+image: /img/products/amour-herringbone-espresso.webp
 specs:
   Series: Amour Series
   Species: European Oak

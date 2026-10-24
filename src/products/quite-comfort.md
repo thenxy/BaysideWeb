@@ -2,10 +2,20 @@
 title: Quite Comfort
 category: carpet
 subcategory: Nylon
-sku: CPTNYL013
-image: /img/products/quite-comfort.webp
-gallery:
-- /img/products/quite-comfort-2.webp
+colours:
+- name: Na
+  image: /img/products/quite-comfort-na.webp
+- name: Midnight Velvet
+  image: /img/products/quite-comfort-midnight-velvet.webp
+- name: Lunar Grey
+  image: /img/products/quite-comfort-lunar-grey.webp
+- name: Iron Veil
+  image: /img/products/quite-comfort-iron-veil.webp
+- name: Silver Haze
+  image: /img/products/quite-comfort-silver-haze.webp
+- name: Sahara Beige
+  image: /img/products/quite-comfort-sahara-beige.webp
+image: /img/products/quite-comfort-na.webp
 specs:
   Fibre / Fabric: Nylon
   Sustainability: Made from recycled plastics including water bottles

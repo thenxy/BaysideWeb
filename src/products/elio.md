@@ -1,10 +1,24 @@
 ---
 title: Elio
 category: timber
-sku: TIM005
-image: /img/products/elio.webp
-gallery:
-- /img/products/elio-2.webp
+colours:
+- name: Amber Wood
+  image: /img/products/elio-amber-wood.webp
+- name: Chalkstone
+  image: /img/products/elio-chalkstone.webp
+- name: Petal Cream
+  image: /img/products/elio-petal-cream.webp
+- name: Walnut Silk
+  image: /img/products/elio-walnut-silk.webp
+- name: Dusk Wood
+  image: /img/products/elio-dusk-wood.webp
+- name: Scandi Snow
+  image: /img/products/elio-scandi-snow.webp
+- name: Glacier Peak
+  image: /img/products/elio-glacier-peak.webp
+- name: Sea Breeze
+  image: /img/products/elio-sea-breeze.webp
+image: /img/products/elio-amber-wood.webp
 specs:
   Product Code: '4005'
   Species: European Oak

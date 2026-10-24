@@ -2,10 +2,24 @@
 title: Urban wave
 category: carpet
 subcategory: Nylon
-sku: CPTNYL014
-image: /img/products/urban-wave.webp
-gallery:
-- /img/products/urban-wave-2.webp
+colours:
+- name: Bourke
+  image: /img/products/urban-wave-bourke.webp
+- name: Simson
+  image: /img/products/urban-wave-simson.webp
+- name: Gawlar
+  image: /img/products/urban-wave-gawlar.webp
+- name: Torrens
+  image: /img/products/urban-wave-torrens.webp
+- name: Canning
+  image: /img/products/urban-wave-canning.webp
+- name: Nullabor
+  image: /img/products/urban-wave-nullabor.webp
+- name: Swan
+  image: /img/products/urban-wave-swan.webp
+- name: Mc Donnel
+  image: /img/products/urban-wave-mc-donnel.webp
+image: /img/products/urban-wave-bourke.webp
 specs:
   Durability: Hard-wearing — suitable for busy families
   UV Fade Resistance: 'Yes'

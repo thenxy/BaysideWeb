@@ -1,10 +1,24 @@
 ---
 title: Enzo
 category: timber
-sku: TIM006
-image: /img/products/enzo.webp
-gallery:
-- /img/products/enzo-2.webp
+colours:
+- name: Orion
+  image: /img/products/enzo-orion.webp
+- name: Luna
+  image: /img/products/enzo-luna.webp
+- name: Montclair
+  image: /img/products/enzo-montclair.webp
+- name: Luminara3155
+  image: /img/products/enzo-luminara3155.webp
+- name: Amber Wood
+  image: /img/products/enzo-amber-wood.webp
+- name: Oakmere
+  image: /img/products/enzo-oakmere.webp
+- name: Driftwood3157
+  image: /img/products/enzo-driftwood3157.webp
+- name: Sandstone
+  image: /img/products/enzo-sandstone.webp
+image: /img/products/enzo-orion.webp
 specs:
   Product Code: '3154'
   Species: European Oak

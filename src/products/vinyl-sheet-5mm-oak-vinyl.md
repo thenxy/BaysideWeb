@@ -2,9 +2,20 @@
 title: Vinyl Sheet - 5mm Oak Vinyl
 category: vinyl
 thickness: 5mm
-image: /img/products/vinyl-sheet-5mm-oak-vinyl.webp
-gallery:
-- /img/products/vinyl-sheet-5mm-oak-vinyl-2.webp
+colours:
+- name: Velvet Allure
+  image: /img/products/vinyl-sheet-5mm-oak-vinyl-velvet-allure.webp
+- name: Lunar Ash
+  image: /img/products/vinyl-sheet-5mm-oak-vinyl-lunar-ash.webp
+- name: Winter Bloosom
+  image: /img/products/vinyl-sheet-5mm-oak-vinyl-winter-bloosom.webp
+- name: Sunflower
+  image: /img/products/vinyl-sheet-5mm-oak-vinyl-sunflower.webp
+- name: Marigold
+  image: /img/products/vinyl-sheet-5mm-oak-vinyl-marigold.webp
+- name: Snow Drift
+  image: /img/products/vinyl-sheet-5mm-oak-vinyl-snow-drift.webp
+image: /img/products/vinyl-sheet-5mm-oak-vinyl-velvet-allure.webp
 specs:
   Plank Size: 189 × 1828 × 5mm
   Structure: 100% Virgin PVC with Fibreglass Layer

@@ -2,7 +2,6 @@
 title: Mera Peak
 category: carpet
 subcategory: Polyester
-sku: CPTPOL002
 image: /img/products/mera-peak.webp
 gallery:
 - /img/products/mera-peak-2.webp

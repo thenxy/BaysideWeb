@@ -1,11 +1,11 @@
 ---
 title: Pinaco NextGen
 category: laminate
-sku: LAM005
 thickness: 12.3mm
 image: /img/products/pinaco-nextgen.webp
 gallery:
 - /img/products/pinaco-nextgen-2.webp
+- /img/products/pinaco-nextgen-3.webp
 specs:
   Type: Laminate Flooring
   Dimensions: 1518 × 235 × 12.3mm

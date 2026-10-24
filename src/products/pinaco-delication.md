@@ -1,11 +1,25 @@
 ---
 title: Pinaco Delication
 category: laminate
-sku: LAM004
 thickness: 8mm
-image: /img/products/pinaco-delication.webp
-gallery:
-- /img/products/pinaco-delication-2.webp
+colours:
+- name: Lanno
+  image: /img/products/pinaco-delication-lanno.webp
+- name: Kinawa
+  image: /img/products/pinaco-delication-kinawa.webp
+- name: Cavalie
+  image: /img/products/pinaco-delication-cavalie.webp
+- name: Annata
+  image: /img/products/pinaco-delication-annata.webp
+- name: Lucasa
+  image: /img/products/pinaco-delication-lucasa.webp
+- name: Carbo
+  image: /img/products/pinaco-delication-carbo.webp
+- name: Diva
+  image: /img/products/pinaco-delication-diva.webp
+- name: Caramel
+  image: /img/products/pinaco-delication-caramel.webp
+image: /img/products/pinaco-delication-lanno.webp
 specs:
   Type: Laminate Flooring
   Dimensions: 1215 × 194 × 8mm

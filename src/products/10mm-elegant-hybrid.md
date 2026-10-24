@@ -1,11 +1,17 @@
 ---
 title: 10mm Elegant Hybrid
 category: hybrid
-sku: HYB001
 thickness: 10mm
-image: /img/products/10mm-elegant-hybrid.webp
-gallery:
-- /img/products/10mm-elegant-hybrid-2.webp
+colours:
+- name: Spotted Gum
+  image: /img/products/10mm-elegant-hybrid-spotted-gum.webp
+- name: Thunder Oak
+  image: /img/products/10mm-elegant-hybrid-thunder-oak.webp
+- name: Coastal Blackbutt
+  image: /img/products/10mm-elegant-hybrid-coastal-blackbutt.webp
+- name: Blonde Oak
+  image: /img/products/10mm-elegant-hybrid-blonde-oak.webp
+image: /img/products/10mm-elegant-hybrid-spotted-gum.webp
 specs:
   Hybrid Thickness: 7.5mm
   Dimensions: 1524 × 228 × 8.0mm (0.7mm wear + 2.0mm EVA backing)

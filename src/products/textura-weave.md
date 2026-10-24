@@ -2,10 +2,22 @@
 title: Textura Weave
 category: carpet
 subcategory: Polyester
-sku: CPTPOL007
-image: /img/products/textura-weave.webp
-gallery:
-- /img/products/textura-weave-2.webp
+colours:
+- name: Textura Weave
+  image: /img/products/textura-weave-textura-weave.webp
+- name: Glacier Steel
+  image: /img/products/textura-weave-glacier-steel.webp
+- name: Frost Grey
+  image: /img/products/textura-weave-frost-grey.webp
+- name: Coal Mist
+  image: /img/products/textura-weave-coal-mist.webp
+- name: Honeywood
+  image: /img/products/textura-weave-honeywood.webp
+- name: Mistwood
+  image: /img/products/textura-weave-mistwood.webp
+- name: Desert Glow
+  image: /img/products/textura-weave-desert-glow.webp
+image: /img/products/textura-weave-textura-weave.webp
 specs:
   Pile Type: Textured Tile Loop
   Fibre / Fabric: 100% Polypropylene (Poly)

@@ -1,7 +1,10 @@
 ---
-title: ''
+title: Solid Timber
 category: timber
-range: Solid Timber
+colours:
+- name: '- Merbau'
+- name: '- Red Ironbark'
+- name: '- Tallowwood'
 source: https://everfloor.com.au/product/solid-timber-grey-ironbark
 ---
-from the Solid Timber range.
+Solid Timber is available in 4 colours.

@@ -1,11 +1,33 @@
 ---
 title: 6mm Oak Hybrid
 category: hybrid
-sku: HYB004
 thickness: 6mm
-image: /img/products/6mm-oak-hybrid.webp
-gallery:
-- /img/products/6mm-oak-hybrid-2.webp
+colours:
+- name: Blackbutt
+  image: /img/products/6mm-oak-hybrid-blackbutt.webp
+- name: Ashwood
+  image: /img/products/6mm-oak-hybrid-ashwood.webp
+- name: Buttercup
+  image: /img/products/6mm-oak-hybrid-buttercup.webp
+- name: Gentle Sand
+  image: /img/products/6mm-oak-hybrid-gentle-sand.webp
+- name: Goldrush
+  image: /img/products/6mm-oak-hybrid-goldrush.webp
+- name: Grey Wolf
+  image: /img/products/6mm-oak-hybrid-grey-wolf.webp
+- name: Platinum Haze
+  image: /img/products/6mm-oak-hybrid-platinum-haze.webp
+- name: Savannah
+  image: /img/products/6mm-oak-hybrid-savannah.webp
+- name: Silver Sun
+  image: /img/products/6mm-oak-hybrid-silver-sun.webp
+- name: Spotted Gum
+  image: /img/products/6mm-oak-hybrid-spotted-gum.webp
+- name: Terracotta
+  image: /img/products/6mm-oak-hybrid-terracotta.webp
+- name: Arctic Storm
+  image: /img/products/6mm-oak-hybrid-arctic-storm.webp
+image: /img/products/6mm-oak-hybrid-blackbutt.webp
 specs:
   Plank Size: 180 × 1220 × 6mm
   Structure: 5.0mm SPC Core

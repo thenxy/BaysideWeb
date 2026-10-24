@@ -2,10 +2,24 @@
 title: Summit
 category: carpet
 subcategory: Polyester
-sku: CPTPOL003
-image: /img/products/summit.webp
-gallery:
-- /img/products/summit-2.webp
+colours:
+- name: Gyachung
+  image: /img/products/summit-gyachung.webp
+- name: Dhaula
+  image: /img/products/summit-dhaula.webp
+- name: Anna
+  image: /img/products/summit-anna.webp
+- name: Kanchan
+  image: /img/products/summit-kanchan.webp
+- name: Cho Oyu
+  image: /img/products/summit-cho-oyu.webp
+- name: Manaslu
+  image: /img/products/summit-manaslu.webp
+- name: Makalu
+  image: /img/products/summit-makalu.webp
+- name: Lotse
+  image: /img/products/summit-lotse.webp
+image: /img/products/summit-gyachung.webp
 specs:
   Collection: Super Soft Collection
   Fibre / Fabric: 100% PET Polyester

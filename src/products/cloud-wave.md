@@ -2,10 +2,42 @@
 title: Cloud Wave
 category: carpet
 subcategory: Nylon
-sku: CPTNYL001
-image: /img/products/cloud-wave.webp
-gallery:
-- /img/products/cloud-wave-2.webp
+colours:
+- name: Coast
+  image: /img/products/cloud-wave-coast.webp
+- name: Little Bourke
+  image: /img/products/cloud-wave-little-bourke.webp
+- name: Essence
+  image: /img/products/cloud-wave-essence.webp
+- name: Breeze
+  image: /img/products/cloud-wave-breeze.webp
+- name: Kick
+  image: /img/products/cloud-wave-kick.webp
+- name: Bloom
+  image: /img/products/cloud-wave-bloom.webp
+- name: Glow
+  image: /img/products/cloud-wave-glow.webp
+- name: Bliss
+  image: /img/products/cloud-wave-bliss.webp
+- name: Wishper
+  image: /img/products/cloud-wave-wishper.webp
+- name: Collins
+  image: /img/products/cloud-wave-collins.webp
+- name: Adelaide St.
+  image: /img/products/cloud-wave-adelaide-st.webp
+- name: Sydney Road
+  image: /img/products/cloud-wave-sydney-road.webp
+- name: Spring
+  image: /img/products/cloud-wave-spring.webp
+- name: Russel
+  image: /img/products/cloud-wave-russel.webp
+- name: Dawn
+  image: /img/products/cloud-wave-dawn.webp
+- name: Bourke
+  image: /img/products/cloud-wave-bourke.webp
+- name: Olive Green
+  image: /img/products/cloud-wave-olive-green.webp
+image: /img/products/cloud-wave-coast.webp
 specs:
   Collection: Super Soft Collection
   Fibre: Colour Guard® Nylon

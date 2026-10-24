@@ -1,11 +1,41 @@
 ---
 title: Ornato Swish Oak Natura
 category: timber
-sku: TIM010
 thickness: 3mm
-image: /img/products/ornato-swish-oak-natura.webp
-gallery:
-- /img/products/ornato-swish-oak-natura-2.webp
+colours:
+- name: Ambient Sand
+  image: /img/products/ornato-swish-oak-natura-ambient-sand.webp
+- name: Raw Leaf
+  image: /img/products/ornato-swish-oak-natura-raw-leaf.webp
+- name: Raw Caramel
+  image: /img/products/ornato-swish-oak-natura-raw-caramel.webp
+- name: Oyster Grey
+  image: /img/products/ornato-swish-oak-natura-oyster-grey.webp
+- name: Odense Grey Swatch2
+  image: /img/products/ornato-swish-oak-natura-odense-grey-swatch2.webp
+- name: Oak Grey Harmony
+  image: /img/products/ornato-swish-oak-natura-oak-grey-harmony.webp
+- name: Oak Dove Grey
+  image: /img/products/ornato-swish-oak-natura-oak-dove-grey.webp
+- name: Nodic Spring
+  image: /img/products/ornato-swish-oak-natura-nodic-spring.webp
+- name: Nordic Limed
+  image: /img/products/ornato-swish-oak-natura-nordic-limed.webp
+- name: French Natural
+  image: /img/products/ornato-swish-oak-natura-french-natural.webp
+- name: French Ghost Swatch4
+  image: /img/products/ornato-swish-oak-natura-french-ghost-swatch4.webp
+- name: French Carbon Swatches
+  image: /img/products/ornato-swish-oak-natura-french-carbon-swatches.webp
+- name: Fiano Brown
+  image: /img/products/ornato-swish-oak-natura-fiano-brown.webp
+- name: Danish White
+  image: /img/products/ornato-swish-oak-natura-danish-white.webp
+- name: Canyon Oak
+  image: /img/products/ornato-swish-oak-natura-canyon-oak.webp
+- name: Belfort Oak
+  image: /img/products/ornato-swish-oak-natura-belfort-oak.webp
+image: /img/products/ornato-swish-oak-natura-ambient-sand.webp
 specs:
   Product Code: SNO-13
   Type: Engineered Oak Floor

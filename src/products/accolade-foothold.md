@@ -2,9 +2,60 @@
 title: Accolade Foothold
 category: vinyl
 thickness: 2mm
-image: /img/products/accolade-foothold.webp
-gallery:
-- /img/products/accolade-foothold-2.webp
+colours:
+- name: Accolade2 Kiama
+  image: /img/products/accolade-foothold-accolade2-kiama.webp
+- name: Accolade2 Spicewhite
+  image: /img/products/accolade-foothold-accolade2-spicewhite.webp
+- name: Accolade Cedunawhite
+  image: /img/products/accolade-foothold-accolade-cedunawhite.webp
+- name: Accolade2 Kanku
+  image: /img/products/accolade-foothold-accolade2-kanku.webp
+- name: Accolade Hawkesbury
+  image: /img/products/accolade-foothold-accolade-hawkesbury.webp
+- name: Vinyl Floorsheet Flooring Accoladeplus Malleewheat
+  image: /img/products/accolade-foothold-vinyl-floorsheet-flooring-accoladeplus-malleewheat.webp
+- name: Accolade Cappuccino
+  image: /img/products/accolade-foothold-accolade-cappuccino.webp
+- name: Vinyl Floorsheet Flooring Accoladeplus Ironbark
+  image: /img/products/accolade-foothold-vinyl-floorsheet-flooring-accoladeplus-ironbark.webp
+- name: Vinyl Floorsheet Flooring Accoladeplus Capricornbeige
+  image: /img/products/accolade-foothold-vinyl-floorsheet-flooring-accoladeplus-capricornbeige.webp
+- name: Accolade2 Redcliffs
+  image: /img/products/accolade-foothold-accolade2-redcliffs.webp
+- name: Accolade2 Lawn Hill
+  image: /img/products/accolade-foothold-accolade2-lawn-hill.webp
+- name: Accolade2 Begavalley
+  image: /img/products/accolade-foothold-accolade2-begavalley.webp
+- name: Accolade2 Luckybay
+  image: /img/products/accolade-foothold-accolade2-luckybay.webp
+- name: Accolade Threadbo
+  image: /img/products/accolade-foothold-accolade-threadbo.webp
+- name: Accolade Esperance
+  image: /img/products/accolade-foothold-accolade-esperance.webp
+- name: Accolade Cervantes
+  image: /img/products/accolade-foothold-accolade-cervantes.webp
+- name: Accolade Sandgrey
+  image: /img/products/accolade-foothold-accolade-sandgrey.webp
+- name: Vinyl Floorsheet Flooring Accoladeplus Murrayclay
+  image: /img/products/accolade-foothold-vinyl-floorsheet-flooring-accoladeplus-murrayclay.webp
+- name: Vinyl Floorsheet Flooring Accoladeplus Darlinggrey
+  image: /img/products/accolade-foothold-vinyl-floorsheet-flooring-accoladeplus-darlinggrey.webp
+- name: Accolade2 Camdengrey
+  image: /img/products/accolade-foothold-accolade2-camdengrey.webp
+- name: Accolade Cradlemountain
+  image: /img/products/accolade-foothold-accolade-cradlemountain.webp
+- name: Accolade Oberon
+  image: /img/products/accolade-foothold-accolade-oberon.webp
+- name: Accolade Whitehaven
+  image: /img/products/accolade-foothold-accolade-whitehaven.webp
+- name: Vinyl Floorsheet Flooring Accoladeplus Bellsblue
+  image: /img/products/accolade-foothold-vinyl-floorsheet-flooring-accoladeplus-bellsblue.webp
+- name: Accolade Mintaroslate
+  image: /img/products/accolade-foothold-accolade-mintaroslate.webp
+- name: Accolade Blackopal
+  image: /img/products/accolade-foothold-accolade-blackopal.webp
+image: /img/products/accolade-foothold-accolade2-kiama.webp
 specs:
   Type: Homogeneous Vinyl Sheet
   Manufactured: Australia

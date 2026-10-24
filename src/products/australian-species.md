@@ -1,7 +1,6 @@
 ---
 title: Australian Species
 category: timber
-sku: TIM018
 thickness: 2100mm
 image: /img/products/australian-species.webp
 specs:

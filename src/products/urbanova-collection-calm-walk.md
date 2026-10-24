@@ -2,9 +2,20 @@
 title: Urbanova Collection - Calm Walk
 category: carpet
 subcategory: Carpet tiles
-image: /img/products/urbanova-collection-calm-walk.webp
-gallery:
-- /img/products/urbanova-collection-calm-walk-2.webp
+colours:
+- name: Ocean Medium
+  image: /img/products/urbanova-collection-calm-walk-ocean-medium.webp
+- name: Ash Grey
+  image: /img/products/urbanova-collection-calm-walk-ash-grey.webp
+- name: Black Rock
+  image: /img/products/urbanova-collection-calm-walk-black-rock.webp
+- name: Alkain
+  image: /img/products/urbanova-collection-calm-walk-alkain.webp
+- name: Jet Black
+  image: /img/products/urbanova-collection-calm-walk-jet-black.webp
+- name: Chino
+  image: /img/products/urbanova-collection-calm-walk-chino.webp
+image: /img/products/urbanova-collection-calm-walk-ocean-medium.webp
 specs:
   Product Range: Urbanova
   Type: Multi-Level Loop Carpet Tile

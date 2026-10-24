@@ -2,9 +2,14 @@
 title: Natural Creations ArborArt
 category: vinyl
 thickness: 185mm
-image: /img/products/natural-creations-arborart.webp
-gallery:
-- /img/products/natural-creations-arborart-2.webp
+colours:
+- name: Summeroak
+  image: /img/products/natural-creations-arborart-summeroak.webp
+- name: Sunriseblackbutt
+  image: /img/products/natural-creations-arborart-sunriseblackbutt.webp
+- name: Morningspottedgum
+  image: /img/products/natural-creations-arborart-morningspottedgum.webp
+image: /img/products/natural-creations-arborart-summeroak.webp
 specs:
   Type: Luxury Vinyl Plank
   Dimensions: 1500 × 185mm

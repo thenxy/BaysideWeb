@@ -1,11 +1,11 @@
 ---
 title: Oakitecture - Herringbone
 category: timber
-sku: TIM 016
 thickness: 15mm
 image: /img/products/oakitecture-herringbone.webp
 gallery:
 - /img/products/oakitecture-herringbone-2.webp
+- /img/products/oakitecture-herringbone-3.webp
 specs:
   Dimensions: 900 × 150 × 15mm
   Wear Layer: 4mm

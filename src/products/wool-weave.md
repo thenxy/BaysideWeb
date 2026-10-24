@@ -2,10 +2,28 @@
 title: wool weave
 category: carpet
 subcategory: Wool
-sku: CPTWOOL002
-image: /img/products/wool-weave.webp
-gallery:
-- /img/products/wool-weave-2.webp
+colours:
+- name: Dark Slate
+  image: /img/products/wool-weave-dark-slate.webp
+- name: Storm Grey
+  image: /img/products/wool-weave-storm-grey.webp
+- name: Denim
+  image: /img/products/wool-weave-denim.webp
+- name: Dune
+  image: /img/products/wool-weave-dune.webp
+- name: Slate
+  image: /img/products/wool-weave-slate.webp
+- name: Clay
+  image: /img/products/wool-weave-clay.webp
+- name: Warm Taupe
+  image: /img/products/wool-weave-warm-taupe.webp
+- name: Soft Olive
+  image: /img/products/wool-weave-soft-olive.webp
+- name: Warm Grey
+  image: /img/products/wool-weave-warm-grey.webp
+- name: Ivory
+  image: /img/products/wool-weave-ivory.webp
+image: /img/products/wool-weave-dark-slate.webp
 specs:
   Style: Level Loop Pile
   Fibre: 100% Wool

@@ -1,11 +1,29 @@
 ---
 title: Arborlok Longboard 2250
 category: laminate
-sku: LAM001
 thickness: 12mm
-image: /img/products/arborlok-longboard-2250.webp
-gallery:
-- /img/products/arborlok-longboard-2250-2.webp
+colours:
+- name: Biato
+  image: /img/products/arborlok-longboard-2250-biato.webp
+- name: Mocha
+  image: /img/products/arborlok-longboard-2250-mocha.webp
+- name: Jarady
+  image: /img/products/arborlok-longboard-2250-jarady.webp
+- name: Calux
+  image: /img/products/arborlok-longboard-2250-calux.webp
+- name: Mosi
+  image: /img/products/arborlok-longboard-2250-mosi.webp
+- name: Amila
+  image: /img/products/arborlok-longboard-2250-amila.webp
+- name: Antigo
+  image: /img/products/arborlok-longboard-2250-antigo.webp
+- name: Lovia
+  image: /img/products/arborlok-longboard-2250-lovia.webp
+- name: Kenda
+  image: /img/products/arborlok-longboard-2250-kenda.webp
+- name: Boski
+  image: /img/products/arborlok-longboard-2250-boski.webp
+image: /img/products/arborlok-longboard-2250-biato.webp
 specs:
   Type: Laminate Flooring
   Dimensions: 2250 × 195 × 12mm

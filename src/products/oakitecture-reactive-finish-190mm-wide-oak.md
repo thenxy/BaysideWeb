@@ -1,11 +1,15 @@
 ---
 title: Oakitecture - Reactive Finish 190mm Wide Oak
 category: timber
-sku: TIM 017
 thickness: 190mm
-image: /img/products/oakitecture-reactive-finish-190mm-wide-oak.webp
-gallery:
-- /img/products/oakitecture-reactive-finish-190mm-wide-oak-2.webp
+colours:
+- name: Wm190
+  image: /img/products/oakitecture-reactive-finish-190mm-wide-oak-wm190.webp
+- name: Stj190
+  image: /img/products/oakitecture-reactive-finish-190mm-wide-oak-stj190.webp
+- name: Jb190
+  image: /img/products/oakitecture-reactive-finish-190mm-wide-oak-jb190.webp
+image: /img/products/oakitecture-reactive-finish-190mm-wide-oak-wm190.webp
 specs:
   Species: European Oak
   Dimensions: 1900 × 190 × 15mm

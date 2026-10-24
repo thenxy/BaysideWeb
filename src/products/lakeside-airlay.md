@@ -2,9 +2,26 @@
 title: Lakeside - Airlay
 category: carpet
 subcategory: Carpet tiles
-image: /img/products/lakeside-airlay.webp
-gallery:
-- /img/products/lakeside-airlay-2.webp
+colours:
+- name: Moss
+  image: /img/products/lakeside-airlay-moss.webp
+- name: Powder
+  image: /img/products/lakeside-airlay-powder.webp
+- name: Whisper
+  image: /img/products/lakeside-airlay-whisper.webp
+- name: Flint
+  image: /img/products/lakeside-airlay-flint.webp
+- name: Ink
+  image: /img/products/lakeside-airlay-ink.webp
+- name: Thunder
+  image: /img/products/lakeside-airlay-thunder.webp
+- name: Storm
+  image: /img/products/lakeside-airlay-storm.webp
+- name: Crimson
+  image: /img/products/lakeside-airlay-crimson.webp
+- name: Navy
+  image: /img/products/lakeside-airlay-navy.webp
+image: /img/products/lakeside-airlay-moss.webp
 specs:
   Brand: Airlay
   Type: Multi-Level Loop Pile Carpet Tile

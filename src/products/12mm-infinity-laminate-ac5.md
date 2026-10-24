@@ -1,11 +1,19 @@
 ---
 title: 12mm Infinity Laminate AC5
 category: laminate
-sku: LAM008
 thickness: 12mm
-image: /img/products/12mm-infinity-laminate-ac5.webp
-gallery:
-- /img/products/12mm-infinity-laminate-ac5-2.webp
+colours:
+- name: Slb Magnolia
+  image: /img/products/12mm-infinity-laminate-ac5-slb-magnolia.webp
+- name: Lamskin Nucore Extreme
+  image: /img/products/12mm-infinity-laminate-ac5-lamskin-nucore-extreme.webp
+- name: Lamwood
+  image: /img/products/12mm-infinity-laminate-ac5-lamwood.webp
+- name: Lamwood Blackbutt
+  image: /img/products/12mm-infinity-laminate-ac5-lamwood-blackbutt.webp
+- name: Lamwood Spottedgum
+  image: /img/products/12mm-infinity-laminate-ac5-lamwood-spottedgum.webp
+image: /img/products/12mm-infinity-laminate-ac5-slb-magnolia.webp
 specs:
   Type: Laminate
   Size: 2200 × 193 × 12mm
