@@ -27,7 +27,7 @@ specs:
   Thickness: 14mm
   Finish: Water-Based UV Lacquer
   Character: Knots, filled cracks, colour variation, natural markings
-  Surface Warranty: 25 Years Residential
+  Surface Warranty: 25 years Residential
   Structural Warranty: Lifetime
 source: https://jimsflooring.com.au/product/continental-oak-nature-line-series/
 ---

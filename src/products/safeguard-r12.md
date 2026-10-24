@@ -17,4 +17,4 @@ specs:
   Maintenance: Low maintenance
 source: https://jimsflooring.com.au/product/safety-safeguard-r12/
 ---
-When a commercial floor needs to perform in high-risk areas without compromise, Safeguard R12 delivers exactly that. This commercial safety vinyl flooring combines a high-performance embossed surface texture with silicon carbide, quartz, and aluminium oxide, three of the toughest slip-resistant materials available, to achieve a P5/R12 slip rating that genuinely handles wet area environments where standard flooring…
+When a commercial floor needs to perform in high-risk areas without compromise, Safeguard R12 delivers exactly that.

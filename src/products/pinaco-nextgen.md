@@ -12,8 +12,8 @@ specs:
   Pack Size: 1.784m²
   Boards Per Pack: 5 pieces
   Pack Weight: 19.5kg
-  Domestic Warranty: 25 Years Wear and Lifetime Structural
-  Commercial Warranty: 5 Years Wear and Lifetime Structural
+  Domestic Warranty: 25 years Wear and Lifetime Structural
+  Commercial Warranty: 5 years Wear and Lifetime Structural
 source: https://jimsflooring.com.au/product/floortex-pinaco-nextgen/
 ---
 Pinaco NextGen takes everything that worked in the original Pinaco laminate and makes it better. Specifically, years of real feedback from customers and floor installers drove every improvement in this next generation laminate flooring.

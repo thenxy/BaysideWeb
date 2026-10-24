@@ -17,8 +17,8 @@ colours:
   image: /img/products/woodveneer-prime-15-4mm-windsor.webp
 image: /img/products/woodveneer-prime-15-4mm-chateau.webp
 specs:
-  Size: 1900 x 190 x 15(4)mm
-  Box: 2.166㎡/ctn,
+  Size: 1900 × 190 × 15(4)mm
+  Box: 2.166m²/ctn,
   Lock System: T&G, Float or Glue
   Warranty: 25 years
 source: https://everfloor.com.au/product/woodveneer-15-4-oak-ab-chateau

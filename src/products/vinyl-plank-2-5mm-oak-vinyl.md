@@ -38,7 +38,7 @@ specs:
   Commercial Warranty: 10 years
   Product Warranty: Download
   Installation Instructions: Download
-  Care and Maintenance: Download
+  Care And Maintenance: Download
 source: https://jimsflooring.com.au/product/vinyl-plank-jims-25mm-oak-vinyl/
 ---
 Not every space calls for a thick, heavy floor and 2.5mm Oak Vinyl Plank makes a strong case for why thinner vinyl done well outperforms bulkier alternatives in the right application. At 189mm wide and 1229mm long, the planks cover 4.181m² per pack across 18 planks, making quantity planning and installation straightforward for any room size.

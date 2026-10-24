@@ -26,7 +26,7 @@ colours:
   image: /img/products/swiss-laminate-bespoke-slb-eggshell.webp
 - name: Slb Blackbutt Light
   image: /img/products/swiss-laminate-bespoke-slb-blackbutt-light.webp
-image: /img/products/swiss-laminate-bespoke-slb-velvet.webp
+image: /img/products/swiss-laminate-bespoke-slb-jarrah.webp
 source: https://jimsflooring.com.au/product/swiss-laminate-bespoke/
 ---
 Swish Bespoke have been making aesthetical difference in many homes across the world. The Swish laminate flooring is classic, sophisticated, and modern.

@@ -24,6 +24,16 @@ module.exports = function (eleventyConfig) {
     const t = img.replace(/\.webp$/, "-t.webp");
     return t !== img && fs.existsSync(path.join("src", t)) ? t : img;
   });
+  // The next n products in the same list after this page (wrapping round), for "you might also like".
+  eleventyConfig.addFilter("related", (items, url, n) => {
+    const i = items.findIndex((p) => p.url === url);
+    const out = [];
+    for (let k = 1; k < items.length && out.length < n; k++) out.push(items[(i + k + items.length) % items.length]);
+    return out;
+  });
+  eleventyConfig.addFilter("byTitles", (items, titles) =>
+    (titles || []).map((t) => items.find((p) => p.data.title === t)).filter(Boolean)
+  );
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
   eleventyConfig.addCollection("catalogue", (api) =>

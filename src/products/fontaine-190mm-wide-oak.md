@@ -21,4 +21,4 @@ specs:
   Grade: Natural character with tight and filled knots
 source: https://jimsflooring.com.au/product/tudorwoods-fontaine-190mm-wide-oak/
 ---
-Some floors try too hard. Fontaine doesn't need to.
+Some floors try too hard. Fontaine doesn't need to. Available in 2 colours.

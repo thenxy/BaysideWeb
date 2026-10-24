@@ -3,7 +3,6 @@ title: Grand Alpine Hybrid - Core
 category: hybrid
 thickness: 6.5mm
 colours:
-- name: Dark Grey
 - name: Blackbutt
   image: /img/products/grand-alpine-hybrid-core-6-5-blackbutt.webp
 - name: Earthwood
@@ -30,10 +29,10 @@ colours:
   image: /img/products/grand-alpine-hybrid-core-6-5-spotted-gum.webp
 image: /img/products/grand-alpine-hybrid-core-6-5-blackbutt.webp
 specs:
-  Size: 1500 x 180 x 6.5mm
-  Box: 1.62 sqm
+  Size: 1500 × 180 × 6.5mm
+  Box: 1.62 m²
   Lock System: Angle to Angle click
   Profile: Micro Bevel
 source: https://everfloor.com.au/product/grand-alpine-bybrid-core-6-5mm-dark-grey
 ---
-Grand Alpine Hybrid - Core 6.5 is available in 13 colours.
+Grand Alpine Hybrid - Core 6.5 is available in 13 colours. Available in 12 colours.

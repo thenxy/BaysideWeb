@@ -50,11 +50,11 @@ colours:
 image: /img/products/greena-bamboo-ash.webp
 specs:
   Size: 1850 × 125 × 14mm
-  Box: 1.3875 (sqm/ctn)
+  Box: 1.3875 (m²/ctn)
   Lock System: Valinge click-lock
   Profile: V Groove
   Box Weight: 19.3 kg
   Warranty: 25 years
 source: https://everfloor.com.au/product/greena-bamboo-flooring-ash
 ---
-Greena Bamboo is available in 11 colours. 25-year warranty.
+Greena Bamboo is available in 11 colours. 25-year warranty. Available in 11 colours.

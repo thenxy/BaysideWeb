@@ -34,12 +34,12 @@ colours:
 image: /img/products/luxflor-gloss-12mm-kempas.webp
 specs:
   Finish: Gloss
-  Abrasion rating: Heavy Residential, Light Commercial AC3
-  Box: 2.1433 (sqm/ctn)
+  Abrasion Rating: Heavy Residential, Light Commercial AC3
+  Box: 2.1433 (m²/ctn)
   Lock System: Unilin Click
   Profile: Bevel Edge
   Box Weight: 21.9 kg
-  Warranty: 25 Years
+  Warranty: 25 years
 source: https://everfloor.com.au/product/luxflor-12mm-gloss-laminate-kempas
 ---
-Luxflor Gloss 12mm is available in 7 colours. Finish: Gloss. 25-year warranty.
+Luxflor Gloss laminate flooring. Available in 7 colours.

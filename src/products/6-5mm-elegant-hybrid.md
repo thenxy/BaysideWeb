@@ -26,8 +26,8 @@ specs:
   Click Profile: Unilin
   Installation: Floated with Underlay
   Pack Size: 6 pieces - 2.08m² per box
-  Domestic Warranty: 25 Years
-  Commercial Warranty: 10 Years
+  Domestic Warranty: 25 years
+  Commercial Warranty: 10 years
 source: https://jimsflooring.com.au/product/aaa-jims-65mm-elegant-hybrid/
 ---
 6.5mm Elegant Hybrid gives Australian homes a stylish hybrid floor that balances elegance, practicality, and genuine affordability. Specifically, the 228mm wide rigid core planks create a sophisticated, spacious surface in any room.

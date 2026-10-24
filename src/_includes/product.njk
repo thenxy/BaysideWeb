@@ -8,7 +8,8 @@ layout: base.njk
   </nav>
   <div class="pdp__grid">
     <div class="pdp__media">
-      {% if image %}<img id="pdp-img" src="{{ image }}" alt="{{ title }}">{% else %}<span class="swatch swatch--lg" aria-hidden="true"></span>{% endif %}
+      <div class="pdp__frame">{% if image %}<img id="pdp-img" src="{{ image }}" alt="{{ title }}">{% else %}<span class="swatch swatch--lg" aria-hidden="true"></span>{% endif %}</div>
+      <p class="pdp__note" id="swatch-note" hidden>Swatch photo. We bring full-size samples to your free on-site quote so you can see and feel the real thing.</p>
       {% if not multi %}{% for g in gallery %}<img src="{{ g }}" alt="{{ title }} detail" loading="lazy">{% endfor %}{% endif %}
     </div>
     <div class="pdp__info">
@@ -44,3 +45,10 @@ layout: base.njk
     </div>
   </div>
 </section>
+{% set rel = collections.catalogue | inCategory(category) | related(page.url, 4) %}
+{% if rel.length %}
+<section class="wrap related">
+  <h2>You might also like</h2>
+  <div class="grid">{% for p in rel %}{% include "card.njk" %}{% endfor %}</div>
+</section>
+{% endif %}

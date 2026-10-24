@@ -9,18 +9,18 @@ colours:
   image: /img/products/ornato-swish-oak-wideboard-urban-limewash-oak.webp
 - name: Urban Antique Oak
   image: /img/products/ornato-swish-oak-wideboard-urban-antique-oak.webp
-- name: Paris Summer Oak5
-  image: /img/products/ornato-swish-oak-wideboard-paris-summer-oak5.webp
-- name: Paris Natural Oak1
-  image: /img/products/ornato-swish-oak-wideboard-paris-natural-oak1.webp
-- name: Elegant White Oak1
-  image: /img/products/ornato-swish-oak-wideboard-elegant-white-oak1.webp
-- name: Elegant Walnut Oak3
-  image: /img/products/ornato-swish-oak-wideboard-elegant-walnut-oak3.webp
-- name: Elegant Sandy Oak1
-  image: /img/products/ornato-swish-oak-wideboard-elegant-sandy-oak1.webp
-- name: Elegant Cloud Oak New3
-  image: /img/products/ornato-swish-oak-wideboard-elegant-cloud-oak-new3.webp
+- name: Paris Summer Oak
+  image: /img/products/ornato-swish-oak-wideboard-paris-summer-oak.webp
+- name: Paris Natural Oak
+  image: /img/products/ornato-swish-oak-wideboard-paris-natural-oak.webp
+- name: Elegant White Oak
+  image: /img/products/ornato-swish-oak-wideboard-elegant-white-oak.webp
+- name: Elegant Walnut Oak
+  image: /img/products/ornato-swish-oak-wideboard-elegant-walnut-oak.webp
+- name: Elegant Sandy Oak
+  image: /img/products/ornato-swish-oak-wideboard-elegant-sandy-oak.webp
+- name: Elegant Cloud Oak New
+  image: /img/products/ornato-swish-oak-wideboard-elegant-cloud-oak-new.webp
 - name: Country Smoked Oak
   image: /img/products/ornato-swish-oak-wideboard-country-smoked-oak.webp
 image: /img/products/ornato-swish-oak-wideboard-country-caramel-oak.webp

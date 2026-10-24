@@ -1,0 +1,13 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in collections.all %}{% if p.url and not p.data.cat and not p.data.noindex and p.url != "/sitemap.xml" and p.url != "/robots.txt" %}
+  <url><loc>{{ site.url }}{{ p.url }}</loc></url>
+{%- endif %}{% endfor %}
+{%- for c in categories %}
+  <url><loc>{{ site.url }}/products/{{ c.key }}/</loc></url>
+{%- endfor %}
+</urlset>

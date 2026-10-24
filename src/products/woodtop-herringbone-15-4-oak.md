@@ -13,13 +13,13 @@ colours:
   image: /img/products/woodtop-herringbone-15-4-oak-saw-mill.webp
 image: /img/products/woodtop-herringbone-15-4-oak-natural.webp
 specs:
-  Size: 600 x 120 x 15(4)mm
+  Size: 600 × 120 × 15(4)mm
   Finish: Matte
-  Box: 0.864㎡/ctn
+  Box: 0.864m²/ctn
   Lock System: T&G
   Profile: Micro Bevel
   Box Weight: '22'
-  Warranty: 25 Years Structural
+  Warranty: 25 years Structural
 source: https://everfloor.com.au/product/woodtop-herringbone-15-4-oak-natural
 ---
-Woodtop Herringbone 15/4 Oak is available in 4 colours. Finish: Matte. Warranty: 25 Years Structural.
+Woodtop Herringbone 15/4 Oak timber flooring. Available in 4 colours.

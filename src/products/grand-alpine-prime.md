@@ -29,11 +29,11 @@ colours:
   image: /img/products/grand-alpine-prime-yarra-oak.webp
 image: /img/products/grand-alpine-prime-chestnut.webp
 specs:
-  Size: 1524 x 230 x 8.5mm
+  Size: 1524 × 230 × 8.5mm
   Finish: Embossed
-  Box: 1.7526 ㎡/ctn
+  Box: 1.7526 m²/ctn
   Profile: Angle to Angle
   Warranty: 25 years
 source: https://everfloor.com.au/product/grand-alpine-prime-chestnut
 ---
-Grand Alpine Prime is available in 12 colours. Finish: Embossed. 25-year warranty.
+Grand Alpine Prime hybrid flooring. Available in 12 colours.

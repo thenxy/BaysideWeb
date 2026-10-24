@@ -6,13 +6,19 @@ pagination:
   alias: cat
 permalink: "/products/{{ cat.key }}/"
 eleventyComputed:
-  title: "{{ cat.name }} flooring"
+  title: "{% if cat.key == 'carpet' %}Carpet{% else %}{{ cat.name }} flooring{% endif %}"
+  description: "{{ cat.blurb }} Request a free on-site quote anywhere in Sydney."
 ---
 <section class="wrap page">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/products/">Products</a> / <span>{{ cat.name }}</span></nav>
   <h1>{{ cat.name }}</h1>
   <p class="lead">{{ cat.blurb }}</p>
   {% set items = collections.catalogue | inCategory(cat.key) %}
+  {% set subs = items | pluck("subcategory") | unique %}
+  {% if subs.length > 1 %}<div class="filters" id="subfilters" aria-label="Filter by type">
+    <button class="chip is-on" data-sub="all">All</button>
+    {% for s in subs %}<button class="chip" data-sub="{{ s }}">{{ s }}</button>{% endfor %}
+  </div>{% endif %}
   {% if items.length %}
   <div class="grid">
     {% for p in items %}{% include "card.njk" %}{% endfor %}

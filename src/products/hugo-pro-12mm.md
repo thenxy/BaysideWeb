@@ -51,19 +51,19 @@ colours:
   image: /img/products/hugo-pro-12mm-warm-natural-oak.webp
   specs:
     Finish: Matte
-- name: Hugo Oak White Wash
-  image: /img/products/hugo-pro-12mm-hugo-oak-white-wash.webp
+- name: Oak White Wash
+  image: /img/products/hugo-pro-12mm-oak-white-wash.webp
   specs:
     Finish: Real Woodgrain EIR
 image: /img/products/hugo-pro-12mm-frappe-oak.webp
 specs:
   Size: 2265 × 192 × 12.3mm
-  Abrasion rating: Commercial AC4
-  Box: 2.1744 (sqm/ctn)
+  Abrasion Rating: Commercial AC4
+  Box: 2.1744 (m²/ctn)
   Lock System: Valinge 5G
   Profile: V Groove
   Box Weight: 23.5 kg
-  Warranty: 25 Years
+  Warranty: 25 years
 source: https://everfloor.com.au/product/12mm-hugo-pro-laminate-frappe-oak
 ---
-Hugo Pro 12mm is available in 13 colours. 25-year warranty.
+Hugo Pro 12mm is available in 13 colours. 25-year warranty. Available in 13 colours.

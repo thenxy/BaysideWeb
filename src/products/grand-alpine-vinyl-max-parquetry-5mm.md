@@ -17,12 +17,12 @@ colours:
   image: /img/products/grand-alpine-vinyl-max-parquetry-5mm-summit.webp
 image: /img/products/grand-alpine-vinyl-max-parquetry-5mm-blossom.webp
 specs:
-  Size: 610 x 125 x 5mm
+  Size: 610 × 125 × 5mm
   Finish: Super-Matte Woodgrain
-  Abrasion rating: Everguard Pro 0.7mm
-  Box: 1.372 ㎡/ctn
+  Abrasion Rating: Everguard Pro 0.7mm
+  Box: 1.372 m²/ctn
   Profile: Micro Bevel
   Warranty: 25 years
 source: https://everfloor.com.au/product/grand-alpine-5mm-vinyl-herringbone-blossom
 ---
-Grand Alpine Vinyl - Max Parquetry 5mm is available in 6 colours. Finish: Super-Matte Woodgrain. 25-year warranty.
+Grand Alpine Vinyl - Max Parquetry vinyl flooring. Available in 6 colours.

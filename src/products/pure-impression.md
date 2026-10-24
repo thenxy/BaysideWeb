@@ -3,8 +3,8 @@ title: Pure Impression
 category: carpet
 subcategory: Nylon
 colours:
-- name: Pure Impression
-  image: /img/products/pure-impression-pure-impression.webp
+- name: Impression
+  image: /img/products/pure-impression-impression.webp
 - name: Velvet Graphite
   image: /img/products/pure-impression-velvet-graphite.webp
 - name: Thunder Veil
@@ -23,9 +23,9 @@ colours:
   image: /img/products/pure-impression-silverstone.webp
 - name: Golden Cane
   image: /img/products/pure-impression-golden-cane.webp
-- name: Pure Impression1
-  image: /img/products/pure-impression-pure-impression1.webp
-image: /img/products/pure-impression-pure-impression.webp
+- name: Impression
+  image: /img/products/pure-impression-impression-x.webp
+image: /img/products/pure-impression-impression.webp
 specs:
   Fibre / Fabric: Solution Dyed Nylon (SDN)
   Stain Resistance: Yes - solution dyed construction

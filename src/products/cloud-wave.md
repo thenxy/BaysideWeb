@@ -45,7 +45,7 @@ specs:
   Construction: Twist
   Stain Resistance: Yes - inherent fibre-level protection
   Fade Resistance: Yes - Colour Guard® technology
-  Warranty: 15 Years - wear, stains, and fade
+  Warranty: 15 years - wear, stains, and fade
   Colours Available: '22'
   Colour Range: Warm creams and tans through to serene pastels
 source: https://jimsflooring.com.au/product/cloud-wave/

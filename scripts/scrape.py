@@ -34,7 +34,7 @@ JIMS_CATEGORY = {
     "Laminate Flooring": ("laminate", None),
     "Timber Flooring": ("timber", None),
     "Vinyl Flooring": ("vinyl", None),
-    "Carpets": ("carpet", None),
+    "Carpets": ("carpet", "Other"),
     "Nylon": ("carpet", "Nylon"),
     "Polyester": ("carpet", "Polyester"),
     "Wool": ("carpet", "Wool"),
@@ -72,12 +72,50 @@ def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s).strip("-")
 
 
+def plain(text):
+    """Strip any HTML (some supplier fields contain escaped markup) and tidy whitespace."""
+    t = BeautifulSoup(html.unescape(text or ""), "lxml").get_text(" ")
+    t = re.sub(r"\s+", " ", t).strip()
+    return re.sub(r"^(?:Description|Overview|Product Description)\b[:\s-]*", "", t).strip()
+
+
 def short(text, sentences=2, limit=420):
-    text = re.sub(r"\s+", " ", html.unescape(text or "")).strip()
+    text = plain(text)
     parts = re.split(r"(?<=[.!?])\s+", text)
-    out = " ".join(parts[:sentences])
+    if text.endswith("…") and len(parts) > 1:  # supplier text already cut off mid-sentence: keep whole sentences
+        parts = parts[:-1]
+    out = ""
+    for part in parts[:sentences]:
+        if out and len(out) + 1 + len(part) > limit:
+            break
+        out = (out + " " + part).strip()
     if len(out) > limit:
         out = out[:limit].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    if out.endswith("…"):  # never end on a cut-off fragment: fall back to the last complete sentence/clause
+        body = out[:-1].rstrip()
+        cut = max(body.rfind("."), body.rfind("!"), body.rfind("?"))
+        if cut > 40:
+            out = body[:cut + 1]
+        elif "," in body:
+            out = body[:body.rfind(",")].rstrip() + "."
+        else:
+            out = body + "."
+    return out
+
+
+SPEC_LABEL = re.compile(r"(Type Of Product|Pile Material|Pile Height|Pile Weight|Wear Warranty|Warranty|Backing|Dye Method|Construction|Width):\s*")
+
+
+def spec_dump(text):
+    """'Type Of Product: Loop pile Pile Material: 100% wool ...' -> dict, or None when it is normal prose."""
+    t = plain(text)
+    m = list(SPEC_LABEL.finditer(t))
+    if len(m) < 2 or m[0].start() > 3:
+        return None
+    out = {}
+    for i, x in enumerate(m):
+        end = m[i + 1].start() if i + 1 < len(m) else len(t)
+        out[x.group(1)] = t[x.end():end].strip(" .")
     return out
 
 
@@ -150,16 +188,17 @@ def scrape_jims(cache):
             title=name, category=cat, subcategory=sub,
             thickness=thickness_of(name, specs.get("Dimensions"), *[v for k, v in specs.items() if "thickness" in k.lower()],
                                  re.sub(r"(?i).*thickness\W*", "", short_desc.get_text(" ") if short_desc else "", count=1)[:40]),
-            colours=[dict(name=n, images=[v[0]]) for n, v in colours.items()] or None,
+            colours=[dict(name=n, images=v) for n, v in colours.items()] or None,
             specs=specs or None,
             desc=short(short_desc.get_text(" ") if short_desc else ld.get("description", "")),
+            raw_desc=short_desc.get_text(" ") if short_desc else ld.get("description", ""),
             images=images, source=u, supplier="Jim's Flooring",
         ))
     return out
 
 
 JUNK_TOKEN = re.compile(
-    r"^(?:\d+p?|\d+x\d*\w*|[a-z]|swatch|lo|hi|res|lr|hr|web|ok|scaled|\d?sm|z|k|gf|pdf|hn\d+\w*|(?=[0-9a-f]*\d)[0-9a-f]{3,})$",
+    r"^(?:web\d*|swatch\w*|\d+p?|\d+x\d*\w*|[a-z]|swatch|lo|hi|res|lr|hr|web|ok|scaled|\d?sm|z|k|gf|pdf|hn\d+\w*|(?=[0-9a-f]*\d)[0-9a-f]{3,})$",
     re.I)
 
 
@@ -341,28 +380,56 @@ def scrape_everfloor(cache):
 
 
 # ----------------------------------------------------------------- output
-def save_image(urls, dest, cache):
+def as_groups(x):
+    """Candidate photos for one picture: a list of groups, each a list of alternative URLs for the same file."""
+    x = [x] if isinstance(x, str) else list(x)
+    return [[e] if isinstance(e, str) else list(e) for e in x]
+
+
+def best_image(groups, cache):
+    """The widest photo among the candidates (suppliers often list a tiny swatch and a large room photo)."""
+    best = None
+    for g in groups:
+        for url in g:
+            try:
+                im = Image.open(io.BytesIO(fetch.get(url, cache, binary=True)))
+                im.load()
+            except Exception:  # noqa: BLE001
+                continue
+            if best is None or im.width > best.width:
+                best = im
+            break  # first alternative that loads
+        if best is not None and best.width >= 900:
+            break
+    return best
+
+
+def width_of(path):
+    try:
+        with Image.open(path) as im:
+            return im.width
+    except Exception:  # noqa: BLE001
+        return 0
+
+
+def save_image(groups, dest, cache):
     """Save a large version (dest) and a small grid/swatch version (<name>-t.webp)."""
+    groups = as_groups(groups)
     thumb = dest.with_name(dest.stem + "-t.webp")
-    if dest.exists() and thumb.exists():
+    if dest.exists() and thumb.exists() and (len(groups) == 1 or width_of(dest) >= 640):
         return True
-    last = None
-    for url in ([urls] if isinstance(urls, str) else urls):
-        try:
-            raw = fetch.get(url, cache, binary=True)
-            im = Image.open(io.BytesIO(raw))
-            im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            for path, width, q in ((dest, IMG_WIDTH, 76), (thumb, THUMB_WIDTH, 70)):
-                out = im
-                if im.width > width:
-                    out = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
-                out.save(path, "WEBP", quality=q, method=4)
-            return True
-        except Exception as e:  # noqa: BLE001
-            last = e
-    print("  ! image failed", urls, last)
-    return False
+    im = best_image(groups, cache)
+    if im is None:
+        print("  ! image failed", groups[:1])
+        return False
+    im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    for path, width, q in ((dest, IMG_WIDTH, 76), (thumb, THUMB_WIDTH, 70)):
+        out = im
+        if im.width > width:
+            out = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
+        out.save(path, "WEBP", quality=q, method=4)
+    return True
 
 
 # Company names that must never appear on the public site.
@@ -396,11 +463,24 @@ def scrub_text(t):
     return re.sub(r"\s+", " ", t).strip()
 
 
+def norm_spec(k, v):
+    k = re.sub(r"\s+", " ", str(k)).strip()
+    if re.fullmatch(r"\d{4,}", k):  # colour-code rows (835701: Platinum Haze) are ordering codes, not specs
+        return None, None
+    k = re.sub(r"\b([a-z])", lambda m: m.group(1).upper(), k)
+    v = scrub_text(str(v))
+    v = re.sub(r"(\d)\s?(?:㎡|m2|sqm)\b", r"\1 m²", v, flags=re.I)
+    v = re.sub(r"㎡|\bsqm\b", "m²", v, flags=re.I)
+    v = re.sub(r"(?<=[\dm])\s+x\s+(?=\d)", " × ", v)
+    v = re.sub(r"(\d)\s*Years?\b", lambda m: m.group(1) + (" year" if m.group(1) == "1" else " years"), v)
+    return k, v
+
+
 def clean_specs(sp):
     out = {}
     for k, v in (sp or {}).items():
-        v = scrub_text(str(v))
-        if v and not UNCONFIRMED.search(v):
+        k, v = norm_spec(k, v)
+        if k and v and not UNCONFIRMED.search(v):
             out[k] = v
     return out
 
@@ -421,11 +501,46 @@ def strip_mm(t, thickness=None):
     return out if len(out) > 2 else t
 
 
+def colour_name(name, orig, title):
+    name = tidy(name)
+    for pre in (orig, title):
+        if name.lower().startswith(pre.lower() + " "):  # drop a repeated product-line prefix
+            name = name[len(pre) + 1:]
+            break
+    words = {re.sub(r"\d+$", "", w.lower()) for w in re.findall(r"[A-Za-z0-9]+", orig)}
+    toks = name.split()
+    if len(toks) > 1 and re.sub(r"\d+$", "", toks[0].lower()) in words:  # "Accolade2 Kiama" -> "Kiama"
+        name = " ".join(toks[1:])
+    name = re.sub(r"^\d+/\d+\s+", "", name)
+    name = re.sub(r"\b([A-Za-z]{1,3})(\d{3,})([A-Za-z]?)\b", lambda m: (m[1] + m[2] + m[3]).upper(), name)
+    name = re.sub(r"([a-z])(\d{3,})", r"\1 \2", name)
+    name = re.sub(r"(?<=[A-Za-z])\d{1,2}\b", "", name)      # "Paris Natural Oak1" -> "Paris Natural Oak"
+    name = re.sub(r"\b\d+(?=[A-Za-z])", "", name)           # "9Crushedice" -> "Crushedice"
+    name = re.sub(r"\s+", " ", name).strip()
+    if name.lower() == "spg":
+        name = "Spotted Gum"
+    elif len(name) <= 3 and name.isalpha() and not re.search(r"[aeiou]", name, re.I):
+        name = name.upper()                                   # "Mcg" -> "MCG"
+    return name
+
+
 def write_product(p, slugs, cache, images=True):
-    orig = tidy(p["title"])
+    orig = tidy(p["title"]).replace("Natrails", "Natralis")
     p["title"] = strip_mm(orig, p.get("thickness"))
-    p["desc"] = scrub_text(p.get("desc"))
     p["specs"] = clean_specs(p.get("specs"))
+    p["desc"] = re.sub(r"\bSDN\b", "Solution-dyed nylon", scrub_text(p.get("desc")))
+    if re.search(r"Technical Specifications|\b[A-Z][a-z]+:\s", p["desc"] or ""):  # a pasted spec table, not a description
+        p["desc"] = f"{p['title']} {p['category']} flooring."
+    if p["desc"] and p["desc"][-1] not in ".!?":
+        p["desc"] += "."
+    dump = spec_dump(p.get("raw_desc")) if p.get("raw_desc") else None
+    if dump:  # the supplier pasted a spec list instead of a description
+        typ, mat = dump.pop("Type Of Product", None), dump.pop("Pile Material", None)
+        for k, v in clean_specs(dump).items():
+            p["specs"].setdefault(k, v)
+        noun = "carpet" if p["category"] == "carpet" else "flooring"
+        p["desc"] = scrub_text(" ".join(x for x in [(typ or "").capitalize(), noun] if x.strip()) +
+                               (f" in {mat}" if mat else "") + ".")
     if p.get("thickness") and UNCONFIRMED.search(str(p["thickness"])):
         p["thickness"] = None
     base = slugify(orig)
@@ -436,12 +551,8 @@ def write_product(p, slugs, cache, images=True):
     slugs.add(slug)
     colours, used = [], set()
     for c in p.get("colours") or []:
-        name = tidy(c["name"])
-        for pre in (orig, p["title"]):
-            if name.lower().startswith(pre.lower() + " "):  # drop a repeated product-line prefix
-                name = name[len(pre) + 1:]
-                break
-        if not name:
+        name = colour_name(c["name"], orig, p["title"])
+        if len(name) <= 2:
             continue
         cs = slugify(name) or "colour"
         while cs in used:
@@ -450,28 +561,34 @@ def write_product(p, slugs, cache, images=True):
         entry = {"name": name}
         if images and c.get("images"):
             fn = f"{slug}-{cs}.webp"
-            if save_image(c["images"][0], IMG / fn, cache):
+            if save_image(c["images"], IMG / fn, cache):
                 entry["image"] = f"/img/products/{fn}"
         sp = clean_specs(c.get("specs"))
         if sp:
             entry["specs"] = sp
         colours.append(entry)
+    if sum(1 for c in colours if c.get("image")) >= 2:  # never show a colour with the wrong (or no) photo
+        colours = [c for c in colours if c.get("image")]
     fm = {"title": p["title"], "category": p["category"]}
     for k in ("subcategory", "thickness"):
         if p.get(k):
             fm[k] = p[k]
     if len(colours) > 1:
         fm["colours"] = colours
-        first = next((c["image"] for c in colours if c.get("image")), None)
-        if first:
-            fm["image"] = first
+        withimg = [c["image"] for c in colours if c.get("image")]
+        # lead with the sharpest photo so the grid card and first view look best
+        sharp = next((i for i in withimg if width_of(ROOT / "src" / i.lstrip("/")) >= 640), None)
+        if withimg:
+            fm["image"] = sharp or withimg[0]
+        if len(p["desc"]) < 60:
+            p["desc"] = (p["desc"].rstrip(".") + ". " if p["desc"] else "") + f"Available in {len(colours)} colours."
     else:
         saved = []
-        imgs = [c for c in (p.get("images") or [])] or [[u] for c in (p.get("colours") or []) for u in c.get("images", [])]
+        imgs = [c for c in (p.get("images") or [])] or [c["images"] for c in (p.get("colours") or []) if c.get("images")]
         if images:
             for i, urls in enumerate(imgs[:3]):
                 fn = f"{slug}.webp" if i == 0 else f"{slug}-{i + 1}.webp"
-                if save_image(urls, IMG / fn, cache):
+                if save_image([urls] if isinstance(urls, str) or isinstance(urls[0], str) else urls, IMG / fn, cache):
                     saved.append(f"/img/products/{fn}")
         if saved:
             fm["image"] = saved[0]

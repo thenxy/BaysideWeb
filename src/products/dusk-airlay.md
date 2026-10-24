@@ -15,12 +15,12 @@ colours:
   image: /img/products/dusk-airlay-blacksea.webp
 - name: Nightsky
   image: /img/products/dusk-airlay-nightsky.webp
-- name: Dusk Range Pitchblack
-  image: /img/products/dusk-airlay-dusk-range-pitchblack.webp
-- name: Dusk Range Starlight
-  image: /img/products/dusk-airlay-dusk-range-starlight.webp
-- name: Dusk Range Moonlight
-  image: /img/products/dusk-airlay-dusk-range-moonlight.webp
+- name: Range Pitchblack
+  image: /img/products/dusk-airlay-range-pitchblack.webp
+- name: Range Starlight
+  image: /img/products/dusk-airlay-range-starlight.webp
+- name: Range Moonlight
+  image: /img/products/dusk-airlay-range-moonlight.webp
 image: /img/products/dusk-airlay-nighttide.webp
 specs:
   Brand: Airlay

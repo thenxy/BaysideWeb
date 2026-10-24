@@ -35,12 +35,12 @@ image: /img/products/marvel-6-5mm-american-oak.webp
 specs:
   Size: 1500 × 180 × 6.5mm
   Finish: Embossed
-  Abrasion rating: Everguard Pro 0.5mm
-  Box: 1.62 (sqm/ctn)
+  Abrasion Rating: Everguard Pro 0.5mm
+  Box: 1.62 (m²/ctn)
   Lock System: Valinge
   Profile: Micro Bevel
   Box Weight: 16.8 kg
   Warranty: 25 years
 source: https://everfloor.com.au/product/marvel-spc-hybrid-flooring-american-oak
 ---
-Marvel 6.5mm is available in 14 colours. Finish: Embossed. 25-year warranty.
+Marvel hybrid flooring. Available in 14 colours.

@@ -41,6 +41,17 @@ description: Carpet, hybrid, timber and laminate flooring supplied and installed
   </div>
 </section>
 
+{% set pop = collections.catalogue | byTitles(site.featured) %}
+{% if pop.length %}
+<section class="wrap block popular">
+  <div class="block__head">
+    <h2>Popular ranges</h2>
+    <a href="/products/">See everything</a>
+  </div>
+  <div class="grid">{% for p in pop %}{% include "card.njk" %}{% endfor %}</div>
+</section>
+{% endif %}
+
 <section class="steps">
   <div class="wrap">
     <h2>How a free quote works</h2>

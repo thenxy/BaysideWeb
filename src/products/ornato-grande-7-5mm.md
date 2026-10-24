@@ -18,4 +18,4 @@ colours:
 image: /img/products/ornato-grande-7-5mm-raw-gum.webp
 source: https://jimsflooring.com.au/product/ornato-grande-75mm/
 ---
-Ornato Grande Hybrid waterproof flooring features a unique blend of design and durability, which allows the flooring boards to be used throughout every interior space, even in bathrooms and laundries …
+Ornato Grande Hybrid waterproof flooring features a unique blend of design and durability, which allows the flooring boards to be used throughout every interior space.

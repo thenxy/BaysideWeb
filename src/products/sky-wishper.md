@@ -1,6 +1,7 @@
 ---
 title: Sky Wishper
 category: carpet
+subcategory: Other
 colours:
 - name: Slate Storm
   image: /img/products/sky-wishper-slate-storm.webp

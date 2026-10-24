@@ -50,12 +50,12 @@ colours:
 image: /img/products/luxflor-embossed-12mm-aged-grey-oak.webp
 specs:
   Size: 1215 × 165 × 12.3mm
-  Abrasion rating: AC3
-  Box: 2.005 (sqm/ctn)
+  Abrasion Rating: AC3
+  Box: 2.005 (m²/ctn)
   Lock System: Unilin Click
   Profile: V Groove
   Box Weight: 20.0 kg
-  Warranty: 25 Years
+  Warranty: 25 years
 source: https://everfloor.com.au/product/luxflor-12mm-embossed-laminate-aged-grey-oak
 ---
 Luxflor Embossed 12mm is available in 11 colours. 25-year warranty.

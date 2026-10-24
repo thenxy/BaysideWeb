@@ -3,8 +3,8 @@ title: Heritage Touch
 category: carpet
 subcategory: Nylon
 colours:
-- name: Heritage Touch
-  image: /img/products/heritage-touch-heritage-touch.webp
+- name: Touch
+  image: /img/products/heritage-touch-touch.webp
 - name: Crystal Silver
   image: /img/products/heritage-touch-crystal-silver.webp
 - name: Stirling Alloy
@@ -23,7 +23,7 @@ colours:
   image: /img/products/heritage-touch-opal-sand.webp
 - name: Lunar Grey
   image: /img/products/heritage-touch-lunar-grey.webp
-image: /img/products/heritage-touch-heritage-touch.webp
+image: /img/products/heritage-touch-touch.webp
 specs:
   Pile Type: Cut Pile Twist
   Fibre / Fabric: 100% Greenstrand™ Solution Dyed Nylon

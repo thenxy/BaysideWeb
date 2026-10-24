@@ -22,7 +22,7 @@ colours:
 image: /img/products/canopy-legacy-8mm-american-walnut.webp
 specs:
   Size: 1215 × 196 × 8.3mm
-  Box: 2.38 ㎡/ctn
+  Box: 2.38 m²/ctn
   Lock System: Floating Click-lock
   Warranty: 25 years
 source: https://everfloor.com.au/product/canopy-legacy-8mm-american-walnut

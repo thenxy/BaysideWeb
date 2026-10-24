@@ -8,4 +8,4 @@ gallery:
 - /img/products/shiraz-3.webp
 source: https://jimsflooring.com.au/product/shiraz/
 ---
-SDN cut pile twist
+Solution-dyed nylon cut pile twist.

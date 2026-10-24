@@ -22,7 +22,7 @@ specs:
   Thickness: 14mm
   Layout: Herringbone
   Finish: Water-Based UV Lacquer
-  Surface Warranty: 25 Years Residential
+  Surface Warranty: 25 years Residential
   Structural Warranty: Lifetime
   Colourways: '6'
 source: https://jimsflooring.com.au/product/continental-oak-amour-herringbone/

@@ -3,8 +3,8 @@ title: Cloud Touch
 category: carpet
 subcategory: Polyester
 colours:
-- name: Cloud Touch
-  image: /img/products/cloud-touch-cloud-touch.webp
+- name: Touch
+  image: /img/products/cloud-touch-touch.webp
 - name: Morning Sky
   image: /img/products/cloud-touch-morning-sky.webp
 - name: Shadow Rock
@@ -19,7 +19,7 @@ colours:
   image: /img/products/cloud-touch-nutmeg.webp
 - name: Earthstone
   image: /img/products/cloud-touch-earthstone.webp
-image: /img/products/cloud-touch-cloud-touch.webp
+image: /img/products/cloud-touch-touch.webp
 specs:
   Pile Type: Cut Pile Twist
   Fibre / Fabric: 100% PET (Polyester)

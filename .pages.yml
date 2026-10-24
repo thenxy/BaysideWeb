@@ -47,3 +47,4 @@ content:
       - { name: email, label: Email, type: string }
       - { name: hours, label: Hours, type: string }
       - { name: areas, label: Areas serviced, type: string, list: true }
+      - { name: featured, label: Popular ranges on the home page (exact product names), type: string, list: true }

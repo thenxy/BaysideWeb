@@ -3,31 +3,29 @@ title: Como - Airlay
 category: carpet
 subcategory: Carpet tiles
 colours:
-- name: Como Toorak
-  image: /img/products/como-airlay-como-toorak.webp
-- name: Como Windsor
-  image: /img/products/como-airlay-como-windsor.webp
-- name: Como Armadale
-  image: /img/products/como-airlay-como-armadale.webp
-- name: Canterbury
-  image: /img/products/como-airlay-canterbury.webp
-- name: Como Brighton
-  image: /img/products/como-airlay-como-brighton.webp
-- name: Como Hampton
-  image: /img/products/como-airlay-como-hampton.webp
-- name: Como Surrey Hills
-  image: /img/products/como-airlay-como-surrey-hills.webp
-- name: Como Toorakbrighton
-  image: /img/products/como-airlay-como-toorakbrighton.webp
-- name: Como Armadale Web1
-  image: /img/products/como-airlay-como-armadale-web1.webp
-- name: Surrey Hills
-  image: /img/products/como-airlay-surrey-hills.webp
-- name: Hampton
-  image: /img/products/como-airlay-hampton.webp
+- name: Toorak
+  image: /img/products/como-airlay-toorak.webp
 - name: Windsor
   image: /img/products/como-airlay-windsor.webp
-image: /img/products/como-airlay-como-toorak.webp
+- name: Armadale
+  image: /img/products/como-airlay-armadale.webp
+- name: Canterbury
+  image: /img/products/como-airlay-canterbury.webp
+- name: Brighton
+  image: /img/products/como-airlay-brighton.webp
+- name: Hampton
+  image: /img/products/como-airlay-hampton.webp
+- name: Surrey Hills
+  image: /img/products/como-airlay-surrey-hills.webp
+- name: Toorakbrighton
+  image: /img/products/como-airlay-toorakbrighton.webp
+- name: Surrey Hills
+  image: /img/products/como-airlay-surrey-hills-x.webp
+- name: Hampton
+  image: /img/products/como-airlay-hampton-x.webp
+- name: Windsor
+  image: /img/products/como-airlay-windsor-x.webp
+image: /img/products/como-airlay-toorak.webp
 specs:
   Brand: Airlay
   Type: Multi Loop Patterned Carpet Tile

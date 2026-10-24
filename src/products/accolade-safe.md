@@ -3,31 +3,31 @@ title: Accolade Safe
 category: vinyl
 thickness: 2mm
 colours:
-- name: Accolade Torquay
-  image: /img/products/accolade-safe-accolade-torquay.webp
+- name: Torquay
+  image: /img/products/accolade-safe-torquay.webp
 - name: Vinyl Floorsheet Flooring Accoladeplus Camdengrey
   image: /img/products/accolade-safe-vinyl-floorsheet-flooring-accoladeplus-camdengrey.webp
-- name: Accolade Cappuccino
-  image: /img/products/accolade-safe-accolade-cappuccino.webp
-- name: Accolade2 Grampians
-  image: /img/products/accolade-safe-accolade2-grampians.webp
-- name: Accolade Murrayclay Fcdd
-  image: /img/products/accolade-safe-accolade-murrayclay-fcdd.webp
-- name: Accolade Cradlemountain Adfa
-  image: /img/products/accolade-safe-accolade-cradlemountain-adfa.webp
-- name: Accolade Sandgrey Efac
-  image: /img/products/accolade-safe-accolade-sandgrey-efac.webp
-- name: Accolade2 Mangrove
-  image: /img/products/accolade-safe-accolade2-mangrove.webp
+- name: Cappuccino
+  image: /img/products/accolade-safe-cappuccino.webp
+- name: Grampians
+  image: /img/products/accolade-safe-grampians.webp
+- name: Murrayclay Fcdd
+  image: /img/products/accolade-safe-murrayclay-fcdd.webp
+- name: Cradlemountain Adfa
+  image: /img/products/accolade-safe-cradlemountain-adfa.webp
+- name: Sandgrey Efac
+  image: /img/products/accolade-safe-sandgrey-efac.webp
+- name: Mangrove
+  image: /img/products/accolade-safe-mangrove.webp
 - name: Vinyl Floorsheet Flooring Accoladeplus Ironbark
   image: /img/products/accolade-safe-vinyl-floorsheet-flooring-accoladeplus-ironbark.webp
-- name: Accolade Simpsondesert
-  image: /img/products/accolade-safe-accolade-simpsondesert.webp
-- name: Accolade2 Bellsblue
-  image: /img/products/accolade-safe-accolade2-bellsblue.webp
-- name: Accolade Blackopal
-  image: /img/products/accolade-safe-accolade-blackopal.webp
-image: /img/products/accolade-safe-accolade-torquay.webp
+- name: Simpsondesert
+  image: /img/products/accolade-safe-simpsondesert.webp
+- name: Bellsblue
+  image: /img/products/accolade-safe-bellsblue.webp
+- name: Blackopal
+  image: /img/products/accolade-safe-blackopal.webp
+image: /img/products/accolade-safe-torquay.webp
 specs:
   Type: Homogeneous Vinyl Sheet
   Manufactured: Australia

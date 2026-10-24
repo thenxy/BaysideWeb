@@ -30,7 +30,7 @@ specs:
   Units Per Box: '20'
   Coverage Per Box: 5m²
   Installation Method: Quarter Turn / Brick
-  Warranty: 15 Years Limited
+  Warranty: 15 years Limited
   Acoustic Rating: 6 Star
   CRI Green Label Plus: GLP1740 - Category 13X
   Tuft Bind: ASTM D 1335
@@ -38,8 +38,8 @@ specs:
   Electrostatic Propensity: AATCC 1996 134
   Flammability: CHF 6.3 kW/m² - Smoke Value 60% min
   Accelerated Soiling: ASTM D 6540
-  Colour Fastness to Light: AATCC 16E
-  Colour Fastness to Crocking: AATCC 165
+  Colour Fastness To Light: AATCC 16E
+  Colour Fastness To Crocking: AATCC 165
 source: https://jimsflooring.com.au/product/urbanova-collection-calm-walk/
 ---
-<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Commercial flooring lives or dies on performance and Calm Walk from the Urbanova Collection is built to perform. This 100% Solution Dyed Nylon multi-level loop carpet tile brings a 6-star acoustic rating, a 15-year limited warranty, and CRI Green Label Plus certification to any commercial space that needs a floor it can rely on.
+Commercial flooring lives or dies on performance and Calm Walk from the Urbanova Collection is built to perform. This 100% Solution Dyed Nylon multi-level loop carpet tile brings a 6-star acoustic rating, a 15-year limited warranty, and CRI Green Label Plus certification to any commercial space that needs a floor it can rely on.

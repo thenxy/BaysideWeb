@@ -35,6 +35,20 @@
     apply();
   }
 
+  // Category pages: filter by type (e.g. carpet: nylon, wool, tiles)
+  var subs = document.getElementById("subfilters");
+  if (subs) {
+    var items = [].slice.call(document.querySelectorAll(".grid .card"));
+    var sbtn = [].slice.call(subs.querySelectorAll(".chip"));
+    sbtn.forEach(function (b) {
+      b.addEventListener("click", function () {
+        sbtn.forEach(function (x) { x.classList.remove("is-on"); });
+        b.classList.add("is-on");
+        items.forEach(function (c) { c.hidden = b.dataset.sub !== "all" && c.dataset.sub !== b.dataset.sub; });
+      });
+    });
+  }
+
   // Prefill the quote form from ?product=
   var field = document.getElementById("product");
   if (field) {
@@ -69,7 +83,12 @@
   // Small source photos are shown at their own size rather than stretched
   var hero = document.getElementById("pdp-img");
   if (hero) {
-    var fit = function () { hero.classList.toggle("is-lowres", hero.naturalWidth > 0 && hero.naturalWidth < 640); };
+    var note = document.getElementById("swatch-note");
+    var fit = function () {
+      var low = hero.naturalWidth > 0 && hero.naturalWidth < 640;
+      hero.parentNode.classList.toggle("is-lowres", low);
+      if (note) note.hidden = !low;
+    };
     hero.addEventListener("load", fit);
     if (hero.complete) fit();
   }

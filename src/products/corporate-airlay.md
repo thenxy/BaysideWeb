@@ -3,12 +3,12 @@ title: Corporate - Airlay
 category: carpet
 subcategory: Carpet tiles
 colours:
-- name: Corporate Imperial
-  image: /img/products/corporate-airlay-corporate-imperial.webp
+- name: Imperial
+  image: /img/products/corporate-airlay-imperial.webp
 - name: Grey Pearl
   image: /img/products/corporate-airlay-grey-pearl.webp
-- name: Corporate Mutual
-  image: /img/products/corporate-airlay-corporate-mutual.webp
+- name: Mutual
+  image: /img/products/corporate-airlay-mutual.webp
 - name: Graphite
   image: /img/products/corporate-airlay-graphite.webp
 - name: Dynasty
@@ -17,17 +17,15 @@ colours:
   image: /img/products/corporate-airlay-passion.webp
 - name: Black Pearl
   image: /img/products/corporate-airlay-black-pearl.webp
-- name: Corporate Majestic
-  image: /img/products/corporate-airlay-corporate-majestic.webp
+- name: Majestic
+  image: /img/products/corporate-airlay-majestic.webp
 - name: Iron Plank
   image: /img/products/corporate-airlay-iron-plank.webp
-- name: Corporate Imperialblack Pearl
-  image: /img/products/corporate-airlay-corporate-imperialblack-pearl.webp
-- name: Corporate Majestic Mutual
-  image: /img/products/corporate-airlay-corporate-majestic-mutual.webp
-- name: Corporate Mutual Web2
-  image: /img/products/corporate-airlay-corporate-mutual-web2.webp
-image: /img/products/corporate-airlay-corporate-imperial.webp
+- name: Imperialblack Pearl
+  image: /img/products/corporate-airlay-imperialblack-pearl.webp
+- name: Majestic Mutual
+  image: /img/products/corporate-airlay-majestic-mutual.webp
+image: /img/products/corporate-airlay-imperial.webp
 specs:
   Brand: Airlay
   Type: Tufted Textured Loop Pile Carpet Tile

@@ -22,8 +22,8 @@ specs:
   Grade: ABCD (Natural Character)
   Coating: UV Lacquered
   Surface Treatment: Brushed
-  Pieces per Box: 6 PCs
-  Coverage per Box: 2.166 sqm
+  Pieces Per Box: 6 PCs
+  Coverage Per Box: 2.166 m²
 source: https://jimsflooring.com.au/product/aaa-jims-engineered-timber-153/
 ---
 If you want real oak underfoot without the fuss of solid timber, this is it. 15/3 Engineered Oak comes in long 1900mm planks with a brushed texture and UV lacquered finish that feels substantial the moment you walk on it.

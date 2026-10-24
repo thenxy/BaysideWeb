@@ -3,8 +3,6 @@ title: Homely Touch
 category: carpet
 subcategory: Nylon
 colours:
-- name: Ht
-  image: /img/products/homely-touch-ht.webp
 - name: Thunder Veil
   image: /img/products/homely-touch-thunder-veil.webp
 - name: Wishper Grey
@@ -17,9 +15,9 @@ colours:
   image: /img/products/homely-touch-silverwood.webp
 - name: Golden Cane
   image: /img/products/homely-touch-golden-cane.webp
-- name: Homely Touch
-  image: /img/products/homely-touch-homely-touch.webp
-image: /img/products/homely-touch-ht.webp
+- name: Touch
+  image: /img/products/homely-touch-touch.webp
+image: /img/products/homely-touch-thunder-veil.webp
 specs:
   Fibre / Fabric: Solution Dyed Nylon (SDN)
   Stain Resistance: Yes - solution dyed construction

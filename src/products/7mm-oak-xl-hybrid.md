@@ -33,22 +33,14 @@ specs:
   Installation: Floating
   Carton: 5 Planks - 2.098m²
   Weight Per Carton: 25.7kg
-  Residential Warranty: 30 Year Limited
-  Commercial Warranty: 10 Year Limited
+  Residential Warranty: 30 years Limited
+  Commercial Warranty: 10 years Limited
   Fire - Smoke: 127%
   Fire - CHF/CRF: 7.4kW/m²
   Slip - Dry Floor Friction: D1
   Slip - Wet Pendulum: P4
   Slip - Oil Wet Ramp: R10
   Formaldehyde: E0
-  '835008': Duskwood
-  '835009': Ironmist
-  '835010': Flint Oak
-  '835011': Cloudwood
-  '835012': Tidal Grey
-  '835013': Herritage Brown
-  '835014': Autumn Grain
-  '835015': Honeywood
 source: https://jimsflooring.com.au/product/jims-7mm-oak-xl-hybrid/
 ---
 XL means wider and wider means better. At 228mm, the Oak XL Hybrid gives you one of the broadest plank widths available in the 7mm hybrid category, creating a floor that immediately reads as more expansive, more generous, and more considered than standard-width alternatives.

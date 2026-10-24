@@ -22,7 +22,7 @@ specs:
   Slip Rating: P3
   Fire Rating: Critical radiant flux 9.7kW/m² — Smoke development rate 87%.minutes
   Acoustic Rating: 5 Star — Ln,w 43dB | IIC 67
-  Residential Warranty: 25 Years
+  Residential Warranty: 25 years
   Surface: Waterproof — scuff and stain resistant
 source: https://jimsflooring.com.au/product/armstrong-natural-creations-arborart/
 ---

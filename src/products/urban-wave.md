@@ -27,4 +27,4 @@ specs:
   Colours Available: 8 on-trend colours
 source: https://jimsflooring.com.au/product/urban-wave/
 ---
-Urban Wave understands what busy households actually need from a carpet, something that feels luxurious underfoot, holds up to daily family life, and keeps its colour and appearance long after cheaper alternatives would have given up. Hard-wearing durability and UV fade resistance form the practical backbone, while eight on-trend colours and a super soft texture deliver the style and comfort that make a home feel…
+Urban Wave understands what busy households actually need from a carpet, something that feels luxurious underfoot, holds up to daily family life, and keeps its colour and appearance long after cheaper alternatives would have given up.

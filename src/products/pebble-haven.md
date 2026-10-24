@@ -5,8 +5,6 @@ subcategory: Nylon
 colours:
 - name: Rain Shadow
   image: /img/products/pebble-haven-rain-shadow.webp
-- name: Ov11
-  image: /img/products/pebble-haven-ov11.webp
 - name: Ov All Colours
   image: /img/products/pebble-haven-ov-all-colours.webp
 - name: Glacier Dust
@@ -29,4 +27,4 @@ specs:
   Stain Resistance: Yes - solution dyed construction
 source: https://jimsflooring.com.au/product/pebble-haven/
 ---
-If you've been looking for a loop pile carpet that combines a wide colour range with the low-maintenance durability of Solution Dyed Nylon, Pebble Haven is worth a close look. Part of new SDN Loop Pile range, it uses a synthetic fibre construction that locks colour deep into each strand from the very start which means it holds up against fading, resists staining, and stays manageable without demanding much…
+If you've been looking for a loop pile carpet that combines a wide colour range with the low-maintenance durability of Solution Dyed Nylon, Pebble Haven is worth a close look.

@@ -17,7 +17,7 @@ specs:
   Installation: Glue Down - AS/NZS 1884
   Stain Resistance: 'Yes'
   Maintenance: Low maintenance
-  Residential Warranty: 25 Years
+  Residential Warranty: 25 years
 source: https://jimsflooring.com.au/product/armstrong-natural-creations-xl/
 ---
 Natural Creations XL delivers wide plank luxury vinyl flooring across twelve modern and classic hardwood and oak designs. At 230mm wide, each plank makes a strong visual impression immediately.

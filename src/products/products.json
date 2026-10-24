@@ -1,5 +1,9 @@
 {
   "layout": "product.njk",
   "tags": "product",
-  "permalink": "/products/{{ category }}/{{ page.fileSlug }}/"
+  "permalink": "/products/{{ category }}/{{ page.fileSlug }}/",
+  "eleventyComputed": {
+    "pageTitle": "{{ title }}{% if thickness %} {{ thickness }}{% endif %} {{ category }} flooring",
+    "description": "{{ title }}{% if thickness %} {{ thickness }}{% endif %} {{ category }} flooring{% if colours.length > 1 %} in {{ colours.length }} colours{% endif %}. Pricing on request: book a free mobile on-site quote anywhere in Sydney."
+  }
 }

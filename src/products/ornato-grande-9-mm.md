@@ -22,4 +22,4 @@ colours:
 image: /img/products/ornato-grande-9-mm-bella.webp
 source: https://jimsflooring.com.au/product/ornato-grande-9-mm/
 ---
-Ornato Grande hybrid floor offers extremely stylish designs carefully selected to appear similar to real timber yet much more practical. Ornato hybrid floors have outstanding product stability, are waterproof, quite, …
+Ornato Grande hybrid floor offers extremely stylish designs carefully selected to appear similar to real timber yet much more practical.

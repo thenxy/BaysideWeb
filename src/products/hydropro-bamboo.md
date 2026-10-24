@@ -40,11 +40,11 @@ colours:
 image: /img/products/hydropro-bamboo-australiana.webp
 specs:
   Size: 1850 × 135 × 2/13mm
-  Abrasion rating: 800+ Taber Abrasion Cycles
+  Abrasion Rating: 800+ Taber Abrasion Cycles
   Box: '1.249'
   Profile: V Groove
   Box Weight: '23.5'
   Warranty: Lifetime Structural
 source: https://everfloor.com.au/product/hydropro-bamboo-australiana
 ---
-HydroPro Bamboo is available in 7 colours. Warranty: Lifetime Structural.
+HydroPro Bamboo bamboo flooring. Available in 7 colours.

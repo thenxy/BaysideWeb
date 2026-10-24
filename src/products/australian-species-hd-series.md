@@ -22,8 +22,8 @@ specs:
   Pack Size: 1.9m² - 8 pieces per pack
   Pack Weight: 15kg
   Species Available: NSW Spotted Gum, Coastal Blackbutt, Sydney Blue Gum, Jarrah
-  Domestic Warranty: 25 Year Wear and Lifetime Structural
-  Commercial Warranty: 5 Year Wear and Lifetime Structural
+  Domestic Warranty: 25 years Wear and Lifetime Structural
+  Commercial Warranty: 5 years Wear and Lifetime Structural
   Eco-Friendly: Yes - patterned from real Australian wood grain
 source: https://jimsflooring.com.au/product/floortex-australian-species-hd-series/
 ---

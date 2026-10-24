@@ -21,8 +21,8 @@ colours:
   image: /img/products/woodveneer-herringbone-15-4-natural.webp
 image: /img/products/woodveneer-herringbone-15-4-estate.webp
 specs:
-  Size: 600 x 120 x 15(4)mm
-  Box: 0.864㎡/ctn
+  Size: 600 × 120 × 15(4)mm
+  Box: 0.864m²/ctn
   Lock System: T&G, Direct-Stick
   Warranty: 25 years
 source: https://everfloor.com.au/product/woodveneer-15-4-oak-herringbone-ab-estate

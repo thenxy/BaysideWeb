@@ -29,14 +29,14 @@ colours:
   image: /img/products/woodguard-taupe-light.webp
 image: /img/products/woodguard-blackbutt.webp
 specs:
-  Size: 1515 x 234 x 10mm
+  Size: 1515 × 234 × 10mm
   Finish: 3D EIR Wood Grain
-  Abrasion rating: AC5 / Wear Class EN33
-  Box: 2.13 (sqm/ctn)
+  Abrasion Rating: AC5 / Wear Class EN33
+  Box: 2.13 (m²/ctn)
   Lock System: Valinge
   Profile: Timber-Grain Bevel
   Box Weight: 15.6kg
-  Warranty: 25 Years
+  Warranty: 25 years
 source: https://everfloor.com.au/product/woodguard-blackbutt
 ---
-WoodGuard is available in 12 colours. Finish: 3D EIR Wood Grain. 25-year warranty.
+WoodGuard hybrid flooring. Available in 12 colours.

@@ -3,8 +3,33 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} | {% endif %}{{ site.name }}</title>
-  <meta name="description" content="{{ description or site.tagline }}">
+  {% set pageName = pageTitle or title %}
+  {% set metaDesc = description or site.tagline %}
+  {% set shareImg = site.url + (image if image else "/img/og-default.jpg") %}
+  <title>{% if pageName %}{{ pageName }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ metaDesc }}">
+  {% if noindex %}<meta name="robots" content="noindex">{% else %}<link rel="canonical" href="{{ site.url }}{{ page.url }}">{% endif %}
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:title" content="{% if pageName %}{{ pageName }} | {% endif %}{{ site.name }}">
+  <meta property="og:description" content="{{ metaDesc }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ shareImg }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1f2a27">
+  {% if page.url == "/" %}<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "{{ site.name }}",
+    "description": "{{ site.tagline }}. Free mobile on-site quotes.",
+    "url": "{{ site.url }}/",
+    "telephone": "+61{{ site.phoneLink | replace('0', '', 1) }}",
+    "email": "{{ site.email }}",
+    "image": "{{ site.url }}/img/og-default.jpg",
+    "areaServed": { "@type": "AdministrativeArea", "name": "Greater Sydney, New South Wales" },
+    "knowsAbout": ["Carpet", "Hybrid flooring", "Timber flooring", "Laminate flooring", "Vinyl flooring", "Bamboo flooring"]
+  }</script>{% endif %}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,10 +88,10 @@
     </div>
   </footer>
 
-  <div class="dock" role="group" aria-label="Quick contact">
+  {% if page.url != "/quote/" %}<div class="dock" role="group" aria-label="Quick contact">
     <a href="tel:{{ site.phoneLink }}">Call</a>
     <a class="dock__main" href="/quote/">Free on-site quote</a>
-  </div>
+  </div>{% endif %}
   <script src="/js/site.js" defer></script>
 </body>
 </html>

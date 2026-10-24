@@ -29,11 +29,11 @@ colours:
   image: /img/products/marvel-hybrid-8-5mm-warm-spotted-gum.webp
 image: /img/products/marvel-hybrid-8-5mm-aged-oak.webp
 specs:
-  Size: 1524 x 230 x 8.5mm
+  Size: 1524 × 230 × 8.5mm
   Finish: Embossed
-  Box: 1.7526 ㎡/ctn
+  Box: 1.7526 m²/ctn
   Profile: Angle to Angle
   Warranty: 25 years
 source: https://everfloor.com.au/product/marvel-8-5mm-hybrid-aged-oak
 ---
-Marvel Hybrid 8.5mm is available in 12 colours. Finish: Embossed. 25-year warranty.
+Marvel Hybrid hybrid flooring. Available in 12 colours.

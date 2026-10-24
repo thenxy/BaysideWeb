@@ -31,8 +31,8 @@ colours:
   image: /img/products/paragon-airlay-blacknight.webp
 - name: Tangerine Pale Silver
   image: /img/products/paragon-airlay-tangerine-pale-silver.webp
-- name: 9Crushedice
-  image: /img/products/paragon-airlay-9crushedice.webp
+- name: Crushedice
+  image: /img/products/paragon-airlay-crushedice-x.webp
 image: /img/products/paragon-airlay-crushedice.webp
 specs:
   Brand: Airlay

@@ -6,15 +6,15 @@ colours:
 - name: Bassett
   image: /img/products/hydropro-oak-15mm-bassett.webp
   specs:
-    Size: 1900 x 190 x 3/15mm
+    Size: 1900 × 190 × 3/15mm
     Finish: Matte
     Box: '1.444'
     Lock System: Click Lock
-    Warranty: 30 Years Structural
+    Warranty: 30 years Structural
 - name: Blossom
   image: /img/products/hydropro-oak-15mm-blossom.webp
   specs:
-    Size: 1900 x 190 x 3/14mm
+    Size: 1900 × 190 × 3/14mm
     Finish: Matte
     Box: '1.444'
     Lock System: Unilin
@@ -22,7 +22,7 @@ colours:
 - name: Cabernet
   image: /img/products/hydropro-oak-15mm-cabernet.webp
   specs:
-    Size: 1900 x 188 x 3/15mm
+    Size: 1900 × 188 × 3/15mm
     Finish: Matte
     Box: 1,444
     Lock System: Unilin
@@ -30,7 +30,7 @@ colours:
 - name: Canyon
   image: /img/products/hydropro-oak-15mm-canyon.webp
   specs:
-    Size: 1900 x 190 x 3/15mm
+    Size: 1900 × 190 × 3/15mm
     Finish: Matte
     Box: 1,444
     Lock System: Unilin
@@ -38,7 +38,7 @@ colours:
 - name: Davos
   image: /img/products/hydropro-oak-15mm-davos.webp
   specs:
-    Size: 1900 x 190 x 3/15mm
+    Size: 1900 × 190 × 3/15mm
     Finish: Matte
     Box: 1,444
     Lock System: Unilin
@@ -46,7 +46,7 @@ colours:
 - name: Hazelnut
   image: /img/products/hydropro-oak-15mm-hazelnut.webp
   specs:
-    Size: 1900 x 190 x 3/15mm
+    Size: 1900 × 190 × 3/15mm
     Finish: Woodgrain
     Box: 1,444
     Lock System: Unilin
@@ -54,7 +54,7 @@ colours:
 - name: Natural
   image: /img/products/hydropro-oak-15mm-natural.webp
   specs:
-    Size: 1900 x 190 x 3/15mm
+    Size: 1900 × 190 × 3/15mm
     Finish: Matte
     Box: 1,444
     Lock System: Click Lock
@@ -62,7 +62,7 @@ colours:
 - name: Oakcraft
   image: /img/products/hydropro-oak-15mm-oakcraft.webp
   specs:
-    Size: 1900 x 190 x 3/15mm
+    Size: 1900 × 190 × 3/15mm
     Finish: Matte
     Box: 1,444
     Lock System: Unilin
@@ -70,15 +70,15 @@ colours:
 - name: Raw Natural
   image: /img/products/hydropro-oak-15mm-raw-natural.webp
   specs:
-    Size: 1900 x 190 x 3/15mm
+    Size: 1900 × 190 × 3/15mm
     Finish: Matte
     Box: '1.444'
     Lock System: Unilin
-    Warranty: 30 Years Structural
+    Warranty: 30 years Structural
 - name: Swan Grey
   image: /img/products/hydropro-oak-15mm-swan-grey.webp
   specs:
-    Size: 1900 x 190 x 3/15mm
+    Size: 1900 × 190 × 3/15mm
     Finish: Matte
     Box: '1.444'
     Lock System: Unilin
@@ -89,4 +89,4 @@ specs:
   Box Weight: '26'
 source: https://everfloor.com.au/product/hydropro-european-oak-bassett
 ---
-HydroPro Oak 15mm is available in 10 colours.
+HydroPro Oak 15mm is available in 10 colours. Available in 10 colours.

@@ -3,8 +3,8 @@ title: Textura Weave
 category: carpet
 subcategory: Polyester
 colours:
-- name: Textura Weave
-  image: /img/products/textura-weave-textura-weave.webp
+- name: Weave
+  image: /img/products/textura-weave-weave.webp
 - name: Glacier Steel
   image: /img/products/textura-weave-glacier-steel.webp
 - name: Frost Grey
@@ -17,7 +17,7 @@ colours:
   image: /img/products/textura-weave-mistwood.webp
 - name: Desert Glow
   image: /img/products/textura-weave-desert-glow.webp
-image: /img/products/textura-weave-textura-weave.webp
+image: /img/products/textura-weave-weave.webp
 specs:
   Pile Type: Textured Tile Loop
   Fibre / Fabric: 100% Polypropylene (Poly)

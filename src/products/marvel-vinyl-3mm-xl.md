@@ -29,11 +29,11 @@ colours:
   image: /img/products/marvel-vinyl-3mm-xl-warm-spotted-gum.webp
 image: /img/products/marvel-vinyl-3mm-xl-aged-oak.webp
 specs:
-  Size: 1524 x 228 x 3mm
+  Size: 1524 × 228 × 3mm
   Finish: Super-Matte Woodgrain
-  Box: 3.474㎡/ctn
+  Box: 3.474m²/ctn
   Box Weight: '19.38'
   Warranty: 25 years
 source: https://everfloor.com.au/product/marvel-3mm-vinyl-aged-oak-v3-207
 ---
-Marvel Vinyl 3mm XL is available in 12 colours. Finish: Super-Matte Woodgrain. 25-year warranty.
+Marvel Vinyl XL vinyl flooring. Available in 12 colours.

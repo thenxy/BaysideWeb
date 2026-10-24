@@ -29,8 +29,8 @@ colours:
   image: /img/products/canopy-purexl-12mm-truffle.webp
 image: /img/products/canopy-purexl-12mm-ambergrain.webp
 specs:
-  Size: 2265 x 192 x 12mm
-  Box: 2.1744 ㎡/ctn
+  Size: 2265 × 192 × 12mm
+  Box: 2.1744 m²/ctn
   Lock System: 5G Click Lock
   Warranty: 25 years
 source: https://everfloor.com.au/product/canopy-purexl-12mm-ambergrain

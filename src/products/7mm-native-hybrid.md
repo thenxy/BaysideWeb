@@ -21,4 +21,4 @@ specs:
   Application: Residential and Commercial
 source: https://jimsflooring.com.au/product/jims-7mm-native-hybrid/
 ---
-Native Hybrid brings a grounded, Australian sensibility to the hybrid flooring category, a 7mm floor built to handle whatever residential and commercial life throws at it without fuss. The hybrid construction delivers the dimensional stability and waterproof performance that Australian conditions demand, while the 7mm thickness gives you a floor that feels solid, sounds quiet underfoot, and holds its appearance…
+Native Hybrid brings a grounded, Australian sensibility to the hybrid flooring category, a 7mm floor built to handle whatever residential and commercial life throws at it without fuss.

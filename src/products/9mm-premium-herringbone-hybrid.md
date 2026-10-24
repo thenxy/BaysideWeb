@@ -11,7 +11,7 @@ specs:
   Total Thickness: 9mm
   Wear Layer Thickness: 0.5mm
   Box Quantity: 12 planks
-  Coverage per Box: 0.9 sqm
+  Coverage Per Box: 0.9 m²
 source: https://jimsflooring.com.au/product/aaa-jims-9mm-premium-herringbone-hybrid/
 ---
 Herringbone has always been one of those patterns that makes a room look like someone actually thought about it. 9mm Premium Herringbone Hybrid brings that same timeless look in a format that's genuinely practical, waterproof, stable underfoot, and far easier to lay than traditional parquetry.

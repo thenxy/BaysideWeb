@@ -3,8 +3,8 @@ title: Homely Haven
 category: carpet
 subcategory: Nylon
 colours:
-- name: Homely Haven
-  image: /img/products/homely-haven-homely-haven.webp
+- name: Haven
+  image: /img/products/homely-haven-haven.webp
 - name: Smoky Haven
   image: /img/products/homely-haven-smoky-haven.webp
 - name: Stone Haven
@@ -21,7 +21,7 @@ colours:
   image: /img/products/homely-haven-gentle-thunder.webp
 - name: Coalstone
   image: /img/products/homely-haven-coalstone.webp
-image: /img/products/homely-haven-homely-haven.webp
+image: /img/products/homely-haven-haven.webp
 specs:
   Pile Type: Cut Pile Twist
   Fibre / Fabric: 100% Greenstrand™ Solution Dyed Nylon

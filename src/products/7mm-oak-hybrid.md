@@ -29,20 +29,14 @@ specs:
   Installation: Floating
   Carton: 5 Planks - 1.656m²
   Weight Per Carton: 20.3kg
-  Residential Warranty: 30 Year Limited
-  Commercial Warranty: 10 Year Limited
+  Residential Warranty: 30 years Limited
+  Commercial Warranty: 10 years Limited
   Fire - Smoke: 161%
   Fire - CHF/CRF: 10.8kW/m²
   Slip - Dry Floor Friction: D1
   Slip - Wet Pendulum: P2
   Slip - Oil Wet Ramp: R10
   Formaldehyde: E0
-  '835601': Marigold
-  '835602': Sunflower
-  '835603': Velvet Allure
-  '835604': Lunar Ash
-  '835605': Snowdrift
-  '835606': Winter Blossom
 source: https://jimsflooring.com.au/product/jims-7mm-oak-hybrid/
 ---
 Hybrid flooring hits a sweet spot that laminate and vinyl plank individually don't and 7mm Oak Hybrid makes that case clearly. Built on a 6mm SPC core with a 0.55mm wear layer, embossed in register surface finishing, and a 1mm high density foam backing already attached, it delivers a floor that feels solid, looks convincingly like timber, and handles moisture without concern.

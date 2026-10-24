@@ -18,4 +18,4 @@ colours:
 image: /img/products/ornato-herringbone-7mm-oak-saffron-herringbone.webp
 source: https://jimsflooring.com.au/product/ornato-herringbone-7mm/
 ---
-Ornato Herringbone Hybrid waterproof flooring features a unique blend of design and durability, which allows the flooring boards to be used throughout every interior space, even in bathrooms and laundries …
+Ornato Herringbone Hybrid waterproof flooring features a unique blend of design and durability, which allows the flooring boards to be used throughout every interior space.

@@ -23,7 +23,7 @@ colours:
   image: /img/products/coastal-essence-stone-whisper.webp
 - name: Rustic Wheat
   image: /img/products/coastal-essence-rustic-wheat.webp
-image: /img/products/coastal-essence-marina-bay.webp
+image: /img/products/coastal-essence-iron-black.webp
 specs:
   Fibre / Fabric: Solution Dyed Nylon
   Stain Resistance: Yes - synthetic solution dyed construction

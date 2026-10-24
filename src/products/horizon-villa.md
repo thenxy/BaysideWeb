@@ -5,8 +5,8 @@ subcategory: Nylon
 colours:
 - name: Harvest
   image: /img/products/horizon-villa-harvest.webp
-- name: Villa Heights
-  image: /img/products/horizon-villa-villa-heights.webp
+- name: Heights
+  image: /img/products/horizon-villa-heights.webp
 - name: Rainfall
   image: /img/products/horizon-villa-rainfall.webp
 - name: Winter Haze

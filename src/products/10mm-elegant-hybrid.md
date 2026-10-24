@@ -21,8 +21,8 @@ specs:
   Click Profile: Välinge
   Installation: Floated with Underlay
   Pack Size: 4 pieces - 1.39m² per box
-  Domestic Warranty: 25 Years
-  Commercial Warranty: 10 Years
+  Domestic Warranty: 25 years
+  Commercial Warranty: 10 years
 source: https://jimsflooring.com.au/product/aaa-jims10mm-elegant-hybrid/
 ---
 Style, durability, and affordability rarely come together this convincingly. 10mm Elegant Hybrid delivers an elegant hybrid vinyl floor that suits any Australian home or commercial space without stretching the budget.

@@ -53,13 +53,13 @@ colours:
     Finish: Embossed
 image: /img/products/aquafloor-12mm-antique-oak.webp
 specs:
-  Size: 2265 x 196 x 12.3mm
-  Abrasion rating: Heavy Commercial AC5
-  Box: 2.2197 (sqm/ctn)
+  Size: 2265 × 196 × 12.3mm
+  Abrasion Rating: Heavy Commercial AC5
+  Box: 2.2197 (m²/ctn)
   Lock System: Valinge 5G
   Profile: V Groove
   Box Weight: 26.0 kg
-  Warranty: 30 Years Structural
+  Warranty: 30 years Structural
 source: https://everfloor.com.au/product/aquafloor-12mm-premium-laminate-antique-oak
 ---
-AquaFloor 12mm is available in 12 colours. Warranty: 30 Years Structural.
+AquaFloor laminate flooring. Available in 12 colours.

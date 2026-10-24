@@ -3,8 +3,6 @@ title: Quite Comfort
 category: carpet
 subcategory: Nylon
 colours:
-- name: Na
-  image: /img/products/quite-comfort-na.webp
 - name: Midnight Velvet
   image: /img/products/quite-comfort-midnight-velvet.webp
 - name: Lunar Grey
@@ -15,7 +13,7 @@ colours:
   image: /img/products/quite-comfort-silver-haze.webp
 - name: Sahara Beige
   image: /img/products/quite-comfort-sahara-beige.webp
-image: /img/products/quite-comfort-na.webp
+image: /img/products/quite-comfort-midnight-velvet.webp
 specs:
   Fibre / Fabric: Nylon
   Sustainability: Made from recycled plastics including water bottles
