@@ -1,5 +1,5 @@
 ---
-title: 6.5mm Elegant Hybrid
+title: Elegant Hybrid
 category: hybrid
 thickness: 6.5mm
 colours:

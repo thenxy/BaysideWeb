@@ -1,5 +1,5 @@
 ---
-title: Marvel Pro 9mm Herringbone
+title: Marvel Pro Herringbone
 category: hybrid
 thickness: 9mm
 colours:

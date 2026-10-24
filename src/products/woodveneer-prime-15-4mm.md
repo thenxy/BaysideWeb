@@ -1,7 +1,7 @@
 ---
-title: WoodVeneer Prime 15/4mm
+title: WoodVeneer Prime 15/4
 category: timber
-thickness: 4mm
+thickness: 15mm
 colours:
 - name: Chateau
   image: /img/products/woodveneer-prime-15-4mm-chateau.webp

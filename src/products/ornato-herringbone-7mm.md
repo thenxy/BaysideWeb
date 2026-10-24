@@ -1,6 +1,7 @@
 ---
-title: Ornato Herringbone 7MM
+title: Ornato Herringbone
 category: hybrid
+thickness: 7mm
 colours:
 - name: Oak Saffron Herringbone
   image: /img/products/ornato-herringbone-7mm-oak-saffron-herringbone.webp

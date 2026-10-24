@@ -1,5 +1,5 @@
 ---
-title: Grand Alpine Vinyl - Max Parquetry 5mm
+title: Grand Alpine Vinyl - Max Parquetry
 category: vinyl
 thickness: 5mm
 colours:

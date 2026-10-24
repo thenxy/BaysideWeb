@@ -1,6 +1,7 @@
 ---
 title: WoodVeneer 14/2 Click
 category: timber
+thickness: 14mm
 colours:
 - name: WoodVeneer - Champagne
   image: /img/products/woodveneer-14-2-click-woodveneer-champagne.webp

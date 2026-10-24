@@ -1,6 +1,7 @@
 ---
 title: Engineered Timber 15/3
 category: timber
+thickness: 15mm
 colours:
 - name: Sand Stone Oak
   image: /img/products/engineered-timber-15-3-sand-stone-oak.webp

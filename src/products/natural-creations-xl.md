@@ -1,7 +1,7 @@
 ---
 title: Natural Creations XL
 category: vinyl
-thickness: 230mm
+thickness: 5mm
 image: /img/products/natural-creations-xl.webp
 gallery:
 - /img/products/natural-creations-xl-2.webp

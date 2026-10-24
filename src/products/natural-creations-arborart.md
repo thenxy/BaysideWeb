@@ -1,7 +1,7 @@
 ---
 title: Natural Creations ArborArt
 category: vinyl
-thickness: 185mm
+thickness: 2.5mm
 colours:
 - name: Summeroak
   image: /img/products/natural-creations-arborart-summeroak.webp

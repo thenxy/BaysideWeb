@@ -1,5 +1,5 @@
 ---
-title: Australian Species HD series
+title: Australian Species HD Series
 category: laminate
 thickness: 12mm
 colours:

@@ -208,3 +208,4 @@ em { font-style: italic; color: var(--oak-dark); }
 /* source photo is small: show it at its own size instead of blowing it up */
 .pdp__media { background: transparent; }
 .pdp__media img.is-lowres { width: auto; max-width: 100%; aspect-ratio: auto; margin: 0; background: #e9e1d2; }
+.pdp__sub { margin: -4px 0 16px; font-size: .8rem; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; color: var(--oak-dark); }

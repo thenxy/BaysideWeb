@@ -1,6 +1,7 @@
 ---
-title: 9MM Premium Herringbone Hybrid
+title: Premium Herringbone Hybrid
 category: hybrid
+thickness: 9mm
 image: /img/products/9mm-premium-herringbone-hybrid.webp
 gallery:
 - /img/products/9mm-premium-herringbone-hybrid-2.webp

@@ -1,5 +1,5 @@
 ---
-title: Crest Hybrid 10mm
+title: Crest Hybrid
 category: hybrid
 thickness: 10mm
 colours:

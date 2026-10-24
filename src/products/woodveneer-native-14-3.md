@@ -1,7 +1,7 @@
 ---
 title: WoodVeneer Native 14/3
 category: timber
-thickness: 2100mm
+thickness: 14mm
 colours:
 - name: Smooth Matte Blue Gum (Pre-Order)
   image: /img/products/woodveneer-native-14-3-smooth-matte-blue-gum-pre-order.webp

@@ -1,5 +1,5 @@
 ---
-title: Canopy PureXL 12mm
+title: Canopy PureXL
 category: laminate
 thickness: 12mm
 colours:

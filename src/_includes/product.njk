@@ -1,11 +1,10 @@
 ---
 layout: base.njk
 ---
-{% set cat = categories | selectattr("key", "equalto", category) | first %}
 {% set multi = colours and colours.length > 1 %}
 <section class="wrap pdp">
   <nav class="crumbs" aria-label="Breadcrumb">
-    <a href="/products/">Products</a> / <a href="/products/{{ category }}/">{{ cat.name }}</a> / <span>{{ title }}</span>
+    <a href="/products/">Products</a> / <a href="/products/{{ category }}/">{% for c in categories %}{% if c.key == category %}{{ c.name }}{% endif %}{% endfor %}</a> / <span>{{ title }}</span>
   </nav>
   <div class="pdp__grid">
     <div class="pdp__media">
@@ -14,6 +13,7 @@ layout: base.njk
     </div>
     <div class="pdp__info">
       <h1>{{ title }}</h1>
+      {% if thickness %}<p class="pdp__sub">{{ thickness }}</p>{% endif %}
       <div class="prose">{{ content | safe }}</div>
 
       {% if multi %}
@@ -38,7 +38,7 @@ layout: base.njk
       </dl>
       {% endif %}
       <div class="pdp__cta">
-        <a class="btn" id="quote-btn" data-product="{{ title }}" href="/quote/?product={{ title | urlencode }}">Request a free quote</a>
+        <a class="btn" id="quote-btn" data-product="{{ title }}{% if thickness %} {{ thickness }}{% endif %}" href="/quote/?product={{ (title + (" " + thickness if thickness else "")) | urlencode }}">Request a free quote</a>
         <p class="note">Pricing on request. We bring samples to you and measure up for free.</p>
       </div>
     </div>

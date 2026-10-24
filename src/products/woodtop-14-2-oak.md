@@ -1,6 +1,7 @@
 ---
 title: Woodtop 14/2 Oak
 category: timber
+thickness: 14mm
 colours:
 - name: Mocca Oak
   image: /img/products/woodtop-14-2-oak-mocca-oak.webp

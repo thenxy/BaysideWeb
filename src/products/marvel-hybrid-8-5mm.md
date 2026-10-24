@@ -1,5 +1,5 @@
 ---
-title: Marvel Hybrid 8.5mm
+title: Marvel Hybrid
 category: hybrid
 thickness: 8.5mm
 colours:

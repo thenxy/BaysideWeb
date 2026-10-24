@@ -1,5 +1,5 @@
 ---
-title: Phoenix 7mm Hybrid
+title: Phoenix Hybrid
 category: hybrid
 thickness: 7mm
 colours:

@@ -1,7 +1,7 @@
 ---
 title: Ornato Swish Oak Natura
 category: timber
-thickness: 3mm
+thickness: 14mm
 colours:
 - name: Ambient Sand
   image: /img/products/ornato-swish-oak-natura-ambient-sand.webp

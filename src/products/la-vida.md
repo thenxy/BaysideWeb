@@ -1,7 +1,7 @@
 ---
 title: La Vida
 category: laminate
-thickness: 236mm
+thickness: 12mm
 colours:
 - name: Nsw Spotted Gum Install
   image: /img/products/la-vida-nsw-spotted-gum-install.webp

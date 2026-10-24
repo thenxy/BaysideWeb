@@ -1,5 +1,5 @@
 ---
-title: 12mm Forever Laminate AC4
+title: Forever Laminate AC4
 category: laminate
 thickness: 12mm
 colours:

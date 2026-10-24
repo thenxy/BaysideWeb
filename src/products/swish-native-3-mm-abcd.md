@@ -1,6 +1,7 @@
 ---
-title: Swish Native 3 MM Abcd
+title: Swish Native Abcd
 category: timber
+thickness: 3mm
 colours:
 - name: Spg
   image: /img/products/swish-native-3-mm-abcd-spg.webp

@@ -1,6 +1,7 @@
 ---
 title: Woodtop Herringbone AB 15/4 Oak
 category: timber
+thickness: 15mm
 colours:
 - name: Wheat
   image: /img/products/woodtop-herringbone-ab-15-4-oak-wheat.webp

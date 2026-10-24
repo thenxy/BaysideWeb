@@ -1,7 +1,7 @@
 ---
 title: Ornato Swish Oak Contemporary
 category: timber
-thickness: 2mm
+thickness: 14mm
 colours:
 - name: Elegant Natural Oak
   image: /img/products/ornato-swish-oak-contemporary-elegant-natural-oak.webp

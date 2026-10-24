@@ -1,5 +1,5 @@
 ---
-title: Marvel Pro 9mm
+title: Marvel Pro
 category: hybrid
 thickness: 9mm
 colours:

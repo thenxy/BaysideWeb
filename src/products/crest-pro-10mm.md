@@ -1,5 +1,5 @@
 ---
-title: Crest Pro 10mm
+title: Crest Pro
 category: hybrid
 thickness: 10mm
 colours:

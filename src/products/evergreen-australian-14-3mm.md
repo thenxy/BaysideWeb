@@ -1,7 +1,7 @@
 ---
-title: Evergreen Australian 14/3mm
+title: Evergreen Australian 14/3
 category: timber
-thickness: 3mm
+thickness: 14mm
 colours:
 - name: 14/3 Blackbutt (Brushed Matte)
   image: /img/products/evergreen-australian-14-3mm-14-3-blackbutt-brushed-matte.webp

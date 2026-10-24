@@ -1,5 +1,5 @@
 ---
-title: Natural Oak 7mm Hybrid
+title: Natural Oak Hybrid
 category: hybrid
 thickness: 7mm
 colours:

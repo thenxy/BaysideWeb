@@ -1,6 +1,7 @@
 ---
 title: Woodtop 15/4 Oak
 category: timber
+thickness: 15mm
 colours:
 - name: Butter
   image: /img/products/woodtop-15-4-oak-butter.webp

@@ -1,6 +1,7 @@
 ---
 title: Woodtop Grade 15/4 Oak
 category: timber
+thickness: 15mm
 colours:
 - name: Ashford
   image: /img/products/woodtop-grade-15-4-oak-ashford.webp

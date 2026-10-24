@@ -1,5 +1,5 @@
 ---
-title: wool weave
+title: Wool Weave
 category: carpet
 subcategory: Wool
 colours:

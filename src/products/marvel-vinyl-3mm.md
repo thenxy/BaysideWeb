@@ -1,7 +1,7 @@
 ---
-title: Marvel Vinyl 3mm
+title: Marvel Vinyl
 category: vinyl
-thickness: 3.0mm
+thickness: 3mm
 colours:
 - name: Natural Oak
   image: /img/products/marvel-vinyl-3mm-natural-oak.webp

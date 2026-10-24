@@ -1,5 +1,5 @@
 ---
-title: Vinyl Plank - 4mm Oak Vinyl
+title: Vinyl Plank - Oak Vinyl
 category: vinyl
 thickness: 4mm
 colours:

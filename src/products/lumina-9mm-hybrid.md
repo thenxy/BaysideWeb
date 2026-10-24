@@ -1,5 +1,5 @@
 ---
-title: Lumina 9mm Hybrid
+title: Lumina Hybrid
 category: hybrid
 thickness: 9mm
 colours:

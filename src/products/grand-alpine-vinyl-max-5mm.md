@@ -1,5 +1,5 @@
 ---
-title: Grand Alpine Vinyl - Max 5mm
+title: Grand Alpine Vinyl - Max
 category: vinyl
 thickness: 5mm
 colours:

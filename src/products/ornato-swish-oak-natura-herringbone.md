@@ -1,7 +1,7 @@
 ---
 title: Ornato Swish Oak Natura Herringbone
 category: timber
-thickness: 3mm
+thickness: 14mm
 colours:
 - name: French Natural Herringbone
   image: /img/products/ornato-swish-oak-natura-herringbone-french-natural-herringbone.webp

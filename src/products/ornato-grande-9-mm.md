@@ -1,6 +1,7 @@
 ---
-title: Ornato Grande 9 MM
+title: Ornato Grande
 category: hybrid
+thickness: 9mm
 colours:
 - name: Bella
   image: /img/products/ornato-grande-9-mm-bella.webp

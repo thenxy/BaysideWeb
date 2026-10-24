@@ -1,5 +1,5 @@
 ---
-title: Marvel Vinyl 3mm XL
+title: Marvel Vinyl XL
 category: vinyl
 thickness: 3mm
 colours:

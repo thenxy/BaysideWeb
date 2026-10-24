@@ -1,7 +1,7 @@
 ---
-title: Luxflor Embossed 12mm
+title: Luxflor Embossed
 category: laminate
-thickness: 12.3mm
+thickness: 12mm
 colours:
 - name: Aged Grey Oak
   image: /img/products/luxflor-embossed-12mm-aged-grey-oak.webp

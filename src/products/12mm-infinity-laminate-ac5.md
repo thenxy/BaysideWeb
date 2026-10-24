@@ -1,5 +1,5 @@
 ---
-title: 12mm Infinity Laminate AC5
+title: Infinity Laminate AC5
 category: laminate
 thickness: 12mm
 colours:

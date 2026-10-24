@@ -1,5 +1,5 @@
 ---
-title: Marvel 5mm Vinyl
+title: Marvel Vinyl
 category: vinyl
 thickness: 5mm
 colours:

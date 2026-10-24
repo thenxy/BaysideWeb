@@ -59,8 +59,12 @@ EVER_TOP = {
 EVER_EXTRA = {
     "adhesives": "accessories", "floor-preparation": "accessories",
     "flooring-trims": "accessories", "water-resistant-scotia": "accessories",
-    "marvel-pro-herringbone": "hybrid", "woodveneer-oak": "timber",
+    "marvel-pro-herringbone": "vinyl",
 }
+# listed on a category page but really part of another range: let the matching step place them
+EVER_UNGROUPED = {"woodveneer-oak"}
+# the page called "Marvel Pro Herringbone" is the 5mm vinyl herringbone range
+EVER_RENAME = {"marvel-pro-herringbone": "Marvel Vinyl Herringbone"}
 
 
 def slugify(s):
@@ -78,10 +82,20 @@ def short(text, sentences=2, limit=420):
 
 
 def thickness_of(*texts):
+    """Nominal thickness: '10mm Name', 'W x L x 12mm', or the 15 of '15/4' (total / wear layer).
+    Anything over 40mm is a plank width or length, not a thickness."""
+    def fmt(n):
+        v = float(n)
+        return None if v <= 0 or v > 40 else (f"{v:g}") + "mm"
+
     for t in texts:
-        m = re.search(r"(\d+(?:\.\d+)?)\s*mm", t or "")
-        if m:
-            return m.group(1) + "mm"
+        t = t or ""
+        m = re.search(r"\d+(?:\.\d+)?\s*(?:mm)?\s*[x×]\s*\d+(?:\.\d+)?\s*(?:mm)?\s*[x×]\s*(\d+(?:\.\d+)?)\s*mm", t, re.I)
+        for m in ([m] if m else []) + list(re.finditer(r"(?<![/\d.])(\d+(?:\.\d+)?)\s*mm", t, re.I)) + \
+                list(re.finditer(r"\b(\d{2})/\d(?!\d)", t)):
+            r = fmt(m.group(1))
+            if r:
+                return r
     return None
 
 
@@ -134,7 +148,8 @@ def scrape_jims(cache):
         images = [[urllib.parse.urljoin(base, i)] for i in (ld.get("image") or [])]
         out.append(dict(
             title=name, category=cat, subcategory=sub,
-            thickness=thickness_of(name, specs.get("Dimensions"), specs.get("Thickness")),
+            thickness=thickness_of(name, specs.get("Dimensions"), *[v for k, v in specs.items() if "thickness" in k.lower()],
+                                 re.sub(r"(?i).*thickness\W*", "", short_desc.get_text(" ") if short_desc else "", count=1)[:40]),
             colours=[dict(name=n, images=[v[0]]) for n, v in colours.items()] or None,
             specs=specs or None,
             desc=short(short_desc.get_text(" ") if short_desc else ld.get("description", "")),
@@ -228,12 +243,15 @@ def scrape_everfloor(cache):
         if slug not in range_name:
             h1 = BeautifulSoup(page, "lxml").find("h1")
             range_name[slug] = h1.get_text(strip=True) if h1 else slug.replace("-", " ").title()
+        if slug in EVER_UNGROUPED:
+            continue
         for p in set(re.findall(r'href="/product/([^"]+)"', page)):
             prod_cat[p] = cat_of.get(slug, "accessories")
-            prod_range[p] = range_name[slug]
+            prod_range[p] = EVER_RENAME.get(slug, range_name[slug])
     groups = {}
     rkey = lambda r: " ".join(sorted(t for t in re.findall(r"[a-z0-9.]+", r.lower().replace("-", " "))  # noqa: E731
                                      if t not in ("laminate", "flooring")))
+    entries = []
     for u in [u for u in sm if "/product/" in u]:
         slug = u.rsplit("/", 1)[1]
         h = fetch.get(u, cache)
@@ -267,16 +285,37 @@ def scrape_everfloor(cache):
         rng = prod_range.get(slug)
         if not cat:  # not listed on any category page: infer from the product title
             low = (title_tag + " " + slug).lower()
-            cat = next((c for w, c in (("bamboo", "bamboo"), ("laminate", "laminate"), ("hybrid", "hybrid"),
-                                       ("vinyl", "vinyl"), ("timber", "timber"), ("oak", "timber"))
-                        if w in low), "accessories")
+            if re.search(r"angle|cover|end-?cap|border|scotia|trim|adhesive|primer|stopgap|nosing|reducer|threshold", slug):
+                cat = "accessories"
+            else:
+                cat = next((c for w, c in (("bamboo", "bamboo"), ("laminate", "laminate"), ("hybrid", "hybrid"),
+                                           ("vinyl", "vinyl"), ("timber", "timber"), ("oak", "timber"))
+                            if w in low), "accessories")
             rng = re.sub(r"\s+-\s+.*$", "", title_tag) if cat != "accessories" else "Flooring Trims"
         rng = re.sub(r"\s+", " ", rng or "").strip()
-        g = groups.get(rkey(rng))
+        entries.append(dict(colour=colour, specs=specs, imgs=imgs[:1], cat=cat, rng=rng,
+                            mapped=slug in prod_cat, slug=slug, url=u))
+    toks = lambda r: set(re.findall(r"[a-z0-9.]+", r.lower().replace("-", " "))) - {"laminate", "flooring"}  # noqa: E731
+    nonnum = lambda t: {x for x in t if not re.match(r"^[\d./]+(?:mm)?$", x)}  # noqa: E731
+    for e in sorted(entries, key=lambda e: not e["mapped"]):  # listed products first, then the stragglers
+        k = rkey(e["rng"])
+        g = groups.get(k)
+        if g is None and not e["mapped"] and e["cat"] != "accessories":
+            # a product missing from the category pages: attach it to the range it obviously belongs to
+            T = toks(e["rng"])
+            cands = [x for x in groups.values() if len(T) >= 2 and T < x["_tok"] and x["category"] != "accessories"]
+            if len(cands) != 1:
+                S = toks(e["slug"])
+                cands = [x for x in groups.values() if x["category"] != "accessories"
+                         and nonnum(x["_tok"]) and nonnum(x["_tok"]) <= S]
+                best = max((len(nonnum(x["_tok"])) for x in cands), default=0)
+                cands = [x for x in cands if len(nonnum(x["_tok"])) == best]
+            if len(cands) == 1:
+                g = cands[0]
         if g is None:
-            g = groups[rkey(rng)] = dict(title=rng, category=cat, subcategory=None, colours=[], images=[],
-                                         source=u, supplier="Everfloor", _specs=[])
-        g["colours"].append(dict(name=colour, images=imgs[:1], _specs=specs))
+            g = groups[k] = dict(title=e["rng"], category=e["cat"], subcategory=None, colours=[], images=[],
+                                 source=e["url"], supplier="Everfloor", _tok=toks(e["rng"]))
+        g["colours"].append(dict(name=e["colour"], images=e["imgs"], _specs=e["specs"]))
     out = []
     for g in groups.values():
         cols = g["colours"]
@@ -289,8 +328,8 @@ def scrape_everfloor(cache):
             if diff:
                 c["specs"] = diff
         g["specs"] = common or None
-        g.pop("_specs", None)
-        g["thickness"] = thickness_of(common.get("Size"), g["title"], *(sp.get("Size") for sp in allspecs))
+        g.pop("_tok", None)
+        g["thickness"] = thickness_of(g["title"], common.get("Size"), *(sp.get("Size") for sp in allspecs))
         bits = [common.get("Finish")]
         g["desc"] = f"{g['title']} is available in {len(cols)} colour{'s' if len(cols) != 1 else ''}." + (
             f" Finish: {common['Finish']}." if common.get("Finish") else "")
@@ -342,6 +381,7 @@ def scrub(t):
 
 def tidy(t):
     t = scrub(t)
+    t = re.sub(r"\b[a-z]{3,}\b", lambda m: m.group().capitalize(), t)  # "Oak hybrid" -> "Oak Hybrid"
     if len(t) > 3 and t.isupper():
         return t.title()
     return re.sub(r"\b[A-Z]{4,}\b", lambda m: m.group().title(), t)
@@ -365,13 +405,30 @@ def clean_specs(sp):
     return out
 
 
+MM = re.compile(r"\s*(?<![/\d.])\b\d+(?:\.\d+)?\s?mm\b", re.I)
+
+
+def strip_mm(t, thickness=None):
+    """Thickness is shown as its own sub-heading, so take it out of the name."""
+    out = re.sub(r"(\d/\d+)\s?mm\b", r"\1", t, flags=re.I)  # 15/4mm -> 15/4 (a build, not a thickness)
+    out = MM.sub("", out)
+    num = (thickness or "").replace("mm", "")
+    if num:
+        out = re.sub(r"\s+" + re.escape(num) + r"$", "", out)  # trailing bare "6.5"
+    out = re.sub(r"\s+", " ", out).strip()
+    out = re.sub(r"^[\s\-–,;]+|[\s\-–,;]+$", "", out)
+    out = re.sub(r"\s+-\s+-\s+", " - ", out)
+    return out if len(out) > 2 else t
+
+
 def write_product(p, slugs, cache, images=True):
-    p["title"] = tidy(p["title"])
+    orig = tidy(p["title"])
+    p["title"] = strip_mm(orig, p.get("thickness"))
     p["desc"] = scrub_text(p.get("desc"))
     p["specs"] = clean_specs(p.get("specs"))
     if p.get("thickness") and UNCONFIRMED.search(str(p["thickness"])):
         p["thickness"] = None
-    base = slugify(p["title"])
+    base = slugify(orig)
     slug, n = base, 2
     while slug in slugs:
         slug = f"{base}-{n}"
@@ -380,8 +437,10 @@ def write_product(p, slugs, cache, images=True):
     colours, used = [], set()
     for c in p.get("colours") or []:
         name = tidy(c["name"])
-        if name.lower().startswith(p["title"].lower() + " "):  # drop a repeated product-line prefix
-            name = name[len(p["title"]) + 1:]
+        for pre in (orig, p["title"]):
+            if name.lower().startswith(pre.lower() + " "):  # drop a repeated product-line prefix
+                name = name[len(pre) + 1:]
+                break
         if not name:
             continue
         cs = slugify(name) or "colour"

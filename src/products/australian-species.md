@@ -1,7 +1,7 @@
 ---
 title: Australian Species
 category: timber
-thickness: 2100mm
+thickness: 14mm
 image: /img/products/australian-species.webp
 specs:
   Dimensions: 1820/2100mm x 180mm x 14mm

@@ -1,7 +1,7 @@
 ---
-title: 8mm Luxflor 48 Hours Water-Resistant
+title: Luxflor 48 Hours Water-Resistant
 category: laminate
-thickness: 8.3mm
+thickness: 8mm
 colours:
 - name: Aged Grey Oak
   image: /img/products/8mm-luxflor-48-hours-water-resistant-aged-grey-oak.webp

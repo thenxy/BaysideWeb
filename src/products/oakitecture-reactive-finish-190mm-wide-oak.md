@@ -1,7 +1,7 @@
 ---
-title: Oakitecture - Reactive Finish 190mm Wide Oak
+title: Oakitecture - Reactive Finish Wide Oak
 category: timber
-thickness: 190mm
+thickness: 15mm
 colours:
 - name: Wm190
   image: /img/products/oakitecture-reactive-finish-190mm-wide-oak-wm190.webp

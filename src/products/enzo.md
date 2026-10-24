@@ -1,6 +1,7 @@
 ---
 title: Enzo
 category: timber
+thickness: 14mm
 colours:
 - name: Orion
   image: /img/products/enzo-orion.webp

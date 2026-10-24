@@ -1,7 +1,7 @@
 ---
 title: Ornato Swish Oak Wideboard
 category: timber
-thickness: 4mm
+thickness: 14mm
 colours:
 - name: Country Caramel Oak
   image: /img/products/ornato-swish-oak-wideboard-country-caramel-oak.webp

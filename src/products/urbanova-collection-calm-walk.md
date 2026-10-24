@@ -2,6 +2,7 @@
 title: Urbanova Collection - Calm Walk
 category: carpet
 subcategory: Carpet tiles
+thickness: 6.5mm
 colours:
 - name: Ocean Medium
   image: /img/products/urbanova-collection-calm-walk-ocean-medium.webp

@@ -20,15 +20,14 @@
         <span class="brand__name">Bayside <em>Flooring Studio</em></span>
       </a>
       <nav class="nav" id="nav" aria-label="Main">
+        <a href="/products/">Products</a>
         <div class="nav__group">
           <button class="nav__btn" type="button" aria-expanded="false" aria-controls="flooring-menu">Flooring <span class="nav__chev" aria-hidden="true"></span></button>
           <div class="nav__menu" id="flooring-menu">
-            <a href="/products/">All products</a>
             {% for c in categories %}{% if c.key != "carpet" %}<a href="/products/{{ c.key }}/">{{ c.name }}</a>{% endif %}{% endfor %}
           </div>
         </div>
         <a href="/products/carpet/">Carpet</a>
-        <a href="/about/">About</a>
       </nav>
       <a class="btn btn--sm top__quote" href="/quote/">Free quote</a>
       <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
@@ -59,7 +58,7 @@
       </div>
     </div>
     <div class="wrap foot__base">
-      <span>&copy; {{ "" | year }} {{ site.name }}. Servicing Sydney.</span>
+      <span>Website &copy; {{ "" | year }} {{ site.name }}. Product names and images belong to their respective owners.</span>
       <a href="/quote/">Book a free on-site quote</a>
     </div>
   </footer>

@@ -1,5 +1,5 @@
 ---
-title: 7mm Oak hybrid
+title: Oak Hybrid
 category: hybrid
 thickness: 7mm
 colours:

@@ -1,6 +1,7 @@
 ---
 title: Elio
 category: timber
+thickness: 14mm
 colours:
 - name: Amber Wood
   image: /img/products/elio-amber-wood.webp

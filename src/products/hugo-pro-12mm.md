@@ -1,7 +1,7 @@
 ---
-title: Hugo Pro 12mm
+title: Hugo Pro
 category: laminate
-thickness: 12.3mm
+thickness: 12mm
 colours:
 - name: Frappe Oak
   image: /img/products/hugo-pro-12mm-frappe-oak.webp
@@ -31,10 +31,6 @@ colours:
   image: /img/products/hugo-pro-12mm-blackbutt.webp
   specs:
     Finish: Matte
-- name: Hugo Oak White Wash
-  image: /img/products/hugo-pro-12mm-hugo-oak-white-wash.webp
-  specs:
-    Finish: Real Woodgrain EIR
 - name: Spotted Gum
   image: /img/products/hugo-pro-12mm-spotted-gum.webp
   specs:
@@ -55,6 +51,10 @@ colours:
   image: /img/products/hugo-pro-12mm-warm-natural-oak.webp
   specs:
     Finish: Matte
+- name: Hugo Oak White Wash
+  image: /img/products/hugo-pro-12mm-hugo-oak-white-wash.webp
+  specs:
+    Finish: Real Woodgrain EIR
 image: /img/products/hugo-pro-12mm-frappe-oak.webp
 specs:
   Size: 2265 × 192 × 12.3mm

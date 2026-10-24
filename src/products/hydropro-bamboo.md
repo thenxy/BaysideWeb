@@ -1,7 +1,6 @@
 ---
 title: HydroPro Bamboo
 category: bamboo
-thickness: 13mm
 colours:
 - name: Australiana
   image: /img/products/hydropro-bamboo-australiana.webp

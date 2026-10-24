@@ -1,6 +1,7 @@
 ---
 title: WoodVeneer Herringbone 15/4
 category: timber
+thickness: 15mm
 colours:
 - name: Estate
   image: /img/products/woodveneer-herringbone-15-4-estate.webp

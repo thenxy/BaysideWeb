@@ -1,5 +1,5 @@
 ---
-title: Marvel 6.5mm
+title: Marvel
 category: hybrid
 thickness: 6.5mm
 colours:

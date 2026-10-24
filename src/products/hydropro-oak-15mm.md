@@ -1,5 +1,5 @@
 ---
-title: HydroPro Oak 15mm
+title: HydroPro Oak
 category: timber
 thickness: 15mm
 colours:

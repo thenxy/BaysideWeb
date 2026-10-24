@@ -1,5 +1,5 @@
 ---
-title: 6mm Oak Hybrid
+title: Oak Hybrid
 category: hybrid
 thickness: 6mm
 colours:

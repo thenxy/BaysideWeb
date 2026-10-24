@@ -1,5 +1,5 @@
 ---
-title: Grand Alpine Hybrid - Core 6.5
+title: Grand Alpine Hybrid - Core
 category: hybrid
 thickness: 6.5mm
 colours:

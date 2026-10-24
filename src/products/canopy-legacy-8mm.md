@@ -1,7 +1,7 @@
 ---
-title: Canopy Legacy 8mm
+title: Canopy Legacy
 category: laminate
-thickness: 8.3mm
+thickness: 8mm
 colours:
 - name: American Walnut
   image: /img/products/canopy-legacy-8mm-american-walnut.webp

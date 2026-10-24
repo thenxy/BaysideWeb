@@ -1,5 +1,5 @@
 ---
-title: 7mm Native Hybrid
+title: Native Hybrid
 category: hybrid
 thickness: 7mm
 colours:

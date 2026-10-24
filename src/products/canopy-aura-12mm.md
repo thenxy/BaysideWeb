@@ -1,5 +1,5 @@
 ---
-title: Canopy Aura 12mm
+title: Canopy Aura
 category: laminate
 thickness: 12mm
 colours:

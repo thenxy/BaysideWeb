@@ -1,6 +1,7 @@
 ---
 title: Woodtop Herringbone 15/4 Oak
 category: timber
+thickness: 15mm
 colours:
 - name: Natural
   image: /img/products/woodtop-herringbone-15-4-oak-natural.webp

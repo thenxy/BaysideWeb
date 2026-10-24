@@ -1,10 +1,10 @@
 ---
-title: Solid Timber 18mm
+title: Solid Timber
 category: timber
 thickness: 18mm
 colours:
-- name: Solid Timber - Blackbutt (Pacific)
-  image: /img/products/solid-timber-18mm-solid-timber-blackbutt-pacific.webp
+- name: '- Blackbutt (Pacific)'
+  image: /img/products/solid-timber-18mm-blackbutt-pacific.webp
 - name: Pacific Blackbutt
   image: /img/products/solid-timber-18mm-pacific-blackbutt.webp
 - name: Pacific Spotted Gum
@@ -17,7 +17,11 @@ colours:
   image: /img/products/solid-timber-18mm-sugar-gum.webp
 - name: Blue Gum
   image: /img/products/solid-timber-18mm-blue-gum.webp
-image: /img/products/solid-timber-18mm-solid-timber-blackbutt-pacific.webp
+- name: '- Jarrah'
+- name: '- Merbau'
+- name: '- Red Ironbark'
+- name: '- Tallowwood'
+image: /img/products/solid-timber-18mm-blackbutt-pacific.webp
 source: https://everfloor.com.au/product/solid-timber-blackbutt
 ---
-Solid Timber 18mm is available in 6 colours.
+Solid Timber 18mm is available in 11 colours.

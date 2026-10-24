@@ -1,7 +1,7 @@
 ---
-title: Hugo Premium 12mm
+title: Hugo Premium
 category: laminate
-thickness: 12.3mm
+thickness: 12mm
 colours:
 - name: Hugo Blue Gum
   image: /img/products/hugo-premium-12mm-hugo-blue-gum.webp

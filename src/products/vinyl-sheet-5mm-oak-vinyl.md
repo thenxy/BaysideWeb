@@ -1,5 +1,5 @@
 ---
-title: Vinyl Sheet - 5mm Oak Vinyl
+title: Vinyl Sheet - Oak Vinyl
 category: vinyl
 thickness: 5mm
 colours:

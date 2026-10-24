@@ -1,7 +1,7 @@
 ---
-title: Fontaine - 190mm Wide Oak
+title: Fontaine - Wide Oak
 category: timber
-thickness: 190mm
+thickness: 15mm
 colours:
 - name: Natural
   image: /img/products/fontaine-190mm-wide-oak-natural.webp

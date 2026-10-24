@@ -1,6 +1,7 @@
 ---
-title: Swish Native 2MM
+title: Swish Native
 category: timber
+thickness: 2mm
 colours:
 - name: Blackbutt
   image: /img/products/swish-native-2mm-blackbutt.webp

@@ -1,5 +1,5 @@
 ---
-title: Nature's Edge 12mm
+title: Nature's Edge
 category: laminate
 thickness: 12mm
 colours:

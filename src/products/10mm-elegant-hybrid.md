@@ -1,5 +1,5 @@
 ---
-title: 10mm Elegant Hybrid
+title: Elegant Hybrid
 category: hybrid
 thickness: 10mm
 colours:

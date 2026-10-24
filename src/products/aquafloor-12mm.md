@@ -1,7 +1,7 @@
 ---
-title: AquaFloor 12mm
+title: AquaFloor
 category: laminate
-thickness: 12.3mm
+thickness: 12mm
 colours:
 - name: Antique Oak
   image: /img/products/aquafloor-12mm-antique-oak.webp

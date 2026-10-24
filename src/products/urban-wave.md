@@ -1,5 +1,5 @@
 ---
-title: Urban wave
+title: Urban Wave
 category: carpet
 subcategory: Nylon
 colours:

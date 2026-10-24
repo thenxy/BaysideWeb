@@ -1,5 +1,5 @@
 ---
-title: HydroPro Australian 13mm
+title: HydroPro Australian
 category: timber
 thickness: 13mm
 colours:

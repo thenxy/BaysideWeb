@@ -1,6 +1,7 @@
 ---
-title: Ornato Grande 7.5MM
+title: Ornato Grande
 category: hybrid
+thickness: 7.5mm
 colours:
 - name: Raw Gum
   image: /img/products/ornato-grande-7-5mm-raw-gum.webp
