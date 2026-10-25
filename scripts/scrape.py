@@ -460,6 +460,7 @@ UNCONFIRMED = re.compile(r"to be (?:confirmed|advised|announced)|\btbc\b|\btba\b
 def scrub_text(t):
     """Like scrub() but keeps sentence punctuation intact."""
     t = SCRUB.sub(" ", t or "")
+    t = re.sub(r"\s+without the fuss of solid (?:timber|hardwood)", "", t, flags=re.I)  # engineered timber only
     return re.sub(r"\s+", " ", t).strip()
 
 
@@ -622,6 +623,8 @@ def main():
         print(f"  {len(got)} products", flush=True)
         products += got
     # accessories are not sold online; wall coverings are out of scope for a flooring catalogue
+    # we only offer engineered timber: leave out anything sold as solid timber
+    products = [p for p in products if not (p["category"] == "timber" and re.search(r"\bsolid\b", p["title"], re.I))]
     products = [p for p in products if p["category"] in SOLD and "wall covering" not in
                 (p["title"] + " " + (p.get("desc") or "")).lower()[:400]]
     # remove previously generated products (those with a `source:`), keep hand-written ones

@@ -26,4 +26,4 @@ specs:
   Coverage Per Box: 2.166 m²
 source: https://jimsflooring.com.au/product/aaa-jims-engineered-timber-153/
 ---
-If you want real oak underfoot without the fuss of solid timber, this is it. 15/3 Engineered Oak comes in long 1900mm planks with a brushed texture and UV lacquered finish that feels substantial the moment you walk on it.
+If you want real oak underfoot, this is it. 15/3 Engineered Oak comes in long 1900mm planks with a brushed texture and UV lacquered finish that feels substantial the moment you walk on it.
