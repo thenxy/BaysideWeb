@@ -257,19 +257,15 @@ em { font-style: italic; color: var(--oak-dark); }
 .form input[type="date"].is-empty:not(:focus)::-webkit-datetime-edit { display: none; }
 .form select, .form input:not([type="hidden"]):not([type="checkbox"]) { min-width: 0; max-width: 100%; }
 
-/* hero swatches: big fan on desktop, a slim strip of the same samples on phones */
-.strip { display: none; list-style: none; margin: 0; padding: 0; width: 100%; grid-template-columns: repeat(6, 1fr); gap: 8px; }
-.strip a { display: block; border-radius: 6px; overflow: hidden; border: 3px solid var(--chalk); box-shadow: 0 3px 10px rgba(31,42,39,.18); }
-.strip img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
-@media (max-width: 899px) {
-  .board { display: none; }
-  .strip { display: grid; }
-  .hero { padding: 28px 0 36px; }
-  .hero__side { margin-top: 4px; }
-}
 
 /* weekday buttons: one even row on phones */
 @media (max-width: 520px) {
   .days__row { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
   .day span { padding: 10px 0; text-align: center; font-size: .82rem; }
+}
+
+/* phones: the hero is just the headline and buttons */
+@media (max-width: 899px) {
+  .hero__side { display: none; }
+  .hero { padding: 28px 0 36px; }
 }

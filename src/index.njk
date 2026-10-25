@@ -26,9 +26,6 @@ description: Carpet, hybrid, laminate and vinyl flooring supplied and installed 
           {% for c in cards %}<li style="--i:{{ loop.index0 }}"><a href="{{ c.url }}"><img src="{{ c.image }}" alt="{{ c.title }}, {{ c.colour }}" loading="lazy"><span class="fan__tag"><strong>{{ c.colour or c.title }}</strong><small>{{ c.title }}</small></span></a></li>{% endfor %}
         </ul>
       </div>
-      <ul class="strip" aria-label="Sample swatches">
-        {% for c in cards %}<li><a href="{{ c.url }}" aria-label="{{ c.title }}, {{ c.colour }}"><img src="{{ c.image }}" alt="" loading="lazy"></a></li>{% endfor %}
-      </ul>
     </div>
   </div>
 </section>
