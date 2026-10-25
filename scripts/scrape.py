@@ -485,8 +485,8 @@ def clean_specs(sp):
     return out
 
 
-# Categories the business sells (timber, bamboo and accessories are deliberately left out).
-SOLD = {"hybrid", "laminate", "vinyl", "carpet"}
+# Categories the business sells (bamboo and accessories are deliberately left out).
+SOLD = {"hybrid", "timber", "laminate", "vinyl", "carpet"}
 
 MM = re.compile(r"\s*(?<![/\d.])\b\d+(?:\.\d+)?\s?mm\b", re.I)
 

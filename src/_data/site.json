@@ -1,6 +1,6 @@
 {
   "name": "Bayside Flooring Studio",
-  "tagline": "Carpet, hybrid, laminate and vinyl flooring across Sydney",
+  "tagline": "Carpet, hybrid, timber, laminate and vinyl flooring across Sydney",
   "url": "https://www.baysideflooringstudio.com.au",
   "phone": "0402 147 153",
   "phoneLink": "0402147153",
@@ -21,21 +21,21 @@
     "Parramatta and Western Sydney",
     "Macarthur and South West Sydney"
   ],
-  "supplierNote": "We supply and install a wide range of carpet, hybrid, laminate and vinyl flooring from leading Australian suppliers.",
+  "supplierNote": "We supply and install a wide range of carpet, hybrid, timber, laminate and vinyl flooring from leading Australian suppliers.",
   "featured": [
     "Crest Pro",
     "Hugo Pro",
+    "Evergreen Australian 14/3",
     "Grand Alpine Max",
-    "Marvel Vinyl XL",
     "Coastal Essence",
-    "Grand Alpine Vinyl - Prime",
-    "Cloud Wave",
-    "Canopy Aura"
+    "Marvel Vinyl XL",
+    "Elio",
+    "Cloud Wave"
   ],
   "heroSwatches": [
     {
-      "product": "Hugo Pro",
-      "colour": "Soft White Oak"
+      "product": "Elio",
+      "colour": "Scandi Snow"
     },
     {
       "product": "Crest Pro",
@@ -46,8 +46,8 @@
       "colour": "Breeze"
     },
     {
-      "product": "Grand Alpine Max",
-      "colour": "Dusky Oak"
+      "product": "Evergreen Australian 14/3",
+      "colour": "Spotted Gum"
     },
     {
       "product": "Marvel Vinyl XL",

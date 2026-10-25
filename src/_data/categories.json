@@ -10,9 +10,19 @@
     ]
   },
   {
+    "key": "timber",
+    "name": "Timber",
+    "blurb": "Solid and engineered hardwood with real grain and real warmth, finished to last.",
+    "tones": [
+      "#9a6a3c",
+      "#7d5430",
+      "#b07d49"
+    ]
+  },
+  {
     "key": "laminate",
     "name": "Laminate",
-    "blurb": "Hard-wearing, scratch-resistant boards with a natural wood look at a friendlier price.",
+    "blurb": "Hard-wearing, scratch-resistant boards with the look of timber at a friendlier price.",
     "tones": [
       "#bfae98",
       "#a8957c",
