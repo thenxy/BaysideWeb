@@ -50,7 +50,8 @@ description: Request a free mobile on-site flooring quote anywhere in Sydney.
         <option>Any time</option><option>Morning</option><option>Afternoon</option>
       </select>
     </label>
-    <label>Product you are interested in (optional)<input name="product" id="product"></label>
+    <input type="hidden" name="came_from_product" id="product-from">
+    <label>Product you are interested in (optional)<input name="product" id="product" autocomplete="off" placeholder="e.g. a range or colour you like"></label>
     <label>Tell us about the job<textarea name="message" rows="5" placeholder="Rooms, approximate size, whether old flooring needs removing, timing"></textarea></label>
     <button class="btn" type="submit">Request my free quote</button>
     <p class="note">We only use your details to arrange your quote.</p>

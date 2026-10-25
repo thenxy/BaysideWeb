@@ -76,10 +76,11 @@
   }
 
   // Prefill the quote form from ?product=
-  var field = document.getElementById("product");
-  if (field) {
+  // The product the visitor came from is sent along quietly, not typed into the form for them.
+  var cameFrom = document.getElementById("product-from");
+  if (cameFrom) {
     var p = new URLSearchParams(location.search).get("product");
-    if (p) field.value = p;
+    if (p) cameFrom.value = p;
   }
 
   // Navigation: Flooring dropdown (click/tap) and mobile menu
