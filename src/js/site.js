@@ -56,7 +56,7 @@
     var d0 = new Date(); d0.setDate(d0.getDate() + 1);
     pdate.min = d0.getFullYear() + "-" + pad(d0.getMonth() + 1) + "-" + pad(d0.getDate());
     var hint = document.getElementById("date-hint");
-    var syncEmpty = function () { pdate.classList.toggle("is-empty", !pdate.value); };
+    var syncEmpty = function () { pdate.parentNode.classList.toggle("has-value", !!pdate.value); };
     pdate.addEventListener("change", syncEmpty); pdate.addEventListener("blur", syncEmpty);
     pdate.addEventListener("input", function () {
       syncEmpty();

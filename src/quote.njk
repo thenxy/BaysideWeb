@@ -33,8 +33,8 @@ description: Request a free mobile on-site flooring quote anywhere in Sydney.
           {% for c in categories %}<option>{{ c.name }}</option>{% endfor %}
         </select>
       </label>
-      <label>Preferred day for the visit
-        <input type="date" name="preferred_date" id="preferred-date" class="is-empty" data-placeholder="Choose a date">
+      <label>Preferred date for the visit
+        <span class="datebox"><input type="date" name="preferred_date" id="preferred-date"><span class="datebox__ph" aria-hidden="true">Choose a date</span></span>
         <span class="hint" id="date-hint">Optional. We will confirm a time with you.</span>
       </label>
     </div>
