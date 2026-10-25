@@ -5,6 +5,8 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 module.exports = function (eleventyConfig) {
   // Prefixes absolute links when served from a sub-path (github.io/baysideweb/).
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  // Changes on every build so browsers fetch fresh CSS/JS after an update instead of using a cached copy.
+  eleventyConfig.addGlobalData("buildId", () => Date.now().toString(36));
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "src/js": "js" });
   eleventyConfig.addPassthroughCopy({ "src/img": "img" });

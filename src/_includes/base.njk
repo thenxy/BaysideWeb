@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css?v={{ buildId }}">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -92,6 +92,6 @@
     <a href="tel:{{ site.phoneLink }}">Call</a>
     <a class="dock__main" href="/quote/">Free on-site quote</a>
   </div>{% endif %}
-  <script src="/js/site.js" defer></script>
+  <script src="/js/site.js?v={{ buildId }}" defer></script>
 </body>
 </html>
