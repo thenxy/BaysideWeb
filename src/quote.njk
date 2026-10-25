@@ -33,25 +33,9 @@ description: Request a free mobile on-site flooring quote anywhere in Sydney.
           {% for c in categories %}<option>{{ c.name }}</option>{% endfor %}
         </select>
       </label>
-      <label>Preferred date for the visit
-        <span class="datebox"><input type="date" name="preferred_date" id="preferred-date"><span class="datebox__ph" aria-hidden="true">Choose a date</span></span>
-        <span class="hint" id="date-hint">Optional. We will confirm a time with you.</span>
-      </label>
+      <label>Product you are interested in (optional)<input name="product" id="product" autocomplete="off" placeholder="e.g. a range or colour you like"></label>
     </div>
-    <fieldset class="days">
-      <legend>Other days that suit you</legend>
-      <div class="days__row">
-        {% for d in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %}<label class="day"><input type="checkbox" value="{{ d }}"><span>{{ d | truncate(3, true, "") }}</span></label>{% endfor %}
-      </div>
-      <input type="hidden" name="other_suitable_days" id="suitable-days">
-    </fieldset>
-    <label>Time of day
-      <select name="time_of_day">
-        <option>Any time</option><option>Morning</option><option>Afternoon</option>
-      </select>
-    </label>
     <input type="hidden" name="came_from_product" id="product-from">
-    <label>Product you are interested in (optional)<input name="product" id="product" autocomplete="off" placeholder="e.g. a range or colour you like"></label>
     <label>Tell us about the job<textarea name="message" rows="5" placeholder="Rooms, approximate size, whether old flooring needs removing, timing"></textarea></label>
     <button class="btn" type="submit">Request my free quote</button>
     <p class="note">We only use your details to arrange your quote.</p>
