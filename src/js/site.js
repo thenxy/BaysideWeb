@@ -49,6 +49,32 @@
     });
   }
 
+  // Quote form: date limits and a tidy list of the days that suit
+  var pdate = document.getElementById("preferred-date");
+  if (pdate) {
+    var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+    var d0 = new Date(); d0.setDate(d0.getDate() + 1);
+    pdate.min = d0.getFullYear() + "-" + pad(d0.getMonth() + 1) + "-" + pad(d0.getDate());
+    var hint = document.getElementById("date-hint");
+    pdate.addEventListener("input", function () {
+      var v = pdate.value ? new Date(pdate.value + "T00:00:00") : null;
+      var sunday = v && v.getDay() === 0;
+      pdate.setCustomValidity(sunday ? "We visit Monday to Saturday. Please choose another day." : "");
+      if (hint) hint.textContent = sunday ? "We visit Monday to Saturday. Please choose another day." : "Optional. We will confirm a time with you.";
+    });
+    var days = [].slice.call(document.querySelectorAll(".days .day input"));
+    var out = document.getElementById("suitable-days");
+    var form = pdate.form;
+    form.addEventListener("submit", function () {
+      out.value = days.filter(function (x) { return x.checked; }).map(function (x) { return x.value; }).join(", ");
+      if (pdate.value) {
+        var v = new Date(pdate.value + "T00:00:00");
+        pdate.type = "text";
+        pdate.value = v.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+      }
+    });
+  }
+
   // Prefill the quote form from ?product=
   var field = document.getElementById("product");
   if (field) {

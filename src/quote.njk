@@ -33,12 +33,23 @@ description: Request a free mobile on-site flooring quote anywhere in Sydney.
           {% for c in categories %}<option>{{ c.name }}</option>{% endfor %}
         </select>
       </label>
-      <label>Best time to visit
-        <select name="best_time">
-          <option>Any time</option><option>Morning</option><option>Afternoon</option><option>Weekend</option>
-        </select>
+      <label>Preferred day for the visit
+        <input type="date" name="preferred_date" id="preferred-date">
+        <span class="hint" id="date-hint">Optional. We will confirm a time with you.</span>
       </label>
     </div>
+    <fieldset class="days">
+      <legend>Other days that suit you</legend>
+      <div class="days__row">
+        {% for d in ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] %}<label class="day"><input type="checkbox" value="{{ d }}"><span>{{ d | truncate(3, true, "") }}</span></label>{% endfor %}
+      </div>
+      <input type="hidden" name="other_suitable_days" id="suitable-days">
+    </fieldset>
+    <label>Time of day
+      <select name="time_of_day">
+        <option>Any time</option><option>Morning</option><option>Afternoon</option>
+      </select>
+    </label>
     <label>Product you are interested in (optional)<input name="product" id="product"></label>
     <label>Tell us about the job<textarea name="message" rows="5" placeholder="Rooms, approximate size, whether old flooring needs removing, timing"></textarea></label>
     <button class="btn" type="submit">Request my free quote</button>

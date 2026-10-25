@@ -220,3 +220,14 @@ em { font-style: italic; color: var(--oak-dark); }
 .popular { padding-top: 24px; }
 .popular .grid { margin-top: 18px; }
 .pdp__media { align-content: start; align-self: start; }
+
+/* quote form: calendar date + weekday buttons */
+.hint { font-weight: 400; font-size: .8rem; color: var(--ink-soft); }
+.days { border: 0; margin: 0; padding: 0; min-width: 0; }
+.days legend { font-weight: 600; font-size: .9rem; padding: 0; margin-bottom: 8px; }
+.days__row { display: flex; flex-wrap: wrap; gap: 8px; }
+.form label.day { position: relative; display: inline-block; font-weight: 500; }
+.form .day input { position: absolute; opacity: 0; width: 100%; height: 100%; margin: 0; padding: 0; inset: 0; cursor: pointer; }
+.day span { display: block; padding: 9px 16px; border: 1px solid #c9bfab; border-radius: 999px; background: #fff; font-size: .9rem; }
+.day input:checked + span { background: var(--ink); border-color: var(--ink); color: #fff; }
+.day input:focus-visible + span { outline: 2px solid var(--oak); outline-offset: 2px; }
