@@ -48,3 +48,10 @@ content:
       - { name: hours, label: Hours, type: string }
       - { name: areas, label: Areas serviced, type: string, list: true }
       - { name: featured, label: Popular ranges on the home page (exact product names), type: string, list: true }
+      - name: heroSwatches
+        label: Sample swatches on the home page (exact product name and colour name)
+        type: object
+        list: true
+        fields:
+          - { name: product, label: Product name, type: string }
+          - { name: colour, label: Colour name (start of it is enough), type: string }

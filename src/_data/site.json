@@ -31,5 +31,31 @@
     "Marvel Vinyl XL",
     "Greena Bamboo",
     "Elio"
+  ],
+  "heroSwatches": [
+    {
+      "product": "Elio",
+      "colour": "Scandi Snow"
+    },
+    {
+      "product": "Crest Pro",
+      "colour": "Aged Oak"
+    },
+    {
+      "product": "Cloud Wave",
+      "colour": "Breeze"
+    },
+    {
+      "product": "Evergreen Australian 14/3",
+      "colour": "Spotted Gum"
+    },
+    {
+      "product": "Marvel Vinyl XL",
+      "colour": "Heritage Brown"
+    },
+    {
+      "product": "Coastal Essence",
+      "colour": "Gunmetal"
+    }
   ]
 }

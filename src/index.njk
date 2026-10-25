@@ -19,8 +19,29 @@ description: Carpet, hybrid, timber and laminate flooring supplied and installed
         <li>Family run, local</li>
       </ul>
     </div>
-    <div class="planks" aria-hidden="true">
-      {% for i in range(0, 14) %}<span></span>{% endfor %}
+    <div class="hero__side">
+      {% set cards = collections.catalogue | swatchCards(site.heroSwatches) %}
+      <div class="board" role="group" aria-label="Sample swatches from our range">
+        <ul class="fan">
+          {% for c in cards %}<li style="--i:{{ loop.index0 }}"><a href="{{ c.url }}"><img src="{{ c.image }}" alt="{{ c.title }}, {{ c.colour }}"><span class="fan__tag"><strong>{{ c.colour or c.title }}</strong><small>{{ c.title }}</small></span></a></li>{% endfor %}
+        </ul>
+        <p class="board__caption">The samples we bring to you. Tap one to see its range.</p>
+      </div>
+      <form class="callback" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="{{ site.web3formsKey }}">
+        <input type="hidden" name="subject" value="Call me back request from the website">
+        <input type="hidden" name="from_name" value="{{ site.name }} website">
+        <input type="hidden" name="redirect" value="{{ site.url }}/thanks/">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none">
+        <p class="callback__title">Rather we called you?</p>
+        <div class="callback__row">
+          <label class="sr" for="cb-phone">Mobile number</label>
+          <input id="cb-phone" name="phone" type="tel" required placeholder="Mobile number" autocomplete="tel">
+          <label class="sr" for="cb-suburb">Suburb</label>
+          <input id="cb-suburb" name="suburb" placeholder="Suburb" autocomplete="address-level2">
+          <button class="btn" type="submit">Call me back</button>
+        </div>
+      </form>
     </div>
   </div>
 </section>

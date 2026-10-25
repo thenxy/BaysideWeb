@@ -36,6 +36,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("byTitles", (items, titles) =>
     (titles || []).map((t) => items.find((p) => p.data.title === t)).filter(Boolean)
   );
+  // Home page sample board: [{product, colour}] -> link, small photo and labels, skipping anything not found.
+  eleventyConfig.addFilter("swatchCards", (items, specs) =>
+    (specs || []).map((s) => {
+      const p = items.find((x) => x.data.title === s.product);
+      if (!p) return null;
+      const c = (p.data.colours || []).find((k) => k.image && k.name.toLowerCase().startsWith(String(s.colour).toLowerCase()))
+        || (p.data.colours || []).find((k) => k.image);
+      const img = (c && c.image) || p.data.image;
+      if (!img) return null;
+      const t = img.replace(/\.webp$/, "-t.webp");
+      return {
+        url: p.url,
+        title: p.data.title,
+        colour: c ? c.name : "",
+        image: fs.existsSync(path.join("src", t)) ? t : img,
+      };
+    }).filter(Boolean)
+  );
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
 
   eleventyConfig.addCollection("catalogue", (api) =>
