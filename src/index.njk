@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Flooring supply and install, Sydney
-description: Carpet, hybrid, timber and laminate flooring supplied and installed across Sydney. Free mobile on-site quotes.
+description: Carpet, hybrid, laminate and vinyl flooring supplied and installed across Sydney. Free mobile on-site quotes.
 ---
 <section class="hero">
   <div class="wrap hero__grid">
@@ -22,10 +22,13 @@ description: Carpet, hybrid, timber and laminate flooring supplied and installed
     <div class="hero__side">
       {% set cards = collections.catalogue | swatchCards(site.heroSwatches) %}
       <div class="board" role="group" aria-label="Sample swatches from our range">
-        <ul class="fan">
-          {% for c in cards %}<li style="--i:{{ loop.index0 }}"><a href="{{ c.url }}"><img src="{{ c.image }}" alt="{{ c.title }}, {{ c.colour }}"><span class="fan__tag"><strong>{{ c.colour or c.title }}</strong><small>{{ c.title }}</small></span></a></li>{% endfor %}
+        <ul class="fan" aria-hidden="false">
+          {% for c in cards %}<li style="--i:{{ loop.index0 }}"><a href="{{ c.url }}"><img src="{{ c.image }}" alt="{{ c.title }}, {{ c.colour }}" loading="lazy"><span class="fan__tag"><strong>{{ c.colour or c.title }}</strong><small>{{ c.title }}</small></span></a></li>{% endfor %}
         </ul>
       </div>
+      <ul class="strip" aria-label="Sample swatches">
+        {% for c in cards %}<li><a href="{{ c.url }}" aria-label="{{ c.title }}, {{ c.colour }}"><img src="{{ c.image }}" alt="" loading="lazy"></a></li>{% endfor %}
+      </ul>
     </div>
   </div>
 </section>

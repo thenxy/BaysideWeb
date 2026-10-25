@@ -20,7 +20,7 @@ content:
         type: select
         required: true
         options:
-          values: [hybrid, timber, laminate, carpet, vinyl, bamboo]
+          values: [hybrid, laminate, carpet, vinyl]
       - { name: thickness, label: Thickness, type: string }
       - { name: finish, label: Finish, type: string }
       - { name: subcategory, label: Sub-category (e.g. Nylon, Underlay), type: string }

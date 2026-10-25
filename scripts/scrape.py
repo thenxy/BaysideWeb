@@ -485,6 +485,9 @@ def clean_specs(sp):
     return out
 
 
+# Categories the business sells (timber, bamboo and accessories are deliberately left out).
+SOLD = {"hybrid", "laminate", "vinyl", "carpet"}
+
 MM = re.compile(r"\s*(?<![/\d.])\b\d+(?:\.\d+)?\s?mm\b", re.I)
 
 
@@ -619,7 +622,7 @@ def main():
         print(f"  {len(got)} products", flush=True)
         products += got
     # accessories are not sold online; wall coverings are out of scope for a flooring catalogue
-    products = [p for p in products if p["category"] != "accessories" and "wall covering" not in
+    products = [p for p in products if p["category"] in SOLD and "wall covering" not in
                 (p["title"] + " " + (p.get("desc") or "")).lower()[:400]]
     # remove previously generated products (those with a `source:`), keep hand-written ones
     PRODUCTS.mkdir(parents=True, exist_ok=True)
